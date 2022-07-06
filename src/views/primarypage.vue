@@ -1,19 +1,15 @@
 <template>
-  <div>
-    <div>
-      "밝고 투명한 사회" 풀뿌리 숙의민주주의를 위한 세상에 없던 지역기반
-      커뮤니티
-      이게 나라냐?
-      민생은 책임 안지고 수사에만 중점을 둔 검찰국가로
-      회귀하려하고 있다.
-      이제는 우리가 직접 나서야 한다.
-      전국 지역장을 3,000명을
-      모집한다.
-      하부에서부터 수렴해서 상위 국가 주요 이슈를 시민이 직접
-      선택(정치)하는 커뮤니티 시스템 가입하라
-    </div>
-
-    <v-btn id="frontpage" @click="agree"> 참여하기 </v-btn>
+  <div class="home">
+    Nanushare에 오신 것을 환영합니다.
+    <br />
+    <br /><br />
+    <v-btn id="frontpage" @click="agree">회원 가입</v-btn>
+    <br /><br />
+    <v-btn id="frontpage" @click="gologin">로그인</v-btn>
+    <br /><br />
+    <v-btn id="frontpage" @click="checklogin"
+      >개발 진척 상황, 주식수 확인</v-btn
+    >
   </div>
 </template>
 
@@ -42,7 +38,7 @@ export default {
 
   methods: {
     agree() {
-      this.$router.push({ name: "primarypage" });
+      this.$router.push({ name: "lawagree" });
     },
 
     gologin() {
@@ -63,10 +59,5 @@ export default {
 <style>
 #frontpage {
   width: 225px;
-}
-
-.contain {
-  display: flex;
-  justify-content: center;
 }
 </style>

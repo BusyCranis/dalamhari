@@ -5,7 +5,7 @@ import Signup from '../views/signup.vue'
 import LinkedInfo from '../views/linkedInfo.vue'
 import Login from '../views/loginformpage.vue'
 import Lawpage from '../views/lawagreepage.vue'
-// import saleItemInfoPage from '../views/saleItemInfoPage.vue'
+import primarypage from '../views/primarypage.vue'
 // import newstartTradepage from '../views/newstartTradepage.vue'
 
 
@@ -56,11 +56,11 @@ const routes = [
     component: Login
   },
 
-  // {
-  //   path: '/saleItemInfoPage',
-  //   name: 'saleItemInfoPage',
-  //   component: saleItemInfoPage
-  // },
+  {
+    path: '/front',
+    name: 'primarypage',
+    component: primarypage
+  },
 
   // {
   //   path: '/newstartTradepage',
