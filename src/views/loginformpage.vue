@@ -67,7 +67,7 @@ export default {
     async onmeet() {
       try {
         await axios
-          .get("/post/method", {
+          .post("/post/method", {
             email: this.form.email,
             password: this.form.password,
           })
