@@ -2,7 +2,7 @@
   <div>
     <a href="http://49.247.19.95"> 개발 진척 상황 확인하기 </a>
 
-    <br><br>
+    <br /><br />
 
     <div>
       <v-btn @click="whileread">주식수 확인하기</v-btn>
@@ -14,7 +14,6 @@
 </template>
 <script>
 import axios from "axios";
-
 
 export default {
   data() {
@@ -33,6 +32,19 @@ export default {
         })
         .catch((e) => {
           console.error(e.message);
+        });
+    },
+    updateinfo(_id) {
+      let myid = _id;
+      console.log(myid);
+
+      axios
+        .post("http://localhost:5100/update/list", {
+          yourid: myid,
+          name: this.form.name,
+        })
+        .then((res) => {
+          console.log(res.data);
         });
     },
   },
