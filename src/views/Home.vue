@@ -2,8 +2,8 @@
   <div>
     <section id="hero">
       <v-parallax dark src="@/assets/img/bgHero.jpg" height="750">
-        <v-row align="center" justify="center">
-          <v-col cols="10">
+        <v-row align="center"  justify="center" >
+          <v-col cols="12">
             <v-row align="center" justify="center">
               <v-col cols="12" md="6" xl="8">
                 <h1 class="display-2 font-weight-bold mb-4">
@@ -90,7 +90,7 @@
       </v-parallax>
       <v-container fluid id="features" class="mt-2">
         <v-row align="center" justify="center">
-          <v-col cols="10">
+          <v-col cols="12">
             <v-row align="center" justify="space-around">
               <!-- <v-col cols="12" class="text-center">
               <h1 class="font-weight-light display-2">Title</h1>
