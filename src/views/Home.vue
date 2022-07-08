@@ -21,7 +21,10 @@
                   결정하는 커뮤니티 시스템 <br />
                   가입하라
                 </h1>
-                <v-btn
+                <v-btn id="frontpage" @click="agree">
+                    지역장 신청하기
+                  </v-btn>
+                <!-- <v-btn
                   rounded
                   outlined
                   large
@@ -29,10 +32,10 @@
                   @click="$vuetify.goTo('#features')"
                   class="mt-5"
                 >
-                  Saiba mais
+                  지역장 신청하기
                   <v-icon class="ml-2">mdi-arrow-down</v-icon>
-                </v-btn>
-                <div class="video d-flex align-center py-4">
+                </v-btn> -->
+                <!-- <div class="video d-flex align-center py-4">
                   <a @click.stop="dialog = true" class="playBut">
                     <svg
                       version="1.1"
@@ -73,11 +76,7 @@
                     </svg>
                   </a>
                   <p class="subheading ml-2 mb-0">Assista o vídeo</p>
-
-                  <v-btn id="frontpage" @click="agree">
-                    지역장 신청하기
-                  </v-btn>
-                </div>
+                </div> -->
               </v-col>
               <v-col cols="12" md="6" xl="4" class="hidden-sm-and-down">
               </v-col>
