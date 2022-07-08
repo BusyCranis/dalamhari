@@ -2,8 +2,8 @@
   <div id="app">
     <div v-if="$route.path !== '/'" class="nav">
       <div></div>
-      <router-link to="/"> Nanushare </router-link>
-      <router-link to="/about">About</router-link>
+      <router-link :to="{name: 'Home'}"> 랜딩페이지 </router-link>
+      <router-link :to="{name: 'primarypage'}"> 프론트페이지 </router-link>
       <div></div>
     </div>
 
