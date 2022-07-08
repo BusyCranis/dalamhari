@@ -1,13 +1,55 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <!-- <router-link to="/"> Nanushare </router-link> |
-      <router-link to="/about">About</router-link> -->
+    <div v-if="$route.path !== '/'" class="nav">
+      <div></div>
+      <router-link to="/"> Nanushare </router-link>
+      <router-link to="/about">About</router-link>
+      <div></div>
     </div>
-    <router-view/>
+
+    <!-- <div @click="checkwindow">확인</div> -->
+
+    <router-view />
   </div>
 </template>
 
+<script>
+import { mapState, mapActions, mapMutations } from "vuex";
+
+export default {
+  name: "App",
+
+  data() {
+    return {
+      // screenview: window.location.pathname !== "/",
+    };
+  },
+
+  methods: {
+    checkwindow() {
+      console.log(this.screenview);
+
+      // console.log(this.$store.state.paththis);
+
+      // console.log(this.$route.path);
+      // console.log(this.$store.state.paththis)
+    },
+  },
+
+  computed: {
+    ...mapState(["paththis"]),
+
+    ...mapState(["islogin"]),
+
+    ...mapState(["newtradingNFTs"]),
+
+    ...mapState(["tradeditem"]),
+    ...mapState(["boughtinfo"]),
+    ...mapState(["soldinfo"]),
+    ...mapState(["vrcp"]),
+  },
+};
+</script>
 
 
 
@@ -19,16 +61,14 @@
   /* -moz-osx-font-smoothing: grayscale; */
   text-align: center;
   /* color: #2c3e50; */
-  
 }
 
-
-/* #nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.nav {
+  display: flex;
+  justify-content: space-between;
 }
 
 #nav a.router-link-exact-active {
   color: #42b983;
-} */
+}
 </style>
