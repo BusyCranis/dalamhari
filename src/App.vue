@@ -29,10 +29,7 @@ export default {
     checkwindow() {
       console.log(this.screenview);
 
-      // console.log(this.$store.state.paththis);
-
-      // console.log(this.$route.path);
-      // console.log(this.$store.state.paththis)
+     
     },
   },
 
