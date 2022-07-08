@@ -75,7 +75,7 @@
                   <p class="subheading ml-2 mb-0">Assista o vídeo</p>
 
                   <v-btn id="frontpage" @click="agree">
-                    지역장으로 임명 받기
+                    지역장 신청하기
                   </v-btn>
                 </div>
               </v-col>
