@@ -1,7 +1,7 @@
 <template>
   <div>
     <section id="hero">
-      <v-parallax dark src="@/assets/img/bgHero.jpg" height="750">
+      <v-parallax dark src="@/assets/img/bgHero.jpg" height="525">
         <v-row align="center"  justify="center" >
           <v-col cols="12">
             <v-row align="center" justify="center">
@@ -82,8 +82,8 @@
                   <p class="subheading ml-2 mb-0">Assista o vídeo</p>
                 </div> -->
               </v-col>
-              <v-col cols="12" md="6" xl="4" class="hidden-sm-and-down">
-              </v-col>
+              <!-- <v-col cols="12" md="6" xl="4" class="hidden-sm-and-down">
+              </v-col> -->
             </v-row>
           </v-col>
         </v-row>
