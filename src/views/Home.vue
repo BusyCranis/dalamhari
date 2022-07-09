@@ -26,7 +26,7 @@
                 </h3>
                 <br>
                 <v-btn id="frontpage" @click="agree">
-                    지역장 신청하기
+                    지역장으로 가입하기
                   </v-btn>
                 <!-- <v-btn
                   rounded
