@@ -9,7 +9,7 @@
                 <h1 class="display-2 font-weight-bold mb-4">
                   "밝고 투명한 사회"
                 </h1>
-                <h1 class="font-weight-light">
+                <h3 class="font-weight-light">
                   풀뿌리 숙의민주주의를 위한 <br />
                   세상에 없던 지역(위치) 기반 커뮤니티<br />
                   이게 나라냐?<br />
@@ -20,7 +20,7 @@
                   아래에서부터 민의를 수렴하여 국가의 주요 이슈까지 시민이 직접
                   결정하는 커뮤니티 시스템 <br />
                   지역장이 되고싶다면 가입하라
-                </h1>
+                </h3>
                 <v-btn id="frontpage" @click="agree">
                     지역장 신청하기
                   </v-btn>
