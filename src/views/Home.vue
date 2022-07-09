@@ -1,7 +1,7 @@
 <template>
   <div>
     <section id="hero">
-      <v-parallax dark src="@/assets/img/bgHero.jpg" height="525">
+      <v-parallax dark src="@/assets/img/bgHero.jpg" height="540">
         <v-row align="center"  justify="center" >
           <v-col cols="12">
             <v-row align="center" justify="center">
@@ -16,12 +16,12 @@
                   풀뿌리 숙의민주주의를 위한 <br />
                   세상에 없던 지역(위치) 기반 커뮤니티<br />
                   "이게 나라냐?"<br />
-                  현 정권은 민생을 외면하고 수사에만 집중하는 검찰국가를
-                  세우려하고 있다.<br />
+                  현 정권은 민생을 외면하고 수사에만 집중하는<br>
+                  검찰국가를 세우려하고 있다.<br />
                   이제는 우리가 직접 나서야 한다.<br />
                   전국 지역장을 3,000명을 모집한다.<br />
-                  아래에서부터 민의를 수렴하여 국가의 주요 이슈까지 시민이 직접
-                  결정하는 커뮤니티 시스템 <br />
+                  아래에서부터 민의를 수렴하여 국가의 주요 이슈까지<br>
+                  시민이 직접 결정하는 커뮤니티 시스템<br>
                   지역장이 되고싶다면 가입하라
                 </h3>
                 <br>
