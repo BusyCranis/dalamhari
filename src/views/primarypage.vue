@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+      <br>
     Nanushare에 오신 것을 환영합니다.
     <br />
     <br /><br />

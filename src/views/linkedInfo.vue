@@ -1,5 +1,6 @@
 <template>
   <div>
+    <br>
     <a href="http://49.247.19.95"> 개발 진척 상황 확인하기 </a>
 
     <br /><br />

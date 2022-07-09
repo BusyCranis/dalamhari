@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <br>
     회원 가입
     <br />
     <br />
