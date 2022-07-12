@@ -1,13 +1,13 @@
 <template>
   <div>
     <section id="hero">
-      <v-parallax dark src="@/assets/img/bgHero.jpg" height="540">
+      <v-parallax dark src="@/assets/img/bgHero.jpg" height="560">
         <v-row align="center" justify="center">
           <v-col cols="12">
             <v-row align="center" justify="center">
               <v-col cols="12">
                 <!-- md="6" xl="8" -->
-                <br /><br />
+                <br /><br /><br />
                 <h1 class="display-2 font-weight-bold mb-4">
                   "밝고 투명한 사회"
                 </h1>
