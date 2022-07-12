@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-      <br>
-    Nanushare에 오신 것을 환영합니다.
+      <br> <br>
+    우만지에 오신 것을 환영합니다.
     <br />
     <br /><br />
     <v-btn id="frontpage" @click="agree">회원 가입</v-btn>
@@ -9,7 +9,7 @@
     <v-btn id="frontpage" @click="gologin">로그인</v-btn>
     <br /><br />
     <v-btn id="frontpage" @click="checklogin"
-      >개발 진척 상황, 주식수 확인</v-btn
+      >개발 진척 상황 확인</v-btn
     >
   </div>
 </template>

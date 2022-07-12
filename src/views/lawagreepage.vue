@@ -1,6 +1,6 @@
 <template>
   <div>
-    <br>
+    <br><br>
     이용 약관
     <br /><br />
     <div class="home contain justify-center">

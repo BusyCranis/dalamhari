@@ -1,6 +1,6 @@
 <template>
   <div>
-    <br>
+    <br><br>
     로그인
     <br />
     <!-- <ValidationProvider name="Email" rules="required|email"> -->

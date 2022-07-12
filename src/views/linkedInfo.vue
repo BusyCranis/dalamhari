@@ -1,12 +1,12 @@
 <template>
   <div>
-    <br>
+    <br><br>
     <a href="http://49.247.19.95"> 개발 진척 상황 확인하기 </a>
 
     <br /><br />
 
     <div>
-      <v-btn @click="whileread">주식수 확인하기</v-btn>
+      <v-btn @click="whileread">지역장 명단 확인하기</v-btn>
       <div v-for="item in userlist" :key="item.id">
         {{ item.name }}
       </div>
