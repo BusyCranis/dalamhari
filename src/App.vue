@@ -6,23 +6,30 @@
       <router-link :to="{name: 'primarypage'}"> 프론트페이지 </router-link>
       <div></div>
     </div>
-
-    <!-- <div @click="checkwindow">확인</div> -->
-
+   
     <router-view />
+ <Footer></Footer>
   </div>
 </template>
 
 <script>
 import { mapState, mapActions, mapMutations } from "vuex";
+import Footer from './views/footer.vue';
+import footer from "./views/footer.vue"
+
 
 export default {
   name: "App",
 
   data() {
     return {
-      // screenview: window.location.pathname !== "/",
+      footer
     };
+  },
+
+components: {
+Footer
+    
   },
 
   methods: {
