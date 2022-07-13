@@ -1,18 +1,18 @@
 <template>
   <div>
     <section id="hero">
-      <v-parallax dark src="@/assets/img/bgHero.jpg" height="560">
+      <v-parallax dark src="@/assets/img/freeimage.jpeg" height="560">
         <v-row align="center" justify="center">
           <v-col cols="12">
             <v-row align="center" justify="center">
               <v-col cols="12">
                 <!-- md="6" xl="8" -->
                 <br /><br /><br />
-                <h1 class="display-2 font-weight-bold mb-4">
+                <h1 class="display-2 font-weight-bold mb-4 hhe1">
                   "밝고 투명한 사회"
                 </h1>
                 <br />
-                <h3 class="font-weight-light">
+                <h3 class="font-weight-light hhe1">
                   풀뿌리 숙의민주주의를 위한 <br />
                   세상에 없던 지역(위치) 기반 커뮤니티<br />
                   "이게 나라냐?"<br />
@@ -275,14 +275,9 @@ export default {
 </style>
 
 <style>
-/* #frontpage {
-  width: 225px;
+.hhe1 {
+  color: rgb(96, 29, 0)
 }
-
-.contain {
-  display: flex;
- 
-} */
 
 .btn-play {
   transition: 0.2s;
