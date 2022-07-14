@@ -7,12 +7,12 @@
             <v-row align="center" justify="center">
               <v-col cols="12">
                 <!-- md="6" xl="8" -->
-                <br /><br /><br />
+                <br /><br /><br /><br />
                 <h1 class="display-2 font-weight-bold mb-4 hhe1">
                   "밝고 투명한 사회"
                 </h1>
-                <br />
-                <h3 class="font-weight-light hhe1">
+                <br /><br />
+                <h4 class="font-weight-light hhe1">
                   풀뿌리 숙의민주주의를 위한 <br />
                   세상에 없던 지역(위치) 기반 커뮤니티<br />
                   "이게 나라냐?"<br />
@@ -23,8 +23,8 @@
                   아래에서부터 민의를 수렴하여 국가의 주요 이슈까지<br />
                   시민이 직접 결정하는 커뮤니티 시스템<br />
                   지역장이 되고싶다면 가입하라
-                </h3>
-                <br />
+                </h4>
+                <br /><br /><br />
                 <v-btn id="frontpage" @click="agree">
                   지역장으로 가입하기
                 </v-btn>
