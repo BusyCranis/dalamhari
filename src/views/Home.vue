@@ -302,7 +302,7 @@ export default {
 
 .btncolor {
   /* color: thin solid red; */
-  color: rgb(215, 0, 64);
+  color: rgb(255, 0, 76);
   /* font-weight: 550 */
 }
 
