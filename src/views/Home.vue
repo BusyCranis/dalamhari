@@ -1,7 +1,7 @@
 <template>
   <div>
     <section id="hero">
-      <v-parallax dark src="@/assets/img/freeimage.jpeg" height="560">
+      <v-parallax   height="560"    class="parallaximage"    >
         <v-row align="center" justify="center">
           <v-col cols="12">
             <v-row align="center" justify="center">
@@ -276,8 +276,21 @@ export default {
 
 <style>
 .hhe1 {
-  color: rgb(96, 29, 0)
+  /* color: rgb(96, 29, 0) */
+
+  color: black
 }
+
+.parallaximage {
+  transform: none;
+  /* background: transparent; */
+  background-image: url(../assets/img/freeimage.jpeg);
+  background-size: cover;
+  width: 100%;
+}
+
+
+
 
 .btn-play {
   transition: 0.2s;
