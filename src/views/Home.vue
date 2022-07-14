@@ -12,7 +12,7 @@
                   "밝고 투명한 사회"
                 </h1>
                 <br /><br />
-                <h4 class="font-weight-light hhe1">
+                <h4 class="font-weight-light hhe1 hhe2">
                   풀뿌리 숙의민주주의를 위한 <br />
                   세상에 없던 지역(위치) 기반 커뮤니티<br />
                   "이게 나라냐?"<br />
@@ -281,6 +281,13 @@ export default {
   color: black
 }
 
+.hhe2 {
+  font-weight: 550
+
+
+}
+
+
 .parallaximage {
   transform: none;
   /* background: transparent; */
@@ -288,9 +295,6 @@ export default {
   background-size: cover;
   width: 100%;
 }
-
-
-
 
 .btn-play {
   transition: 0.2s;
