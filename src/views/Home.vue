@@ -26,7 +26,7 @@
                 </h4>
                 <br /><br /><br />
                 <v-btn class="frontpage" @click="agree"      outlined>
-                  지역장으로 가입하기
+                <a class="btncolor" >  지역장으로 가입하기 </a>
                 </v-btn>
                 <!-- <v-btn
                   rounded
@@ -299,9 +299,19 @@ export default {
 
 /* background-color: transparent; */
 /* color: rgb(215, 0, 64) */
-border: rgb(215, 0, 64)
+border: rgb(215, 0, 64);
+/* border: rgb(215, 0, 64) */
 
 }
+
+.btncolor {
+
+/* color: thin solid red; */
+color: rgb(215, 0, 64);
+
+
+}
+
 
 
 .btn-play {
