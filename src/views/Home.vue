@@ -25,7 +25,7 @@
                   지역장이 되고싶다면 가입하라
                 </h4>
                 <br /><br /><br />
-                <v-btn class="frontpage" @click="agree"  depressed   outlined>
+                <v-btn class="frontpage" @click="agree"    outlined>
                   <a class="btncolor"> 지역장으로 가입하기 </a>
                 </v-btn>
                 <!-- <v-btn
