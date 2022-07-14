@@ -25,7 +25,7 @@
                   지역장이 되고싶다면 가입하라
                 </h4>
                 <br /><br /><br />
-                <v-btn id="frontpage" @click="agree">
+                <v-btn class="frontpage" @click="agree"      outlined>
                   지역장으로 가입하기
                 </v-btn>
                 <!-- <v-btn
@@ -287,7 +287,6 @@ export default {
 
 }
 
-
 .parallaximage {
   transform: none;
   /* background: transparent; */
@@ -295,6 +294,15 @@ export default {
   background-size: cover;
   width: 100%;
 }
+
+.frontpage {
+
+/* background-color: transparent; */
+/* color: rgb(215, 0, 64) */
+border: thin solid red
+
+}
+
 
 .btn-play {
   transition: 0.2s;
