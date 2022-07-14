@@ -1,7 +1,7 @@
 <template>
   <div>
     <section id="hero">
-      <v-parallax   height="560"    class="parallaximage"    >
+      <v-parallax height="560" class="parallaximage">
         <v-row align="center" justify="center">
           <v-col cols="12">
             <v-row align="center" justify="center">
@@ -25,8 +25,8 @@
                   지역장이 되고싶다면 가입하라
                 </h4>
                 <br /><br /><br />
-                <v-btn class="frontpage" @click="agree"      outlined>
-                <a class="btncolor" >  지역장으로 가입하기 </a>
+                <v-btn class="frontpage" @click="agree"  depressed   outlined>
+                  <a class="btncolor"> 지역장으로 가입하기 </a>
                 </v-btn>
                 <!-- <v-btn
                   rounded
@@ -278,13 +278,11 @@ export default {
 .hhe1 {
   /* color: rgb(96, 29, 0) */
 
-  color: black
+  color: black;
 }
 
 .hhe2 {
-  font-weight: 550
-
-
+  font-weight: 550;
 }
 
 .parallaximage {
@@ -296,23 +294,16 @@ export default {
 }
 
 .frontpage {
-
-/* background-color: transparent; */
-/* color: rgb(215, 0, 64) */
-border: medium solid rgb(215, 0, 64);
-/* border: rgb(215, 0, 64) */
-
+  /* background-color: transparent; */
+  /* color: rgb(215, 0, 64) */
+  border: medium solid rgb(215, 0, 64);
+  /* border: rgb(215, 0, 64) */
 }
 
 .btncolor {
-
-/* color: thin solid red; */
-color: rgb(215, 0, 64);
-
-
+  /* color: thin solid red; */
+  color: rgb(215, 0, 64);
 }
-
-
 
 .btn-play {
   transition: 0.2s;
