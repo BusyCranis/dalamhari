@@ -299,7 +299,7 @@ export default {
 
 /* background-color: transparent; */
 /* color: rgb(215, 0, 64) */
-border: rgb(215, 0, 64);
+border: thin solid red;
 /* border: rgb(215, 0, 64) */
 
 }
