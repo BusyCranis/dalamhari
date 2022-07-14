@@ -296,7 +296,7 @@ export default {
 .frontpage {
   /* background-color: transparent; */
   /* color: rgb(215, 0, 64) */
-  border: medium solid rgb(215, 35, 64);
+  border: medium solid rgb(255, 35, 64);
   /* border: rgb(215, 0, 64) */
 }
 
