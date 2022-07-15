@@ -288,7 +288,7 @@ export default {
 .parallaximage {
   transform: none;
   /* background: transparent; */
-  background-image: url(../assets/img/freeimage.jpeg);
+  background-image: url(../assets/img/Frame22.png);
   background-size: cover;
   width: 100%;
 }
