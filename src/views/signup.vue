@@ -96,7 +96,7 @@
     <br />
     <v-btn @click="onSubmit"> 가입하기 </v-btn>
 
-    <br><br><br>
+    <br><br><br><br><br>
   </div>
 </template>
 

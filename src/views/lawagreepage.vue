@@ -43,7 +43,7 @@
 
     <v-btn @click="agree">동의</v-btn>
 
-    <br><br><br><br>
+    <br><br><br><br><br>
   </div>
 </template>
 
