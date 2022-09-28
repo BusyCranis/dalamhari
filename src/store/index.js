@@ -12,6 +12,15 @@ export default new Vuex.Store({
     // paththis: window.location.pathname
 
 
+    foodstore: []
+
+
+
+
+
+
+
+
 
   },
   mutations: {

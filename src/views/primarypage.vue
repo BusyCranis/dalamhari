@@ -29,8 +29,15 @@
       <input id="target-month-input" class="target-input" size="5" />
       <input id="target-date-input" class="target-input" size="5" />
     </div>
-    <button onclick="starter()" class="btn">카운트다운 시작</button>
-    <button onclick="resetTimer()" class="btn">타이머 초기화</button>
+    <button @click="starter" class="btn">카운트다운 시작</button>
+
+    <button> 냉장고에 넣기 </button>
+
+    <br /><br /><br />
+
+    <div v-for="item in foodlist" :key="item.id">
+      {{ item.countdown }}
+    </div>
 
     <v-btn id="frontpage" @click="agree">회원 가입</v-btn>
     <br /><br />
@@ -68,12 +75,97 @@ export default {
 
       messgeContainer: null,
       container: null,
-      intervalIdArr: null,
+      // intervalIdArr: [],
       savedDate: null,
+
+      foodlist: [],
     };
   },
 
   methods: {
+    starter() {
+      let intervalId;
+      // let intervalIdArr = [];
+      // function setClearInterval() {
+      //   for (let i = 0; i < intervalIdArr.length; i++) {
+      //     clearInterval(intervalIdArr[i]);
+      //     console.log("초기화");
+      //   }
+      // }
+      this.container.style.display = "flex";
+      this.messgeContainer.style.display = "none";
+      console.log(this.dateForMaker());
+
+      clearInterval(intervalId);
+
+      // for (let i = 0; i < intervalIdArr.length; i++) {
+      //     clearInterval(intervalIdArr[i]);
+      //     console.log("초기화")
+      //   }
+      this.counterMaker(this.dateForMaker());
+      intervalId = setInterval(() => {
+        console.log("dddd", this.dateForMaker());
+        this.counterMaker(this.dateForMaker());
+      }, 1000);
+      // intervalIdArr.push(intervalId);
+
+      // setClearInterval()
+      // clearInterval(intervalId);
+
+      let newfood = {
+        id: Date.now(),
+        limit: this.dateForMaker(),
+        // countdown: intervalId,
+      };
+
+      this.foodlist.push(newfood);
+    },
+
+    dateForMaker() {
+      const inputYear = document.querySelector("#target-year-input").value;
+      const inputMonth = document.querySelector("#target-month-input").value;
+      const inputDate = document.querySelector("#target-date-input").value;
+
+      const dateFormat = `${inputYear}-${inputMonth}-${inputDate}`;
+
+      return dateFormat;
+    },
+
+    counterMaker(data) {
+      const nowDate = new Date();
+      const targetDate = new Date(data).setHours(0, 0, 0, 0);
+      const remaining = (targetDate - nowDate) / 1000;
+
+      const remainingObj = {
+        remainingDate: Math.floor(remaining / 3600 / 24),
+        remainingHours: Math.floor(remaining / 3600) % 24,
+        remainingMin: Math.floor(remaining / 60) % 60,
+        remainingSec: Math.floor(remaining) % 60,
+      };
+
+      const documentArr = ["days", "hours", "nin", "sec"];
+      const timeKeys = Object.keys(remainingObj);
+
+      const format = function (time) {
+        if (time < 10) {
+          return "0" + time;
+        } else {
+          return time;
+        }
+      };
+
+      let i = 0;
+      for (let tag of documentArr) {
+        const remainingTime = format(remainingObj[timeKeys[i]]);
+        document.getElementById(tag).textContent = remainingTime;
+        i++;
+      }
+
+    
+    },
+
+    returnele() {},
+
     agree() {
       this.$router.push({ name: "lawagree" });
     },
@@ -94,7 +186,7 @@ export default {
   mounted() {
     this.messgeContainer = document.querySelector("#d-day-message");
     this.container = document.querySelector("#d-day-container");
-    this.intervalIdArr = [];
+    // this.intervalIdArr = [];
     this.savedDate = localStorage.getItem("saved-date");
 
     this.container.style.display = "none";
