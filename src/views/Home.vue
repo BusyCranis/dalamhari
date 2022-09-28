@@ -95,23 +95,23 @@ export default {
     return {
       dialog: false,
       videoId: "i8IvvHJssWE",
-      features: [
-        {
-          img: require("@/assets/img/icon2.png"),
-          title: "지역장이 되세요",
-          text: "",
-        },
-        {
-          img: require("@/assets/img/icon1.png"),
-          title: "",
-          text: "정치에 관심이 많은 3백만명의 회원들이 활동하는 플랫폼입니다. 모든 회원들은 본인이 관심있는 정치적 사안에 대한 의견을 제시하실수있으며 투표가 필요한 사안에 대해서는 투표를 신청하실수있습니다.",
-        },
-        {
-          img: require("@/assets/img/icon3.png"),
-          title: "5천만 국민 모두의 공론장",
-          text: "대한민국 국민이라면 누구나 가입하고 활동할수있으며 5천만 국민 모두를 대표할수있는 플랫폼으로 발전시켜나가겠습니다.",
-        },
-      ],
+      // features: [
+      //   {
+      //     img: require("@/assets/img/icon2.png"),
+      //     title: "지역장이 되세요",
+      //     text: "",
+      //   },
+      //   {
+      //     img: require("@/assets/img/icon1.png"),
+      //     title: "",
+      //     text: "정치에 관심이 많은 3백만명의 회원들이 활동하는 플랫폼입니다. 모든 회원들은 본인이 관심있는 정치적 사안에 대한 의견을 제시하실수있으며 투표가 필요한 사안에 대해서는 투표를 신청하실수있습니다.",
+      //   },
+      //   {
+      //     img: require("@/assets/img/icon3.png"),
+      //     title: "5천만 국민 모두의 공론장",
+      //     text: "대한민국 국민이라면 누구나 가입하고 활동할수있으며 5천만 국민 모두를 대표할수있는 플랫폼으로 발전시켜나가겠습니다.",
+      //   },
+      // ],
     };
   },
 
