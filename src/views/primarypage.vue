@@ -4,49 +4,40 @@
     <br />
     안녕하세요! 오늘의 유통기한을 안내합니다
 
-    <h1>D-Day</h1>
-    <div id="d-day-container">
-      <div class="d-day-child-continer">
-        <span id="days">0</span>
-        <span>일</span>
-      </div>
-      <div class="d-day-child-continer">
-        <span id="hours">0</span>
-        <span>시간</span>
-      </div>
-      <div class="d-day-child-continer">
-        <span id="nin">0</span>
-        <span>분</span>
-      </div>
-      <div class="d-day-child-continer">
-        <span id="sec">0</span>
-        <span>초</span>
-      </div>
-    </div>
+    <div id="d-day-container"></div>
     <div id="d-day-message"></div>
+    <div>유통기한</div>
     <div id="target-selector">
-      <input id="target-year-input" class="target-input" size="5" />
-      <input id="target-month-input" class="target-input" size="5" />
-      <input id="target-date-input" class="target-input" size="5" />
+      <input id="target-year-input" class="target-input" size="5" />년
+      <input id="target-month-input" class="target-input" size="5" />월
+      <input id="target-date-input" class="target-input" size="5" />일
     </div>
-    <button @click="starter" class="btn">카운트다운 시작</button>
 
-    <!-- <button>냉장고에 넣기</button> -->
+    <button @click="freeze">냉동 보관</button>
+    <button @click="fresh">냉장 보관</button>
+    <button @click="tempture">실온 보관</button>
+
+    <br />
+
+    이름: <input v-model="foodname" />
+
+    <br />
+
+    <button @click="starter" class="btn">보관하기</button>
 
     <br /><br /><br />
 
     <div v-for="item in foodlist" :key="item.id">
       {{ item.limit }}
 
-  <button @click="agree(item.id)"> 상세 보기 </button>
-
+      <button @click="agree(item.id)">상세 보기</button>
     </div>
 
-    <v-btn id="frontpage" @click="agree">회원 가입</v-btn>
+    <!-- <v-btn id="frontpage" @click="agree">회원 가입</v-btn>
     <br /><br />
     <v-btn id="frontpage" @click="gologin">로그인</v-btn>
     <br /><br />
-    <v-btn id="frontpage" @click="checklogin">개발 진척 상황 확인</v-btn>
+    <v-btn id="frontpage" @click="checklogin">개발 진척 상황 확인</v-btn> -->
 
     <br /><br /><br /><br /><br />
     <br /><br /><br /><br /><br /><br />
@@ -83,6 +74,10 @@ export default {
       savedDate: null,
 
       foodlist: [],
+
+      typestore: null,
+
+      foodname: "",
     };
   },
 
@@ -111,54 +106,48 @@ export default {
     ...mapMutations(["updatecore"]),
     ...mapMutations(["submitlogout"]),
 
+    freeze() {
+      this.typestore = "냉동";
+    },
+
+    fresh() {
+      this.typestore = "냉장";
+    },
+
+    tempture() {
+      this.typestore = "실온";
+    },
+
     starter() {
-      let intervalId;
-      // let intervalIdArr = [];
-      // function setClearInterval() {
-      //   for (let i = 0; i < intervalIdArr.length; i++) {
-      //     clearInterval(intervalIdArr[i]);
-      //     console.log("초기화");
-      //   }
-      // }
-      this.container.style.display = "flex";
-      this.messgeContainer.style.display = "none";
-      console.log(this.dateForMaker());
-
-      clearInterval(intervalId);
-
-      // for (let i = 0; i < intervalIdArr.length; i++) {
-      //     clearInterval(intervalIdArr[i]);
-      //     console.log("초기화")
-      //   }
-      this.counterMaker(this.dateForMaker());
-      intervalId = setInterval(() => {
-        console.log("dddd", this.dateForMaker());
+      if (this.typestore == null || this.typestore == undefined) {
+        return;
+      } else {
+        // let intervalId;
+        this.container.style.display = "flex";
+        this.messgeContainer.style.display = "none";
+        console.log(this.dateForMaker());
+        // clearInterval(intervalId);
         this.counterMaker(this.dateForMaker());
-      }, 1000);
-      // intervalIdArr.push(intervalId);
-
-      // setClearInterval()
-      // clearInterval(intervalId);
-
-      let newfood = {
-        id: Date.now(),
-        limit: this.dateForMaker(),
-        // countdown: intervalId,
-      };
-
-      this.foodlist.push(newfood);
-      this.savefood(newfood)
-
-
+        // intervalId = setInterval(() => {
+        //   console.log("dddd", this.dateForMaker());
+        //   this.counterMaker(this.dateForMaker());
+        // }, 1000);
+        let newfood = {
+          id: Date.now(),
+          limit: this.dateForMaker(),
+          sttype: this.typestore,
+          name: this.foodname,
+        };
+        this.foodlist.push(newfood);
+        this.savefood(newfood);
+      }
     },
 
     dateForMaker() {
       const inputYear = document.querySelector("#target-year-input").value;
       const inputMonth = document.querySelector("#target-month-input").value;
       const inputDate = document.querySelector("#target-date-input").value;
-
       const dateFormat = `${inputYear}-${inputMonth}-${inputDate}`;
-
       return dateFormat;
     },
 
@@ -166,7 +155,6 @@ export default {
       const nowDate = new Date();
       const targetDate = new Date(data).setHours(0, 0, 0, 0);
       const remaining = (targetDate - nowDate) / 1000;
-
       // const remainingObj = {
       let remainingDate = Math.floor(remaining / 3600 / 24);
       let remainingHours = Math.floor(remaining / 3600) % 24;
@@ -176,7 +164,6 @@ export default {
 
       // const documentArr = ["days", "hours", "nin", "sec"];
       // const timeKeys = Object.keys(remainingObj);
-
       const format = function (time) {
         if (time < 10) {
           return "0" + time;
@@ -184,7 +171,6 @@ export default {
           return time;
         }
       };
-
       // let i = 0;
       // for (let tag of documentArr) {
       //   const remainingTime = format(remainingObj[timeKeys[i]]);
@@ -199,13 +185,11 @@ export default {
     returnele() {},
 
     agree(id) {
+      let item0 = this.$store.state.foodstore.filter(
+        (item) => item.id === id
+      )[0];
 
-      let item0 = this.$store.state.foodstore.filter((item) => item.id === id)[0]
-
-      this.insertfood(item0)
-
-
-
+      this.insertfood(item0);
 
       this.$router.push({ name: "lawagree" });
     },
@@ -230,7 +214,7 @@ export default {
     this.savedDate = localStorage.getItem("saved-date");
 
     this.container.style.display = "none";
-    this.messgeContainer.innerHTML = "<h3>D-Day를 입력해주세요.</h3>";
+    this.messgeContainer.innerHTML = "";
   },
 };
 </script>
