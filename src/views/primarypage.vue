@@ -31,12 +31,15 @@
     </div>
     <button @click="starter" class="btn">카운트다운 시작</button>
 
-    <button> 냉장고에 넣기 </button>
+    <!-- <button>냉장고에 넣기</button> -->
 
     <br /><br /><br />
 
     <div v-for="item in foodlist" :key="item.id">
-      {{ item.countdown }}
+      {{ item.limit }}
+
+  <button @click="agree(item.id)"> 상세 보기 </button>
+
     </div>
 
     <v-btn id="frontpage" @click="agree">회원 가입</v-btn>
@@ -55,6 +58,7 @@
 <script>
 // import axios from "axios";
 import { ValidationProvider } from "vee-validate";
+import { mapState, mapActions, mapMutations } from "vuex";
 
 export default {
   name: "Home",
@@ -83,6 +87,30 @@ export default {
   },
 
   methods: {
+    ...mapActions(["login"]),
+    ...mapMutations(["loginsuccess"]),
+    ...mapMutations(["addNFT2"]),
+    ...mapMutations(["sendNFT"]),
+    ...mapMutations(["sendNFTtitle"]),
+    ...mapMutations(["sendNFTcontent"]),
+    ...mapMutations(["addItems"]),
+    ...mapMutations(["sendNewItem"]),
+    ...mapMutations(["savefood"]),
+    ...mapMutations(["deleteNFT1"]),
+    ...mapMutations(["updateNFT1"]),
+    ...mapMutations(["addshop"]),
+    ...mapMutations(["deleteproduct"]),
+    ...mapMutations(["addboughtinfo"]),
+    ...mapMutations(["addsoldinfo"]),
+    ...mapMutations(["spendmoney"]),
+    ...mapMutations(["buyprocess"]),
+    ...mapMutations(["updateproduct"]),
+    ...mapMutations(["deleteanarray"]),
+    ...mapMutations(["insertfood"]),
+    ...mapMutations(["updateindeep"]),
+    ...mapMutations(["updatecore"]),
+    ...mapMutations(["submitlogout"]),
+
     starter() {
       let intervalId;
       // let intervalIdArr = [];
@@ -119,6 +147,9 @@ export default {
       };
 
       this.foodlist.push(newfood);
+      this.savefood(newfood)
+
+
     },
 
     dateForMaker() {
@@ -136,15 +167,15 @@ export default {
       const targetDate = new Date(data).setHours(0, 0, 0, 0);
       const remaining = (targetDate - nowDate) / 1000;
 
-      const remainingObj = {
-        remainingDate: Math.floor(remaining / 3600 / 24),
-        remainingHours: Math.floor(remaining / 3600) % 24,
-        remainingMin: Math.floor(remaining / 60) % 60,
-        remainingSec: Math.floor(remaining) % 60,
-      };
+      // const remainingObj = {
+      let remainingDate = Math.floor(remaining / 3600 / 24);
+      let remainingHours = Math.floor(remaining / 3600) % 24;
+      let remainingMin = Math.floor(remaining / 60) % 60;
+      let remainingSec = Math.floor(remaining) % 60;
+      // };
 
-      const documentArr = ["days", "hours", "nin", "sec"];
-      const timeKeys = Object.keys(remainingObj);
+      // const documentArr = ["days", "hours", "nin", "sec"];
+      // const timeKeys = Object.keys(remainingObj);
 
       const format = function (time) {
         if (time < 10) {
@@ -154,19 +185,28 @@ export default {
         }
       };
 
-      let i = 0;
-      for (let tag of documentArr) {
-        const remainingTime = format(remainingObj[timeKeys[i]]);
-        document.getElementById(tag).textContent = remainingTime;
-        i++;
-      }
-
-    
+      // let i = 0;
+      // for (let tag of documentArr) {
+      //   const remainingTime = format(remainingObj[timeKeys[i]]);
+      document.getElementById("days").textContent = format(remainingDate);
+      document.getElementById("hours").textContent = format(remainingHours);
+      document.getElementById("nin").textContent = format(remainingMin);
+      document.getElementById("sec").textContent = format(remainingSec);
+      //   i++;
+      // }
     },
 
     returnele() {},
 
-    agree() {
+    agree(id) {
+
+      let item0 = this.$store.state.foodstore.filter((item) => item.id === id)[0]
+
+      this.insertfood(item0)
+
+
+
+
       this.$router.push({ name: "lawagree" });
     },
 

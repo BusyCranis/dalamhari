@@ -12,7 +12,9 @@ export default new Vuex.Store({
     // paththis: window.location.pathname
 
 
-    foodstore: []
+    foodstore: [],
+
+    selectedFood: null
 
 
 
@@ -28,6 +30,18 @@ export default new Vuex.Store({
     loginsuccess(state) {
       state.islogin = true
     },
+
+    savefood(state, payload) {
+
+      state.foodstore.push(payload)
+
+    },
+
+    insertfood(state, payload) {
+
+      state.selectedFood = payload
+
+    }
 
 
 

@@ -1,36 +1,24 @@
 <template>
   <div>
-    <br><br>
+    <br /><br />
     이용 약관
     <br /><br />
     <div class="home contain justify-center">
       <div style="overflow: scroll" class="innerscroll">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. OfficiisLorem
-        ipsum dolor sit amet consectetur adipisicing elit. Officiisuasi iusto
-        alias sequi, aut aliquid voluptatibus commodi! Minima, eum facilis dicta
-        esse molestias vero hic laudantium provident nisi eos facilis dicta esse
-        molestias vero hic laudantium provident nisi eosuasi iusto alias sequi,
-        aut aliquid voluptatibus commodi! Minima, eum quasi iusto alias sequi,
-        aut aliquid voluptatibus commodi! Minima, eum quasi iusto alias sequi,
-        aut aliquid voluptatibus commodi! Minima, eumuasi iusto alias sequi, aut
-        aliquid voluptatibus commodi! Minima, eum voluptates?Lorem ipsum dolor
-        sit amet consectetur adipisicing elit. Officiis voluptates?Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Officiis facilis dicta esse
-        molestias vero hic laudantium provident nisi eosvoluptates?Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Officiisuasi iusto alias
-        sequi, aut aliquid voluptatibus commodi! Minima, eum facilis dicta esse
-        molestias vero hic laudantium provident nisi eos quasi iusto alias
-        sequi, aut aliquid voluptatibus commodi! Minima, eumuasi iusto alias
-        sequi, aut aliquid voluptatibus commodi! Minima, eum voluptates? quasi
-        iusto alias sequi, aut aliquid voluptatibus commodi! Minima, eum quasi
-        iusto alias sequi, aut aliquid voluptatibus commodi! Minima, eum
-        voluptates?uasi iusto alias sequi, aut aliquid voluptatibus commodi!
-        Minima, eumuasi iusto alias sequi, aut aliquid voluptatibus commodi!
-        Minima, eumuasi iusto alias sequi, aut aliquid voluptatibus commodi!
-        Minima, eum voluptates? quasi iusto alias sequi, aut aliquid
-        voluptatibus commodi! Minima, eumuasi iusto alias sequi, aut aliquid
-        voluptatibus commodi! Minima, eumuasi iusto alias sequi, aut aliquid
-        voluptatibus commodi! Minima, eum
+        <div>
+          {{ $store.state.selectedFood.limit }}
+
+          {{ this.remainingtime0 }}일
+
+          {{ this.remainingtime1 }}시간
+
+          {{ this.remainingtime2 }}분
+
+          {{ this.remainingtime3 }}초
+        </div>
+
+        <!-- <button @click="starter">시작</button> -->
+
         <br /><br /><br /><br />
         <br /><br /><br /><br />
         <br /><br /><br /><br /><br /><br /><br />
@@ -41,9 +29,9 @@
 
     <br />
 
-    <v-btn @click="agree">동의</v-btn>
+    <!-- <v-btn @click="agree">동의</v-btn> -->
 
-    <br><br><br><br><br>
+    <br /><br /><br /><br /><br />
   </div>
 </template>
 
@@ -68,13 +56,77 @@ export default {
       userlist: [],
 
       scrollInvoked: 0,
+
+      remainingtime0: null,
+      remainingtime1: null,
+      remainingtime2: null,
+      remainingtime3: null,
     };
   },
 
   methods: {
-    agree() {
+    starter() {
+      let intervalId;
+
+      // this.container.style.display = "flex";
+      // this.messgeContainer.style.display = "none";
+      console.log(this.$store.state.selectedFood.limit);
+
+      clearInterval(intervalId);
+
+      this.counterMaker(this.$store.state.selectedFood.limit);
+      intervalId = setInterval(() => {
+        console.log("dddd", this.$store.state.selectedFood.limit);
+        this.counterMaker(this.$store.state.selectedFood.limit);
+      }, 1000);
+
+      // let newfood = {
+      //   id: Date.now(),
+      //   limit: this.dateForMaker(),
+      // };
+      // this.foodlist.push(newfood);
+      // this.savefood(newfood);
+    },
+
+    // dateForMaker() {
+    //   const inputYear = document.querySelector("#target-year-input").value;
+    //   const inputMonth = document.querySelector("#target-month-input").value;
+    //   const inputDate = document.querySelector("#target-date-input").value;
+    //   const dateFormat = `${inputYear}-${inputMonth}-${inputDate}`;
+    //   return dateFormat;
+    // },
+
+    counterMaker(data) {
+      const nowDate = new Date();
+      const targetDate = new Date(data).setHours(0, 0, 0, 0);
+      const remaining = (targetDate - nowDate) / 1000;
+
+      let remainingDate = Math.floor(remaining / 3600 / 24);
+      let remainingHours = Math.floor(remaining / 3600) % 24;
+      let remainingMin = Math.floor(remaining / 60) % 60;
+      let remainingSec = Math.floor(remaining) % 60;
+
+      const format = function (time) {
+        if (time < 10) {
+          return "0" + time;
+        } else {
+          return time;
+        }
+      };
+
+      this.remainingtime0 = format(remainingDate);
+      this.remainingtime1 = format(remainingHours);
+      this.remainingtime2 = format(remainingMin);
+      this.remainingtime3 = format(remainingSec);
+    },
+
+    agree01() {
       this.$router.push({ name: "signup" });
     },
+  },
+
+  mounted() {
+    this.starter();
   },
 };
 </script>
