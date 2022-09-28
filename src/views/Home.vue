@@ -9,81 +9,19 @@
                 <!-- md="6" xl="8" -->
                 <br /><br /><br /><br />
                 <h1 class="display-2 font-weight-bold mb-4 hhe1">
-                  "밝고 투명한 사회"
+                
                 </h1>
                 <br /><br />
                 <h4 class="font-weight-light hhe1 hhe2">
-                  풀뿌리 숙의민주주의를 위한 <br />
-                  세상에 없던 지역(위치) 기반 커뮤니티<br />
-                  "이게 나라냐?"<br />
-                  현 정권은 민생을 외면하고 수사에만 집중하는<br />
-                  검찰국가를 세우려하고 있다.<br />
-                  이제는 우리가 직접 나서야 한다.<br />
-                  전국 지역장을 3,000명을 모집한다.<br />
-                  아래에서부터 민의를 수렴하여 국가의 주요 이슈까지<br />
-                  시민이 직접 결정하는 커뮤니티 시스템<br />
-                  지역장이 되고싶다면 가입하라
+           
                 </h4>
                 <br /><br /><br />
                 <v-btn class="frontpage" @click="agree"    outlined>
-                  <h4 class="btncolor"> 지역장으로 가입하기 </h4>
+                  <h4 class="btncolor"> 가입하기 </h4>
                 </v-btn>
-                <!-- <v-btn
-                  rounded
-                  outlined
-                  large
-                  dark
-                  @click="$vuetify.goTo('#features')"
-                  class="mt-5"
-                >
-                  지역장 신청하기
-                  <v-icon class="ml-2">mdi-arrow-down</v-icon>
-                </v-btn> -->
-                <!-- <div class="video d-flex align-center py-4">
-                  <a @click.stop="dialog = true" class="playBut">
-                    <svg
-                      version="1.1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-                      x="0px"
-                      y="0px"
-                      width="60px"
-                      height="60px"
-                      viewBox="0 0 213.7 213.7"
-                      enable-background="new 0 0 213.7 213.7"
-                      xml:space="preserve"
-                    >
-                      <polygon
-                        class="triangle"
-                        id="XMLID_18_"
-                        fill="none"
-                        stroke-width="7"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-miterlimit="10"
-                        points="73.5,62.5 148.5,105.8 73.5,149.1 "
-                      />
-
-                      <circle
-                        class="circle"
-                        id="XMLID_17_"
-                        fill="none"
-                        stroke-width="7"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-miterlimit="10"
-                        cx="106.8"
-                        cy="106.8"
-                        r="103.3"
-                      />
-                    </svg>
-                  </a>
-                  <p class="subheading ml-2 mb-0">Assista o vídeo</p>
-                </div> -->
+       
               </v-col>
-              <!-- <v-col cols="12" md="6" xl="4" class="hidden-sm-and-down">
-              </v-col> -->
+          
             </v-row>
           </v-col>
         </v-row>
@@ -95,12 +33,7 @@
         <v-row align="center" justify="center">
           <v-col cols="12">
             <v-row align="center" justify="space-around">
-              <!-- <v-col cols="12" class="text-center">
-              <h1 class="font-weight-light display-2">Title</h1>
-              <h1 class="font-weight-light">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </h1>
-            </v-col> -->
+         
               <v-col
                 cols="12"
                 sm="4"
@@ -166,11 +99,11 @@ export default {
         {
           img: require("@/assets/img/icon2.png"),
           title: "지역장이 되세요",
-          text: "지역장이 되시면 현실 정치의 모든 현안들에 대한 의견들을 아래로부터 모아서 실제 정치인(대통령,국회의원,지방자치단체장)에게 전달하고 그들을 움직일수있습니다.",
+          text: "",
         },
         {
           img: require("@/assets/img/icon1.png"),
-          title: "가장 큰 온라인 정치 플랫폼",
+          title: "",
           text: "정치에 관심이 많은 3백만명의 회원들이 활동하는 플랫폼입니다. 모든 회원들은 본인이 관심있는 정치적 사안에 대한 의견을 제시하실수있으며 투표가 필요한 사안에 대해서는 투표를 신청하실수있습니다.",
         },
         {

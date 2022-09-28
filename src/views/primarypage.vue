@@ -1,7 +1,8 @@
 <template>
   <div class="home">
       <br> <br>
-    우만지에 오신 것을 환영합니다.
+    안녕하세요!
+    오늘의 유통기한을 안내합니다
     <br />
     <br /><br />
     <v-btn id="frontpage" @click="agree">회원 가입</v-btn>
