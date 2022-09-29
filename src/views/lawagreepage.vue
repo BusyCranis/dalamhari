@@ -38,6 +38,7 @@
 <script>
 import axios from "axios";
 import { ValidationProvider } from "vee-validate";
+import { mapState, mapActions, mapMutations } from "vuex";
 
 export default {
   name: "Home",
@@ -47,12 +48,7 @@ export default {
 
   data() {
     return {
-      form: {
-        email: "",
-        password: "",
-        passwordConfirm: "",
-        name: "",
-      },
+      
       userlist: [],
 
       scrollInvoked: 0,
@@ -65,6 +61,30 @@ export default {
   },
 
   methods: {
+    ...mapActions(["login"]),
+    ...mapMutations(["loginsuccess"]),
+    ...mapMutations(["addNFT2"]),
+    ...mapMutations(["sendNFT"]),
+    ...mapMutations(["sendNFTtitle"]),
+    ...mapMutations(["sendNFTcontent"]),
+    ...mapMutations(["addItems"]),
+    ...mapMutations(["sendNewItem"]),
+    ...mapMutations(["savefood"]),
+    ...mapMutations(["deleteNFT1"]),
+    ...mapMutations(["updateNFT1"]),
+    ...mapMutations(["addshop"]),
+    ...mapMutations(["deleteproduct"]),
+    ...mapMutations(["addboughtinfo"]),
+    ...mapMutations(["addsoldinfo"]),
+    ...mapMutations(["spendmoney"]),
+    ...mapMutations(["buyprocess"]),
+    ...mapMutations(["updateproduct"]),
+    ...mapMutations(["deleteanarray"]),
+    ...mapMutations(["insertfood"]),
+    ...mapMutations(["loadfood"]),
+    ...mapMutations(["updatecore"]),
+    ...mapMutations(["submitlogout"]),
+
     starter() {
       let intervalId;
 

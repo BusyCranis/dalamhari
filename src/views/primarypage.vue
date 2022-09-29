@@ -2,29 +2,25 @@
   <div class="home">
     <br />
     <br />
-    <p> 안녕하세요! 오늘의 유통기한을 안내합니다  </p>
+    <p>안녕하세요! 오늘의 유통기한을 안내합니다</p>
 
-    <br>
+    <br />
 
-    <div>유통기한</div>
+    <button @click="gologin">추가</button>
 
+    <!-- <div>유통기한</div>
     <div id="target-selector">
       <input id="target-year-input" class="target-input" size="5" />년
       <input id="target-month-input" class="target-input" size="5" />월
       <input id="target-date-input" class="target-input" size="5" />일
     </div>
-
     <button @click="freeze">냉동 보관</button>
     <button @click="fresh">냉장 보관</button>
     <button @click="tempture">실온 보관</button>
-
     <br />
-
     이름: <input v-model="foodname" />
-
     <br />
-
-    <button @click="starter" class="btn">보관하기</button>
+    <button @click="starter0" class="btn">보관하기</button> -->
 
     <br /><br /><br />
 
@@ -60,12 +56,7 @@ export default {
 
   data() {
     return {
-      form: {
-        email: "",
-        password: "",
-        passwordConfirm: "",
-        name: "",
-      },
+     
 
       userlist: [],
 
@@ -123,11 +114,11 @@ export default {
       await axios.get("http://localhost:5150/member/accounts").then((res) => {
         console.log(res.data.posts);
         this.foodlist = res.data.posts;
-        this.loadfood(res.data.posts)
+        this.loadfood(res.data.posts);
       });
     },
 
-    async starter() {
+    async starter0() {
       if (this.typestore == null || this.typestore == undefined) {
         return;
       } else {
@@ -136,10 +127,10 @@ export default {
         // this.messgeContainer.style.display = "none";
         console.log(this.dateForMaker());
         // clearInterval(intervalId);
-        this.counterMaker(this.dateForMaker());
+        this.counterMaker0(this.dateForMaker());
         // intervalId = setInterval(() => {
         //   console.log("dddd", this.dateForMaker());
-        //   this.counterMaker(this.dateForMaker());
+        //   this.counterMaker0(this.dateForMaker());
         // }, 1000);
         let newfood = {
           id: Date.now(),
@@ -163,7 +154,7 @@ export default {
       return dateFormat;
     },
 
-    counterMaker(data) {
+    counterMaker0(data) {
       const nowDate = new Date();
       const targetDate = new Date(data).setHours(0, 0, 0, 0);
       const remaining = (targetDate - nowDate) / 1000;
@@ -200,7 +191,7 @@ export default {
     },
 
     gologin() {
-      this.$router.push({ name: "login" });
+      this.$router.push({ name: "signup" });
     },
 
     checklogin() {
