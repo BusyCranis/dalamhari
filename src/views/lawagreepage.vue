@@ -6,9 +6,9 @@
     <div class="home contain justify-center">
       <div style="overflow: scroll" class="innerscroll">
         <div>
-          {{ $store.state.selectedFood.limit }}
+          <p>유통기한: {{ $store.state.selectedFood.limit }}까지</p>
 
-          {{ this.remainingtime0 }}일
+          남은 시간: {{ this.remainingtime0 }}일
 
           {{ this.remainingtime1 }}시간
 
@@ -36,7 +36,7 @@
 </template>
 
 <script>
-// import axios from "axios";
+import axios from "axios";
 import { ValidationProvider } from "vee-validate";
 
 export default {

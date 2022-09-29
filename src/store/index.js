@@ -37,6 +37,12 @@ export default new Vuex.Store({
 
     },
 
+    loadfood(state, payload) {
+
+      state.foodstore = payload
+
+    },
+
     insertfood(state, payload) {
 
       state.selectedFood = payload

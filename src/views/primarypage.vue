@@ -2,11 +2,12 @@
   <div class="home">
     <br />
     <br />
-    안녕하세요! 오늘의 유통기한을 안내합니다
+    <p> 안녕하세요! 오늘의 유통기한을 안내합니다  </p>
 
-    <div id="d-day-container"></div>
-    <div id="d-day-message"></div>
+    <br>
+
     <div>유통기한</div>
+
     <div id="target-selector">
       <input id="target-year-input" class="target-input" size="5" />년
       <input id="target-month-input" class="target-input" size="5" />월
@@ -47,7 +48,7 @@
 </template>
 
 <script>
-// import axios from "axios";
+import axios from "axios";
 import { ValidationProvider } from "vee-validate";
 import { mapState, mapActions, mapMutations } from "vuex";
 
@@ -73,7 +74,7 @@ export default {
       // intervalIdArr: [],
       savedDate: null,
 
-      foodlist: [],
+      foodlist: null,
 
       typestore: null,
 
@@ -102,7 +103,7 @@ export default {
     ...mapMutations(["updateproduct"]),
     ...mapMutations(["deleteanarray"]),
     ...mapMutations(["insertfood"]),
-    ...mapMutations(["updateindeep"]),
+    ...mapMutations(["loadfood"]),
     ...mapMutations(["updatecore"]),
     ...mapMutations(["submitlogout"]),
 
@@ -118,13 +119,21 @@ export default {
       this.typestore = "실온";
     },
 
-    starter() {
+    async bring() {
+      await axios.get("http://localhost:5150/member/accounts").then((res) => {
+        console.log(res.data.posts);
+        this.foodlist = res.data.posts;
+        this.loadfood(res.data.posts)
+      });
+    },
+
+    async starter() {
       if (this.typestore == null || this.typestore == undefined) {
         return;
       } else {
         // let intervalId;
-        this.container.style.display = "flex";
-        this.messgeContainer.style.display = "none";
+        // this.container.style.display = "flex";
+        // this.messgeContainer.style.display = "none";
         console.log(this.dateForMaker());
         // clearInterval(intervalId);
         this.counterMaker(this.dateForMaker());
@@ -138,8 +147,10 @@ export default {
           sttype: this.typestore,
           name: this.foodname,
         };
-        this.foodlist.push(newfood);
+        // this.foodlist.push(newfood);
         this.savefood(newfood);
+
+        await axios.post("http://localhost:5150/root/post", newfood);
       }
     },
 
@@ -147,6 +158,7 @@ export default {
       const inputYear = document.querySelector("#target-year-input").value;
       const inputMonth = document.querySelector("#target-month-input").value;
       const inputDate = document.querySelector("#target-date-input").value;
+
       const dateFormat = `${inputYear}-${inputMonth}-${inputDate}`;
       return dateFormat;
     },
@@ -155,15 +167,12 @@ export default {
       const nowDate = new Date();
       const targetDate = new Date(data).setHours(0, 0, 0, 0);
       const remaining = (targetDate - nowDate) / 1000;
-      // const remainingObj = {
+
       let remainingDate = Math.floor(remaining / 3600 / 24);
       let remainingHours = Math.floor(remaining / 3600) % 24;
       let remainingMin = Math.floor(remaining / 60) % 60;
       let remainingSec = Math.floor(remaining) % 60;
-      // };
 
-      // const documentArr = ["days", "hours", "nin", "sec"];
-      // const timeKeys = Object.keys(remainingObj);
       const format = function (time) {
         if (time < 10) {
           return "0" + time;
@@ -171,15 +180,11 @@ export default {
           return time;
         }
       };
-      // let i = 0;
-      // for (let tag of documentArr) {
-      //   const remainingTime = format(remainingObj[timeKeys[i]]);
-      document.getElementById("days").textContent = format(remainingDate);
-      document.getElementById("hours").textContent = format(remainingHours);
-      document.getElementById("nin").textContent = format(remainingMin);
-      document.getElementById("sec").textContent = format(remainingSec);
-      //   i++;
-      // }
+
+      // document.getElementById("days").textContent = format(remainingDate);
+      // document.getElementById("hours").textContent = format(remainingHours);
+      // document.getElementById("nin").textContent = format(remainingMin);
+      // document.getElementById("sec").textContent = format(remainingSec);
     },
 
     returnele() {},
@@ -208,13 +213,13 @@ export default {
   },
 
   mounted() {
-    this.messgeContainer = document.querySelector("#d-day-message");
-    this.container = document.querySelector("#d-day-container");
-    // this.intervalIdArr = [];
-    this.savedDate = localStorage.getItem("saved-date");
+    // this.messgeContainer = document.querySelector("#d-day-message");
+    // this.container = document.querySelector("#d-day-container");
+    // this.savedDate = localStorage.getItem("saved-date");
+    // this.container.style.display = "none";
+    // this.messgeContainer.innerHTML = "";
 
-    this.container.style.display = "none";
-    this.messgeContainer.innerHTML = "";
+    this.bring();
   },
 };
 </script>

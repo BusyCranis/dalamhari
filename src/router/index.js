@@ -15,11 +15,11 @@ import primarypage from '../views/primarypage.vue'
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
+  // {
+  //   path: '/',
+  //   name: 'Home',
+  //   component: Home
+  // },
   {
     path: '/about',
     name: 'About',
@@ -28,7 +28,7 @@ const routes = [
 
   {
     path: '/*',
-    redirect: { name: 'Home' }
+    redirect: { name: 'primarypage' }
   },
 
   {
@@ -57,7 +57,7 @@ const routes = [
   },
 
   {
-    path: '/front',
+    path: '/',
     name: 'primarypage',
     component: primarypage
   },
