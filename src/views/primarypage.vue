@@ -25,16 +25,16 @@
     <br /><br /><br />
 
     <div v-for="item in foodlist" :key="item.id">
-      {{ item.limit }}
+      <div @click="agree(item.id)">
+        {{ item.name }}
 
-      <button @click="agree(item.id)">상세 보기</button>
+        {{ item.limit }}
+
+        {{ counterMaker(item.limit) }}일 남았습니다
+
+        <!-- <button @click="agree(item.id)">상세 보기</button> -->
+      </div>
     </div>
-
-    <!-- <v-btn id="frontpage" @click="agree">회원 가입</v-btn>
-    <br /><br />
-    <v-btn id="frontpage" @click="gologin">로그인</v-btn>
-    <br /><br />
-    <v-btn id="frontpage" @click="checklogin">개발 진척 상황 확인</v-btn> -->
 
     <br /><br /><br /><br /><br />
     <br /><br /><br /><br /><br /><br />
@@ -56,8 +56,6 @@ export default {
 
   data() {
     return {
-     
-
       userlist: [],
 
       messgeContainer: null,
@@ -70,6 +68,13 @@ export default {
       typestore: null,
 
       foodname: "",
+
+      limitlist: null,
+
+      remainingtime0: null,
+      remainingtime1: null,
+      remainingtime2: null,
+      remainingtime3: null,
     };
   },
 
@@ -112,10 +117,55 @@ export default {
 
     async bring() {
       await axios.get("http://localhost:5150/member/accounts").then((res) => {
-        console.log(res.data.posts);
+        // console.log(res.data.posts);
         this.foodlist = res.data.posts;
         this.loadfood(res.data.posts);
+        // this.limitlist = this.foodlist.map((food) => {
+        //   return this.counterMaker(food.limit);
+        // });
+        // console.log(this.limitlist);
       });
+    },
+
+    starter() {
+      let intervalId;
+
+      console.log(this.$store.state.selectedFood.limit);
+
+      clearInterval(intervalId);
+
+      this.counterMaker(this.$store.state.selectedFood.limit);
+
+      // intervalId = setInterval(() => {
+      //   console.log("dddd", this.$store.state.selectedFood.limit);
+      //   this.counterMaker(this.$store.state.selectedFood.limit);
+      // }, 1000);
+    },
+
+    counterMaker(data) {
+      const nowDate = new Date();
+      const targetDate = new Date(data).setHours(0, 0, 0, 0);
+      const remaining = (targetDate - nowDate) / 1000;
+
+      let remainingDate = Math.floor(remaining / 3600 / 24);
+      let remainingHours = Math.floor(remaining / 3600) % 24;
+      let remainingMin = Math.floor(remaining / 60) % 60;
+      let remainingSec = Math.floor(remaining) % 60;
+
+      const format = function (time) {
+        if (time < 10) {
+          return "0" + time;
+        } else {
+          return time;
+        }
+      };
+
+      this.remainingtime0 = format(remainingDate);
+      this.remainingtime1 = format(remainingHours);
+      this.remainingtime2 = format(remainingMin);
+      this.remainingtime3 = format(remainingSec);
+
+      return format(remainingDate);
     },
 
     async starter0() {
@@ -204,12 +254,6 @@ export default {
   },
 
   mounted() {
-    // this.messgeContainer = document.querySelector("#d-day-message");
-    // this.container = document.querySelector("#d-day-container");
-    // this.savedDate = localStorage.getItem("saved-date");
-    // this.container.style.display = "none";
-    // this.messgeContainer.innerHTML = "";
-
     this.bring();
   },
 };

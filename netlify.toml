@@ -6,12 +6,6 @@
 
 
 
-[[redirects]]
-  from = "/member/accounts"
-  to = "http://49.247.26.149:5100/member/accounts"
-  status = 200
-
-
   [[redirects]]
   from = "/post/method"
   to = "http://49.247.26.149:5100/post/method"

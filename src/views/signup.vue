@@ -105,22 +105,14 @@ export default {
     ...mapMutations(["updatecore"]),
     ...mapMutations(["submitlogout"]),
 
-
-
     async starter() {
       if (this.typestore == null || this.typestore == undefined) {
         return;
       } else {
-        // let intervalId;
-        // this.container.style.display = "flex";
-        // this.messgeContainer.style.display = "none";
         console.log(this.dateForMaker());
-        // clearInterval(intervalId);
+     
         this.counterMaker(this.dateForMaker());
-        // intervalId = setInterval(() => {
-        //   console.log("dddd", this.dateForMaker());
-        //   this.counterMaker(this.dateForMaker());
-        // }, 1000);
+        
         let newfood = {
           id: Date.now(),
           limit: this.dateForMaker(),

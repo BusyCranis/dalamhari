@@ -1,11 +1,11 @@
 <template>
   <div>
     <br /><br />
-    이용 약관
-    <br /><br />
     <div class="home contain justify-center">
       <div style="overflow: scroll" class="innerscroll">
         <div>
+          {{ $store.state.selectedFood.name }}
+
           <p>유통기한: {{ $store.state.selectedFood.limit }}까지</p>
 
           남은 시간: {{ this.remainingtime0 }}일
@@ -17,7 +17,11 @@
           {{ this.remainingtime3 }}초
         </div>
 
-        <!-- <button @click="starter">시작</button> -->
+        <button @click="agree01">수정</button>
+
+        <!-- <input v-model="year" />년 <input v-model="month" />월
+        <input v-model="day" />일
+        <button @click="requpdate">시작</button> -->
 
         <br /><br /><br /><br />
         <br /><br /><br /><br />
@@ -28,8 +32,6 @@
     </div>
 
     <br />
-
-    <!-- <v-btn @click="agree">동의</v-btn> -->
 
     <br /><br /><br /><br /><br />
   </div>
@@ -48,7 +50,6 @@ export default {
 
   data() {
     return {
-      
       userlist: [],
 
       scrollInvoked: 0,
@@ -57,6 +58,11 @@ export default {
       remainingtime1: null,
       remainingtime2: null,
       remainingtime3: null,
+
+      year: null,
+      month: null,
+      day: null,
+      foodname: null,
     };
   },
 
@@ -85,12 +91,25 @@ export default {
     ...mapMutations(["updatecore"]),
     ...mapMutations(["submitlogout"]),
 
+    async requpdate() {
+      console.log(this.$store.state.selectedFood._id);
+
+      let limit = this.year + "-" + this.month + "-" + this.day;
+
+      console.log(limit);
+
+      await axios.post("http://localhost:5150/request/update", {
+        yourid: this.$store.state.selectedFood._id,
+        limit: limit,
+      });
+    },
+
     starter() {
       let intervalId;
 
       // this.container.style.display = "flex";
       // this.messgeContainer.style.display = "none";
-      console.log(this.$store.state.selectedFood.limit);
+      console.log(this.$store.state.selectedFood);
 
       clearInterval(intervalId);
 
@@ -141,7 +160,7 @@ export default {
     },
 
     agree01() {
-      this.$router.push({ name: "signup" });
+      this.$router.push({ name: "login" });
     },
   },
 
