@@ -8,20 +8,6 @@
 
     <button @click="gologin">추가</button>
 
-    <!-- <div>유통기한</div>
-    <div id="target-selector">
-      <input id="target-year-input" class="target-input" size="5" />년
-      <input id="target-month-input" class="target-input" size="5" />월
-      <input id="target-date-input" class="target-input" size="5" />일
-    </div>
-    <button @click="freeze">냉동 보관</button>
-    <button @click="fresh">냉장 보관</button>
-    <button @click="tempture">실온 보관</button>
-    <br />
-    이름: <input v-model="foodname" />
-    <br />
-    <button @click="starter0" class="btn">보관하기</button> -->
-
     <br /><br /><br />
 
     <div v-for="item in foodlist" :key="item.id">
@@ -32,7 +18,6 @@
 
         {{ counterMaker(item.limit) }}일 남았습니다
 
-        <!-- <button @click="agree(item.id)">상세 보기</button> -->
       </div>
     </div>
 
@@ -116,7 +101,7 @@ export default {
     },
 
     async bring() {
-      await axios.get("http://localhost:5150/member/accounts").then((res) => {
+      await axios.get("http://49.247.26.149:5150/member/accounts").then((res) => {
         // console.log(res.data.posts);
         this.foodlist = res.data.posts;
         this.loadfood(res.data.posts);
@@ -191,7 +176,7 @@ export default {
         // this.foodlist.push(newfood);
         this.savefood(newfood);
 
-        await axios.post("http://localhost:5150/root/post", newfood);
+        await axios.post("http://49.247.26.149:5150/root/post", newfood);
       }
     },
 
