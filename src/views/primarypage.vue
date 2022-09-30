@@ -21,6 +21,8 @@
       </div>
     </div>
 
+    <button @click="gocomp">추가</button>
+
     <br /><br /><br /><br /><br />
     <br /><br /><br /><br /><br /><br />
     <br /><br /><br /><br /><br /><br />
@@ -223,6 +225,10 @@ export default {
       this.insertfood(item0);
 
       this.$router.push({ name: "lawagree" });
+    },
+
+    gocomp() {
+      this.$router.push({ name: "About" });
     },
 
     gologin() {
