@@ -4,7 +4,6 @@
 
     <div class="home contain justify-center">
       <div style="overflow: scroll" class="innerscroll">
-
         <input v-model="year" />년 <input v-model="month" />월
         <input v-model="day" />일
 
@@ -85,10 +84,14 @@ export default {
 
       console.log(limit);
 
-      await axios.post("http://localhost:5150/request/update", {
-        yourid: this.$store.state.selectedFood._id,
-        limit: limit,
-      });
+      await axios
+        .post("http://localhost:5150/request/update", {
+          yourid: this.$store.state.selectedFood._id,
+          limit: limit,
+        })
+        .then((res) => console.log(res.data));
+
+      this.$router.push({ name: "primarypage" });
     },
 
     starter() {
