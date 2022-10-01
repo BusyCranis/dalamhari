@@ -84,7 +84,6 @@ export default {
 <template>
   <div id="tweet" v-show="isVideoMode">
     <img :src="userData.pictureUrl" />
-    <!-- https://100k-faces.glitch.me/random-image" class="avatar-image -->
     <div class="tweet-content">
       <div class="user-info">
         <p class="name"> 냉장고 {{ userData.firstName + ' ' + userData.lastName }}</p>
@@ -103,6 +102,7 @@ export default {
 
           </span>
         </p>
+        
       </div>
       <div class="buttons">
         <div class="button" id="reply">
