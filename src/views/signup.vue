@@ -22,7 +22,7 @@
 
           <br />
 
-          <button @click="starter" class="btn">저장하기</button>
+          <button @click="starter" >저장하기</button>
         </div>
 
         <!-- <button @click="starter">시작</button> -->

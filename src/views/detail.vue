@@ -5,7 +5,7 @@
       id="app"
       class="fill-height"
       fluid
-      style="width: 100%; margin-bottom: 45px"
+      style="margin-bottom: 45px"
     >
       <routermainview class="fill-height"> </routermainview>
     </v-container>
