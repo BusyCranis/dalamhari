@@ -20,7 +20,7 @@
       </div>
     </div>
 
-    <!-- <button @click="gocomp">추가</button> -->
+    <button @click="gocomp">look design</button>
 
     <!-- <br /><br /><br /><br /><br />
     <br /><br /><br /><br /><br /><br />
