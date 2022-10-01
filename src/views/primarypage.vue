@@ -22,10 +22,6 @@
 
     <button @click="gocomp">look design</button>
 
-
-
-
-
     <!-- <br /><br /><br /><br /><br />
     <br /><br /><br /><br /><br /><br />
     <br /><br /><br /><br /><br /><br />
@@ -295,10 +291,4 @@ h1 {
 .d-day-child-continer span {
   font-size: 1.3rem;
 }
-
-
-
-
-
-
 </style>

@@ -4,6 +4,10 @@ import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify'
 
+import 'normalize.css'
+
+import 'reset-css'
+
 import '@oruga-ui/oruga/dist/oruga.css'
 
 import Oruga from '@oruga-ui/oruga'
