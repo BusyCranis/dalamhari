@@ -27,7 +27,7 @@
         v-model="filter"
         name="all"
         native-value="all"
-        @click="isOpen = -1"
+        @click="isOpen"
       >
         All
       </o-radio>
@@ -35,7 +35,7 @@
         v-model="filter"
         name="featured"
         native-value="featured"
-        @click="isOpen = -1"
+        @click="isOpen"
       >
         Featured
       </o-radio>
@@ -43,7 +43,7 @@
         v-model="filter"
         name="faster"
         native-value="faster"
-        @click="isOpen = -1"
+        @click="isOpen"
       >
         Faster
       </o-radio>
@@ -51,7 +51,7 @@
     <article
       class="p-4 flex space-x-4"
       v-for="(recipe, index) of filteredRecipes"
-      :class="{ hidden: !isLoading }"
+     
       :key="`loading-${index}`"
     >
       <div>
@@ -66,7 +66,7 @@
     <o-collapse
       animation="slide"
       v-for="(recipe, index) of filteredRecipes"
-      :class="{ hidden: isLoading }"
+     
       :key="index"
       :open="isOpen == index"
       @open="isOpen = index"

@@ -22,6 +22,10 @@
 
     <button @click="gocomp">look design</button>
 
+
+
+
+
     <!-- <br /><br /><br /><br /><br />
     <br /><br /><br /><br /><br /><br />
     <br /><br /><br /><br /><br /><br />
@@ -229,7 +233,7 @@ export default {
     },
 
     gocomp() {
-      this.$router.push({ name: "About" });
+      this.$router.push({ name: "cleft" });
     },
 
     gologin() {
@@ -251,7 +255,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #frontpage {
   width: 225px;
 }
@@ -291,4 +295,10 @@ h1 {
 .d-day-child-continer span {
   font-size: 1.3rem;
 }
+
+
+
+
+
+
 </style>

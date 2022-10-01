@@ -139,6 +139,13 @@ const router = new VueRouter({
         import(/* webpackChunkName: "about" */ "../views/About.vue"),
     },
 
+    {
+      path: "/cleft",
+      name: "cleft",
+      component: () =>
+        import(/* webpackChunkName: "about" */ "../views/CLeft.vue"),
+    },
+
 
     {
       path: "/*",
