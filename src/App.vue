@@ -12,20 +12,19 @@
 
 <script>
 import { mapState, mapActions, mapMutations } from "vuex";
-import Footer from "./views/footer.vue";
-import footer from "./views/footer.vue";
+
 
 export default {
   name: "App",
 
   data() {
     return {
-      footer,
+     
     };
   },
 
   components: {
-    Footer,
+   
   },
 
   methods: {
