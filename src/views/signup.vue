@@ -1,8 +1,6 @@
 <template>
   <div>
     <br /><br />
-    이용 약관
-    <br /><br />
     <div class="home contain justify-center">
       <div style="overflow: scroll" class="innerscroll">
         <div>
