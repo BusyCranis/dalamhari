@@ -14,6 +14,8 @@
       <div @click="agree(item.id)">
         {{ item.name }}
 
+        {{ item.sttype }}
+
         {{ item.limit }}
 
         {{ counterMaker(item.limit) }}일 남았습니다

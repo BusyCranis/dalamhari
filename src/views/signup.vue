@@ -24,7 +24,7 @@
 
           <br />
 
-          <button @click="starter" class="btn">보관하기</button>
+          <button @click="starter" class="btn">저장하기</button>
         </div>
 
         <!-- <button @click="starter">시작</button> -->
@@ -164,15 +164,15 @@ export default {
     },
 
     freeze() {
-      this.typestore = "냉동";
+      this.typestore = "냉동 보관";
     },
 
     fresh() {
-      this.typestore = "냉장";
+      this.typestore = "냉장 보관";
     },
 
     tempture() {
-      this.typestore = "실온";
+      this.typestore = "실온 보관";
     },
 
     agree01() {

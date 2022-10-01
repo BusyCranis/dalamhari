@@ -88,9 +88,9 @@ export default {
     <div class="tweet-content">
       <div class="user-info">
         <p class="name"> 냉장고 {{ userData.firstName + ' ' + userData.lastName }}</p>
-        <p class="username" v-show="userData.userId">@332333{{ userData.userId }}</p>
-        <span>•</span>
-        <p class="date">{{ date }}h</p>
+        <p class="username" >@332333{{ userData.userId }}</p>
+        <span></span>
+        <!-- <p class="date">{{ date }}h</p> -->
       </div>
       <div class="tweet-body">
         <p>
