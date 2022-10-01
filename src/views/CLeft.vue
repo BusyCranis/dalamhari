@@ -96,15 +96,23 @@ export default {
 
          12222
           {{ tweetBody.content
-          }}<span class="hashtag">#{{ tweetBody.author }}
-
+          }}
+          <!-- <span class="hashtag">#{{ tweetBody.author }}
             22e2a
-
-          </span>
+          </span> -->
         </p>
-        
+
+        <p>
+
+         12222
+          {{ tweetBody.content
+          }}
+          <!-- <span class="hashtag">#{{ tweetBody.author }}
+            22e2a
+          </span> -->
+        </p>
       </div>
-      <div class="buttons">
+      <!-- <div class="buttons">
         <div class="button" id="reply">
           <icons icon="comment" />
           <span v-show="replyNumber">{{ replyNumber }}</span>
@@ -120,7 +128,7 @@ export default {
         <div class="button" id="share">
           <icons icon="share" />
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
