@@ -7,10 +7,17 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@oruga-ui/oruga": "^0.5.6",
+    "autoprefixer": "^10.4.12",
     "axios": "^0.27.2",
     "core-js": "^3.6.5",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8",
+    "typescript": "^4.8.4",
     "vee-validate": "3.0",
     "vue": "^2.6.11",
+    "vue-class-component": "^7.2.6",
+    "vue-property-decorator": "^9.1.2",
     "vue-router": "^3.2.0",
     "vuetify": "^2.6.0",
     "vuex": "^3.4.0"

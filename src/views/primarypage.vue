@@ -4,7 +4,7 @@
     <br />
     <p>안녕하세요! 오늘의 유통기한을 안내합니다</p>
 
-    <br />
+    <!-- <br /> -->
 
     <button @click="gologin">추가</button>
 
@@ -17,16 +17,15 @@
         {{ item.limit }}
 
         {{ counterMaker(item.limit) }}일 남았습니다
-
       </div>
     </div>
 
-    <button @click="gocomp">추가</button>
+    <!-- <button @click="gocomp">추가</button> -->
 
-    <br /><br /><br /><br /><br />
+    <!-- <br /><br /><br /><br /><br />
     <br /><br /><br /><br /><br /><br />
     <br /><br /><br /><br /><br /><br />
-    <br /><br />
+    <br /><br /> -->
   </div>
 </template>
 
@@ -103,15 +102,17 @@ export default {
     },
 
     async bring() {
-      await axios.get("http://49.247.26.149:5150/member/accounts").then((res) => {
-        // console.log(res.data.posts);
-        this.foodlist = res.data.posts;
-        this.loadfood(res.data.posts);
-        // this.limitlist = this.foodlist.map((food) => {
-        //   return this.counterMaker(food.limit);
-        // });
-        // console.log(this.limitlist);
-      });
+      await axios
+        .get("http://49.247.26.149:5150/member/accounts")
+        .then((res) => {
+          // console.log(res.data.posts);
+          this.foodlist = res.data.posts;
+          this.loadfood(res.data.posts);
+          // this.limitlist = this.foodlist.map((food) => {
+          //   return this.counterMaker(food.limit);
+          // });
+          // console.log(this.limitlist);
+        });
     },
 
     starter() {

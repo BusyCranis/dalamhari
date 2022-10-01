@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white dark:bg-gray-900;
+  }
+
+  h1 {
+    @apply text-4xl sm:text-6xl lg:text-7xl leading-none font-extrabold tracking-tight text-primary dark:text-primary-dark mt-10 mb-8 sm:mt-14 sm:mb-10;
+  }
+
+  h2 {
+    @apply text-3xl text-primary dark:text-primary-dark;
+  }
+
+  h3 {
+    @apply text-lg text-primary dark:text-primary-dark;
+  }
+}

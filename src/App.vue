@@ -1,42 +1,36 @@
 <template>
   <div id="app">
-    <div v-if="$route.path !== '/'" class="nav">
+    <!-- <div v-if="$route.path !== '/'" class="nav">
       <div></div>
       <router-link :to="{name: 'primarypage'}"> 뒤로 </router-link>
-      <!-- <router-link :to="{name: 'primarypage'}"> 프론트페이지 </router-link> -->
       <div></div>
-    </div>
-   
+    </div> -->
+
     <router-view />
- <Footer></Footer>
   </div>
 </template>
 
 <script>
 import { mapState, mapActions, mapMutations } from "vuex";
-import Footer from './views/footer.vue';
-import footer from "./views/footer.vue"
-
+import Footer from "./views/footer.vue";
+import footer from "./views/footer.vue";
 
 export default {
   name: "App",
 
   data() {
     return {
-      footer
+      footer,
     };
   },
 
-components: {
-Footer
-    
+  components: {
+    Footer,
   },
 
   methods: {
     checkwindow() {
       console.log(this.screenview);
-
-     
     },
   },
 
