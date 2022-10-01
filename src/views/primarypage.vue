@@ -3,57 +3,38 @@
     <br />
     <br />
     <p>안녕하세요! 오늘의 유통기한을 안내합니다</p>
-
     <!-- <br /> -->
-
-    <button @click="gologin">추가</button>
-
+    <button @click="gologin">식품 추가하기</button>
     <br /><br /><br />
-
-    <div v-for="item in foodlist" :key="item.id">
+    <!-- <div v-for="item in foodlist" :key="item.id">
       <div @click="agree(item.id)">
         {{ item.name }}
-
         {{ item.sttype }}
-
         {{ item.limit }}
-
         {{ counterMaker(item.limit) }}일 남았습니다
       </div>
-    </div>
+    </div> -->
 
-    <button @click="gocomp">look design</button>
+    <!-- <button @click="gocomp">look design</button> -->
 
-    <!-- <br /><br /><br /><br /><br />
-    <br /><br /><br /><br /><br /><br />
-    <br /><br /><br /><br /><br /><br />
-    <br /><br /> -->
-
-    <div id="tweet" v-show="isVideoMode">
-      <img :src="userData.pictureUrl" />
-      <div class="tweet-content">
-        <div class="user-info">
-          <p class="name">
-            냉장고 {{ userData.firstName + " " + userData.lastName }}
-          </p>
-          <p class="username">@332333{{ userData.userId }}</p>
-          <span></span>
-      
+    <div v-for="item in foodlist" :key="item.id">
+      <div id="tweet" v-show="isVideoMode" @click="agree(item.id)">
+        <img :src="userData.pictureUrl" />
+        <div class="tweet-content">
+          <div class="user-info">
+            <p class="name">
+              {{ item.name }}
+            </p>
+            <p class="username">{{ item.sttype }}</p>
+            <span></span>
+          </div>
+          <div class="tweet-body">
+            <p>{{ counterMaker(item.limit) }}일 남았습니다</p>
+            <p>
+              {{ item.limit }}
+            </p>
+          </div>
         </div>
-        <div class="tweet-body">
-          <p>
-            12222
-            {{ tweetBody.content }}
-         
-          </p>
-
-          <p>
-            12222
-            {{ tweetBody.content }}
-      
-          </p>
-        </div>
-     
       </div>
     </div>
   </div>
