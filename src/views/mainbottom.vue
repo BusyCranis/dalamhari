@@ -12,7 +12,9 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      value: null,
+    };
   },
   methods: {
     move3() {
