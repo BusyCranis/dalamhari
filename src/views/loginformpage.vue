@@ -4,8 +4,25 @@
 
     <div class="home contain justify-center">
       <div style="overflow: scroll" class="innerscroll">
-        <input v-model="year" />년 <input v-model="month" />월
-        <input v-model="day" />일
+        <!-- <input v-model="year" />년 <input v-model="month" />월
+        <input v-model="day" />일 -->
+
+        유통기한 수정 페이지
+
+        <div class="search">
+          <img src="@/assets/tweet-icons/icon-section.svg" alt="" />
+          <input type="text" v-model="year" placeholder="year" />년
+        </div>
+
+        <div class="search">
+          <img src="@/assets/tweet-icons/icon-section.svg" alt="" />
+          <input type="text" v-model="month" placeholder="month" />월
+        </div>
+
+        <div class="search">
+          <img src="@/assets/tweet-icons/icon-section.svg" alt="" />
+          <input type="text" v-model="day" placeholder="day" />일
+        </div>
 
         <button @click="requpdate">수정</button>
 
@@ -159,7 +176,7 @@ export default {
   },
 };
 </script>
-<style>
+<style     scoped lang="scss"    >
 .innerscroll {
   max-height: 375px;
   width: 375px;
@@ -169,5 +186,35 @@ export default {
 .contain {
   display: flex;
   justify-content: center;
+}
+
+.search {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px auto;
+  height: 48px;
+  background: #e7ecf0;
+  border-radius: 100px;
+
+  img {
+    margin-left: 17.67px;
+    margin-right: 9.88px;
+  }
+  input {
+    color: #828282;
+    background: #e7ecf0;
+    font-size: 15px;
+    line-height: 27.58px;
+    width: 15rem;
+  }
+  input:active {
+    outline: none;
+    border: none;
+  }
+  input:focus {
+    outline: 0;
+  }
 }
 </style>

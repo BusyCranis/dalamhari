@@ -356,22 +356,6 @@ h1 {
   margin-top: 0.5rem;
 }
 
-#d-day-continer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 1.6rem;
-}
-
-.d-day-child-continer {
-  text-align: center;
-  margin-right: 1rem;
-}
-
-.d-day-child-continer span {
-  font-size: 1.3rem;
-}
-
 #tweet {
   display: flex;
   align-items: flex-start;

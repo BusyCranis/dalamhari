@@ -3,29 +3,39 @@
     <br /><br />
     <div class="home contain justify-center">
       <div style="overflow: scroll" class="innerscroll">
-        <div>
-          <div>유통기한</div>
-
-          <div id="target-selector">
-            <input id="target-year-input" class="target-input" size="5" />년
-            <input id="target-month-input" class="target-input" size="5" />월
-            <input id="target-date-input" class="target-input" size="5" />일
-          </div>
-
-          <button @click="freeze">냉동 보관</button>
-          <button @click="fresh">냉장 보관</button>
-          <button @click="tempture">실온 보관</button>
-
-          <br />
-
-          이름: <input v-model="foodname" />
-
-          <br />
-
-          <button @click="starter" >저장하기</button>
+        <div class="search">
+          <img src="@/assets/tweet-icons/icon-section.svg" alt="" />
+          <input
+            type="text"
+            placeholder="식재료 이름을 입력하세요"
+            v-model="foodname"
+          />
         </div>
 
-        <!-- <button @click="starter">시작</button> -->
+        <div>유통기한 입력</div>
+
+        <div class="search">
+          <img src="@/assets/tweet-icons/icon-section.svg" alt="" />
+          <input type="text" id="target-year-input" placeholder="year" />년
+        </div>
+
+        <div class="search">
+          <img src="@/assets/tweet-icons/icon-section.svg" alt="" />
+          <input type="text" id="target-month-input" placeholder="month" />월
+        </div>
+
+        <div class="search">
+          <img src="@/assets/tweet-icons/icon-section.svg" alt="" />
+          <input type="text" id="target-date-input" placeholder="day" />일
+        </div>
+
+        <button @click="freeze">냉동 보관</button>
+        <button @click="fresh">냉장 보관</button>
+        <button @click="tempture">실온 보관</button>
+
+        <br />
+
+        <button @click="starter">저장하기</button>
 
         <br /><br /><br /><br />
         <br /><br /><br /><br />
@@ -108,9 +118,9 @@ export default {
         return;
       } else {
         console.log(this.dateForMaker());
-     
+
         this.counterMaker(this.dateForMaker());
-        
+
         let newfood = {
           id: Date.now(),
           limit: this.dateForMaker(),
@@ -179,7 +189,7 @@ export default {
   },
 };
 </script>
-<style>
+<style       scoped lang="scss"       >
 .innerscroll {
   max-height: 375px;
   width: 375px;
@@ -189,5 +199,35 @@ export default {
 .contain {
   display: flex;
   justify-content: center;
+}
+
+.search {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px auto;
+  height: 48px;
+  background: #e7ecf0;
+  border-radius: 100px;
+
+  img {
+    margin-left: 17.67px;
+    margin-right: 9.88px;
+  }
+  input {
+    color: #828282;
+    background: #e7ecf0;
+    font-size: 15px;
+    line-height: 27.58px;
+    width: 15rem;
+  }
+  input:active {
+    outline: none;
+    border: none;
+  }
+  input:focus {
+    outline: 0;
+  }
 }
 </style>
