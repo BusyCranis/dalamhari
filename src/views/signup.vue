@@ -2,7 +2,7 @@
   <div>
     <br /><br />
     <div class="home contain justify-center">
-      <div style="overflow: scroll" class="innerscroll">
+      <div  class="innerscroll">
         <div class="search">
           <img src="@/assets/tweet-icons/icon-section.svg" alt="" />
           <input
@@ -29,25 +29,49 @@
           <input type="text" id="target-date-input" placeholder="day" />일
         </div>
 
-        <button @click="freeze">냉동 보관</button>
-        <button @click="fresh">냉장 보관</button>
-        <button @click="tempture">실온 보관</button>
+        <!-- <button @click="freeze">냉동</button>
+        <button @click="fresh">냉장</button>
+        <button @click="tempture">실온</button> -->
 
         <br />
 
-        <button @click="starter">저장하기</button>
+        <div class="input00context">
+          <div class="icons">
+            <div class="right-icon">
+              <button @click="freeze">냉동</button>
+            </div>
 
-        <br /><br /><br /><br />
+            <div class="right-icon">
+              <button @click="fresh">냉장</button>
+            </div>
+
+            <div class="right-icon">
+              <button @click="tempture">실온</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- <button @click="starter">저장하기</button> -->
+
+        <div class="justify0">
+          <div class="input-context">
+            <div class="icons">
+              <div class="right-icon">
+                <button @click="starter">저장하기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <br /><br /><br /><br />
         <br /><br /><br /><br />
         <br /><br /><br /><br /><br /><br /><br />
         <br /><br /><br /><br />
-        <br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /> -->
       </div>
     </div>
 
     <br />
-
-    <!-- <v-btn @click="agree">동의</v-btn> -->
 
     <br /><br /><br /><br /><br />
   </div>
@@ -58,8 +82,6 @@ import axios from "axios";
 import { ValidationProvider } from "vee-validate";
 import { mapState, mapActions, mapMutations } from "vuex";
 import Icons from "@/components/Icons";
-
-
 
 export default {
   name: "Home",
@@ -231,6 +253,196 @@ export default {
   }
   input:focus {
     outline: 0;
+  }
+}
+
+.justify0 {
+  display: flex;
+
+  justify-content: center;
+}
+
+.input-context {
+  // border-top: 1px solid rgba(0, 0, 0, 0.08);
+  // border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+  // justify-content: center;
+
+  width: 600px;
+  padding-left: 1rem;
+  padding-top: 8px;
+  display: flex;
+  align-items: center;
+
+  margin-right: 2rem;
+  // display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  input {
+    color: #828282;
+    font-weight: 400;
+    line-height: 22.27px;
+    font-size: 19px;
+    padding: 1rem 1rem 40px 1rem;
+  }
+  input:active {
+    outline: none;
+    border: none;
+  }
+  input:focus {
+    outline: 0;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+    .left-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      svg {
+        border-radius: 50%;
+        padding: 0.5rem;
+        box-sizing: content-box;
+        &:hover {
+          background-color: rgba(#1da1f2, 0.1);
+        }
+      }
+    }
+
+    .right-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      button {
+        margin-right: 0px;
+        background-color: #1da1f2;
+        width: 98px;
+        height: 42px;
+        border-radius: 100px;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 17.58px;
+        cursor: pointer;
+        color: #fff;
+        transition: 1s color, 1s background-color;
+      }
+      button:hover {
+        color: #1da1f2;
+        background-color: #fff;
+        border: 1px solid #1da1f2;
+      }
+      button:active {
+        outline: none;
+        border: none;
+      }
+      button:focus {
+        outline: 0;
+      }
+    }
+  }
+}
+
+.input00context {
+  // border-top: 1px solid rgba(0, 0, 0, 0.08);
+  // border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+  // justify-content: center;
+
+  width: 600px;
+  padding-left: 1rem;
+  padding-top: 8px;
+  display: flex;
+  align-items: flex-start;
+
+  margin-right: 2rem;
+  // display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  input {
+    color: #828282;
+    font-weight: 400;
+    line-height: 22.27px;
+    font-size: 19px;
+    padding: 1rem 1rem 40px 1rem;
+  }
+  input:active {
+    outline: none;
+    border: none;
+  }
+  input:focus {
+    outline: 0;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+    .left-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      svg {
+        border-radius: 50%;
+        padding: 0.5rem;
+        box-sizing: content-box;
+        &:hover {
+          background-color: rgba(#1da1f2, 0.1);
+        }
+      }
+    }
+
+    .right-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      button {
+        margin-right: 0px;
+        background-color: #1da1f2;
+        width: 98px;
+        height: 42px;
+        border-radius: 100px;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 17.58px;
+        cursor: pointer;
+        color: #fff;
+        transition: 1s color, 1s background-color;
+      }
+      button:hover {
+        color: #1da1f2;
+        background-color: #fff;
+        border: 1px solid #1da1f2;
+      }
+      button:active {
+        outline: none;
+        border: none;
+      }
+      button:focus {
+        outline: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 758px) {
+  #input-context {
+    width: 100%;
+  }
+}
+
+@media (max-width: 476px) {
+  #input-context {
+    display: none;
   }
 }
 </style>

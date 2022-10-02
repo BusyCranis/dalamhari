@@ -16,6 +16,14 @@ export default {
       <div class="right-icon">
         <button>Tweet</button>
       </div>
+
+      <div class="right-icon">
+        <button>Tweet</button>
+      </div>
+
+      <div class="right-icon">
+        <button>Tweet</button>
+      </div>
     </div>
   </div>
 

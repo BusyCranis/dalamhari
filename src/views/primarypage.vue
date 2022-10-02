@@ -3,10 +3,7 @@
     <br />
     <br />
     <p>안녕하세요! 오늘의 유통기한을 안내합니다</p>
-    <!-- <br /> -->
-    <!-- <button @click="gologin">식품 추가하기</button> -->
-    <br /><br /><br />
-
+  
     <div class="justify0">
       <div class="input-context">
         <div class="icons">
@@ -16,14 +13,7 @@
         </div>
       </div>
     </div>
-    <!-- <div v-for="item in foodlist" :key="item.id">
-      <div @click="agree(item.id)">
-        {{ item.name }}
-        {{ item.sttype }}
-        {{ item.limit }}
-        {{ counterMaker(item.limit) }}일 남았습니다
-      </div>
-    </div> -->
+   
 
     <button @click="gocomp">look design</button>
 

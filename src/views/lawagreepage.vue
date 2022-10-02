@@ -19,9 +19,7 @@
 
         <button @click="agree01">수정</button>
 
-        <!-- <input v-model="year" />년 <input v-model="month" />월
-        <input v-model="day" />일
-        <button @click="requpdate">시작</button> -->
+       
 
         <br /><br /><br /><br />
         <br /><br /><br /><br />
