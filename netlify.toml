@@ -1,15 +1,39 @@
 [[redirects]]
-  from = "/signup/account"
-  to = "http://49.247.26.149:5100/signup/account"
-  status = 200
+from = "/member/accounts"
+status = 200
+to = "http://49.247.26.149:5150/signup/account"
 
+[[redirects]]
+from = "/root/post"
+status = 200
+to = "http://49.247.26.149:5150/root/post"
 
+[[redirects]]
+from = "/post/method"
+status = 200
+to = "http://49.247.26.149:5150/request/update"
 
+[[redirects]]
+from = "/post/method"
+status = 200
+to = "http://49.247.26.149:5150"
 
-  [[redirects]]
-  from = "/post/method"
-  to = "http://49.247.26.149:5100/post/method"
-  status = 200
+[[redirects]]
+from = "/post/method"
+status = 200
+to = "http://49.247.26.149:5150"
 
+[[redirects]]
+from = "/post/method"
+status = 200
+to = "http://49.247.26.149:5150"
 
+[[redirects]]
+from = "/post/method"
+status = 200
+to = "http://49.247.26.149:5150"
 
+[[redirects]]
+from = "/post/method"
+status = 200
+to = "http://49.247.26.149:5150"

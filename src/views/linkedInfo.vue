@@ -30,17 +30,7 @@ export default {
   },
 
   methods: {
-    whileread() {
-      axios
-        .get("/member/accounts")
-        .then((res) => {
-          this.userlist = res.data.posts;
-          console.log(res.data.posts);
-        })
-        .catch((e) => {
-          console.error(e.message);
-        });
-    },
+  
     updateinfo(_id) {
       let myid = _id;
       console.log(myid);
