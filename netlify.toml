@@ -1,7 +1,7 @@
 [[redirects]]
 from = "/member/accounts"
 status = 200
-to = "http://49.247.26.149:5150/signup/account"
+to = "http://49.247.26.149:5150/member/accounts"
 
 [[redirects]]
 from = "/root/post"
@@ -9,31 +9,7 @@ status = 200
 to = "http://49.247.26.149:5150/root/post"
 
 [[redirects]]
-from = "/post/method"
+from = "/request/update"
 status = 200
 to = "http://49.247.26.149:5150/request/update"
 
-[[redirects]]
-from = "/post/method"
-status = 200
-to = "http://49.247.26.149:5150"
-
-[[redirects]]
-from = "/post/method"
-status = 200
-to = "http://49.247.26.149:5150"
-
-[[redirects]]
-from = "/post/method"
-status = 200
-to = "http://49.247.26.149:5150"
-
-[[redirects]]
-from = "/post/method"
-status = 200
-to = "http://49.247.26.149:5150"
-
-[[redirects]]
-from = "/post/method"
-status = 200
-to = "http://49.247.26.149:5150"
