@@ -354,16 +354,16 @@ export default {
 
   // justify-content: center;
 
-  width: 600px;
-  padding-left: 1rem;
+  // width: 600px;
+  // padding-left: 1rem;
   padding-top: 8px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 
-  margin-right: 2rem;
+  // margin-right: 2rem;
   // display: flex;
   flex-direction: column;
-  flex: 1;
+  // flex: 1;
 
   input {
     color: #828282;
