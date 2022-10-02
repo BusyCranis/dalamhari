@@ -4,31 +4,33 @@
     <div class="home contain justify-center">
       <div class="innerscroll">
         <div>
-        <p>  {{ $store.state.selectedFood.name }} </p>
+          <p>{{ $store.state.selectedFood.name }}</p>
 
           <p>유통기한: {{ $store.state.selectedFood.limit }}까지</p>
 
-          남은 시간: {{ this.remainingtime0 }}일
+          <p>
+            남은 시간: {{ this.remainingtime0 }}일
 
-          {{ this.remainingtime1 }}시간
+            {{ this.remainingtime1 }}시간
 
-          {{ this.remainingtime2 }}분
+            {{ this.remainingtime2 }}분
 
-          {{ this.remainingtime3 }}초
+            {{ this.remainingtime3 }}초
+          </p>
+
+          <p>보관 형태: {{ $store.state.selectedFood.sttype }}</p>
         </div>
 
-      <br /><br /><br /><br />
-
-
+        <br /><br /><br /><br />
 
         <!-- <div class="justify0"> -->
-          <div class="input00context">
-            <div class="icons">
-              <div class="right-icon">
-                <button @click="agree01">수정</button>
-              </div>
+        <div class="input00context">
+          <div class="icons">
+            <div class="right-icon">
+              <button @click="agree01">수정</button>
             </div>
           </div>
+        </div>
         <!-- </div> -->
 
         <!-- <br /><br /><br /><br />
@@ -367,8 +369,4 @@ export default {
     }
   }
 }
-
-
-
-
 </style>
