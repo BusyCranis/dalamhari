@@ -3,7 +3,7 @@
     <br />
     <br />
     <p>안녕하세요! 오늘의 유통기한을 안내합니다</p>
-  
+
     <div class="justify0">
       <div class="input-context">
         <div class="icons">
@@ -13,7 +13,6 @@
         </div>
       </div>
     </div>
-   
 
     <button @click="gocomp">look design</button>
 
