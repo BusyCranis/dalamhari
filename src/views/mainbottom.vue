@@ -23,6 +23,17 @@ export default {
     move4() {
       this.$router.push({ name: "home" });
     },
+
+
+    makeAlert() {
+
+      alert("준비중입니다.")
+
+
+    }
+
+
+
   },
 };
 </script>
