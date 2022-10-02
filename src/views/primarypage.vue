@@ -21,7 +21,7 @@
       <div id="tweet" v-show="isVideoMode" @click="agree(item.id)">
         <img :src="userData.pictureUrl" />
         <div class="tweet-content">
-          <div class="user-info">
+          <div class="user-info    mb-0">
             <p class="name mb-0">
               {{ item.name }}
             </p>
