@@ -130,7 +130,7 @@ export default {
 
     async bring() {
       await axios
-        .get("http://49.247.26.149:5150/member/accounts")
+        .get("/member/accounts")
         .then((res) => {
           // console.log(res.data.posts);
           this.foodlist = res.data.posts;
@@ -206,7 +206,7 @@ export default {
         // this.foodlist.push(newfood);
         this.savefood(newfood);
 
-        await axios.post("http://49.247.26.149:5150/root/post", newfood);
+        await axios.post("/root/post", newfood);
       }
     },
 

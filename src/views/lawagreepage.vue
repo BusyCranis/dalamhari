@@ -107,7 +107,7 @@ export default {
 
       console.log(limit);
 
-      await axios.post("http://49.247.26.149:5150/request/update", {
+      await axios.post("/request/update", {
         yourid: this.$store.state.selectedFood._id,
         limit: limit,
       });

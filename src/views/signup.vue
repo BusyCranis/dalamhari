@@ -156,7 +156,7 @@ export default {
         this.savefood(newfood);
 
         await axios
-          .post("http://49.247.26.149:5150/root/post", newfood)
+          .post("/root/post", newfood)
           .then((res) => console.log(res.data));
 
         this.$router.push({ name: "primarypage" });
