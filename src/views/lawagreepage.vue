@@ -21,15 +21,15 @@
 
 
 
-        <div class="justify0">
-          <div class="input-context">
+        <!-- <div class="justify0"> -->
+          <div class="input00context">
             <div class="icons">
               <div class="right-icon">
                 <button @click="agree01">수정</button>
               </div>
             </div>
           </div>
-        </div>
+        <!-- </div> -->
 
         <!-- <br /><br /><br /><br />
         <br /><br /><br /><br />
@@ -281,4 +281,94 @@ export default {
     }
   }
 }
+
+.input00context {
+  // border-top: 1px solid rgba(0, 0, 0, 0.08);
+  // border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+  // justify-content: center;
+
+  // width: 600px;
+  // padding-left: 1rem;
+  padding-top: 8px;
+  display: flex;
+  align-items: center;
+
+  // margin-right: 2rem;
+  // display: flex;
+  flex-direction: column;
+  // flex: 1;
+
+  input {
+    color: #828282;
+    font-weight: 400;
+    line-height: 22.27px;
+    font-size: 19px;
+    padding: 1rem 1rem 40px 1rem;
+  }
+  input:active {
+    outline: none;
+    border: none;
+  }
+  input:focus {
+    outline: 0;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+    .left-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      svg {
+        border-radius: 50%;
+        padding: 0.5rem;
+        box-sizing: content-box;
+        &:hover {
+          background-color: rgba(#1da1f2, 0.1);
+        }
+      }
+    }
+
+    .right-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      button {
+        margin-right: 0px;
+        background-color: #1da1f2;
+        width: 98px;
+        height: 42px;
+        border-radius: 100px;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 17.58px;
+        cursor: pointer;
+        color: #fff;
+        transition: 1s color, 1s background-color;
+      }
+      button:hover {
+        color: #1da1f2;
+        background-color: #fff;
+        border: 1px solid #1da1f2;
+      }
+      button:active {
+        outline: none;
+        border: none;
+      }
+      button:focus {
+        outline: 0;
+      }
+    }
+  }
+}
+
+
+
+
 </style>

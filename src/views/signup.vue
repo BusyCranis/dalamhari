@@ -53,7 +53,7 @@
 
         <!-- <button @click="starter">저장하기</button> -->
 
-        <div class="justify0">
+        <!-- <div class="justify0"> -->
           <div class="input-context">
             <div class="icons">
               <div class="right-icon">
@@ -61,7 +61,7 @@
               </div>
             </div>
           </div>
-        </div>
+        <!-- </div> -->
 
         <!-- <br /><br /><br /><br />
         <br /><br /><br /><br />
@@ -263,21 +263,22 @@ export default {
 }
 
 .input-context {
-  // border-top: 1px solid rgba(0, 0, 0, 0.08);
+ 
+// border-top: 1px solid rgba(0, 0, 0, 0.08);
   // border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 
   // justify-content: center;
 
-  width: 600px;
-  padding-left: 1rem;
+  // width: 600px;
+  // padding-left: 1rem;
   padding-top: 8px;
   display: flex;
   align-items: center;
 
-  margin-right: 2rem;
+  // margin-right: 2rem;
   // display: flex;
   flex-direction: column;
-  flex: 1;
+  // flex: 1;
 
   input {
     color: #828282;
@@ -346,6 +347,11 @@ export default {
       }
     }
   }
+
+
+
+
+
 }
 
 .input00context {
