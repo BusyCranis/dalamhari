@@ -22,10 +22,10 @@
         <img :src="userData.pictureUrl" />
         <div class="tweet-content">
           <div class="user-info">
-            <p class="name">
+            <p class="name mb-0">
               {{ item.name }}
             </p>
-            <p class="username">{{ item.sttype }}</p>
+            <p class="username  mb-0">{{ item.sttype }}</p>
             <span></span>
           </div>
           <div class="tweet-body">
@@ -394,7 +394,8 @@ h1 {
     .user-info {
       display: flex;
       align-items: flex-start;
-      margin-bottom: 11px;
+      flex-direction: column;
+      margin-bottom: 0px;
       * {
         margin-right: 4px;
         line-height: 17.58px;
