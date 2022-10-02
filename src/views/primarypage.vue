@@ -8,7 +8,7 @@
       <div class="input-context">
         <div class="icons">
           <div class="right-icon">
-            <button @click="gologin">식품 추가하기</button>
+            <button @click="gologin">식품 추가</button>
           </div>
         </div>
       </div>
