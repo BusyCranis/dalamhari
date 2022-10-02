@@ -1,6 +1,6 @@
 <template>
   <div>
-    <router-link :to="{ name: 'primarypage' }"           class="getflex"     >
+    <router-link :to="{ name: 'primarypage' }" class="getflex">
       <img src="@/assets/뒤로가기.png" class="backbtn" />
     </router-link>
 
@@ -18,14 +18,8 @@ export default {};
 }
 
 .getflex {
+  display: flex;
 
-display: flex;
-
-align-items: flex-start;
-
-
+  align-items: flex-start;
 }
-
-
-
 </style>
