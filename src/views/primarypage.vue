@@ -4,17 +4,18 @@
     <br />
     <p>안녕하세요! 오늘의 유통기한을 안내합니다</p>
     <!-- <br /> -->
-    <button @click="gologin">식품 추가하기</button>
+    <!-- <button @click="gologin">식품 추가하기</button> -->
     <br /><br /><br />
 
-    <div class="input-context">
-      <div class="icons">
-        <div class="right-icon">
-          <button>식품 추가하기</button>
+    <div class="justify0">
+      <div class="input-context">
+        <div class="icons">
+          <div class="right-icon">
+            <button @click="gologin">식품 추가하기</button>
+          </div>
         </div>
       </div>
     </div>
-
     <!-- <div v-for="item in foodlist" :key="item.id">
       <div @click="agree(item.id)">
         {{ item.name }}
@@ -486,17 +487,26 @@ h1 {
   }
 }
 
+.justify0 {
+  display: flex;
+
+  justify-content: center;
+}
+
 .input-context {
   // border-top: 1px solid rgba(0, 0, 0, 0.08);
   // border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+  // justify-content: center;
+
   width: 600px;
   padding-left: 1rem;
   padding-top: 8px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 
   margin-right: 2rem;
-  display: flex;
+  // display: flex;
   flex-direction: column;
   flex: 1;
 
