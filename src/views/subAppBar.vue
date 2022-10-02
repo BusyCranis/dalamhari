@@ -1,16 +1,31 @@
 <template>
-    <div>
-        <router-link :to="{name: 'primarypage'}"> 뒤로 </router-link>
-    </div>
+  <div>
+    <router-link :to="{ name: 'primarypage' }"           class="getflex"     >
+      <img src="@/assets/뒤로가기.png" class="backbtn" />
+    </router-link>
+
+    <!-- <img src="@/assets/뒤로가기.png" class="backbtn" /> -->
+  </div>
 </template>
 <script>
-
-
-
-export default {
-    
-}
+export default {};
 </script>
 <style>
-    
+.backbtn {
+  max-height: 50px;
+
+  max-width: 50px;
+}
+
+.getflex {
+
+display: flex;
+
+align-items: flex-start;
+
+
+}
+
+
+
 </style>

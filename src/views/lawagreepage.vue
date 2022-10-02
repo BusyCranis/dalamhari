@@ -4,7 +4,7 @@
     <div class="home contain justify-center">
       <div class="innerscroll">
         <div>
-          {{ $store.state.selectedFood.name }}
+        <p>  {{ $store.state.selectedFood.name }} </p>
 
           <p>유통기한: {{ $store.state.selectedFood.limit }}까지</p>
 
