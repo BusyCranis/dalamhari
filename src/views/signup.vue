@@ -57,6 +57,9 @@
 import axios from "axios";
 import { ValidationProvider } from "vee-validate";
 import { mapState, mapActions, mapMutations } from "vuex";
+import Icons from "@/components/Icons";
+
+
 
 export default {
   name: "Home",
