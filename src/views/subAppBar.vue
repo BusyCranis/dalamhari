@@ -3,8 +3,6 @@
     <router-link :to="{ name: 'primarypage' }" class="getflex">
       <img src="@/assets/뒤로가기.png" class="backbtn" />
     </router-link>
-
-    <!-- <img src="@/assets/뒤로가기.png" class="backbtn" /> -->
   </div>
 </template>
 <script>
