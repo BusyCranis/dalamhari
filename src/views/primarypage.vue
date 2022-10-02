@@ -14,7 +14,7 @@
       </div>
     <!-- </div> -->
 
-    <button @click="gocomp">look design</button>
+    <!-- <button @click="gocomp">look design</button> -->
 
     <div v-for="item in foodlist" :key="item.id">
       <div id="tweet" v-show="isVideoMode" @click="agree(item.id)">
