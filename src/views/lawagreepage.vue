@@ -17,7 +17,9 @@
           {{ this.remainingtime3 }}초
         </div>
 
-        <!-- <button @click="agree01">수정</button> -->
+      <br /><br /><br /><br />
+
+
 
         <div class="justify0">
           <div class="input-context">
@@ -29,17 +31,17 @@
           </div>
         </div>
 
-        <br /><br /><br /><br />
-        <br /><br /><br /><br />
-        <br /><br /><br /><br /><br /><br /><br />
+        <!-- <br /><br /><br /><br />
         <br /><br /><br /><br />
         <br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /> -->
       </div>
     </div>
 
     <br />
 
-    <br /><br /><br /><br /><br />
+    <!-- <br /><br /><br /><br /><br /> -->
   </div>
 </template>
 

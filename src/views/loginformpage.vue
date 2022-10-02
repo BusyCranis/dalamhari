@@ -1,13 +1,15 @@
 <template>
   <div>
-    <br /><br />
+    <!-- <br /><br /> -->
 
     <div class="home contain justify-center">
-      <div style="overflow: scroll" class="innerscroll">
+      <div class="innerscroll">
         <!-- <input v-model="year" />년 <input v-model="month" />월
         <input v-model="day" />일 -->
 
         유통기한 수정 페이지
+
+        <br /><br />
 
         <div class="search">
           <img src="@/assets/tweet-icons/icon-section.svg" alt="" />
@@ -26,6 +28,9 @@
 
         <!-- <button @click="requpdate">수정</button> -->
 
+        <br /><br />
+        <br /><br />
+
         <div class="justify0">
           <div class="input-context">
             <div class="icons">
@@ -36,11 +41,11 @@
           </div>
         </div>
 
-        <br /><br /><br /><br />
-        <br /><br /><br /><br />
-        <br /><br /><br /><br /><br /><br /><br />
+        <!-- <br /><br /><br /><br />
         <br /><br /><br /><br />
         <br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /> -->
       </div>
     </div>
 
