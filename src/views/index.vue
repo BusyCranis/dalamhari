@@ -2,11 +2,11 @@
   <v-app>
     <v-container
       id="app"
-      class="fill-height"
+      class="fill-height setcolor"
       fluid
-      style="margin-bottom: 45px"
+      style="margin-bottom: 0px"
     >
-      <routermainview class="fill-height"> </routermainview>
+      <routermainview class="fill-height setzindex"> </routermainview>
     </v-container>
 
     <mainbottom> </mainbottom>
@@ -26,3 +26,15 @@ export default {
   },
 };
 </script>
+
+<style   scoped >
+.setcolor {
+  background: yellow;
+}
+
+.setzindex {
+  z-index: 1;
+
+  background: white;
+}
+</style>
