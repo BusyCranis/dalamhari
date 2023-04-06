@@ -1,5 +1,7 @@
 <template>
   <v-app-bar class="" color="white" white height="94" fixed hide-on-scroll app>
+
+
     <v-toolbar-title class="pl-0" @click="goHome">
       <div class="d-flex align-center">
         <img src="/fstmovielogo.png" width="90px" class="ml-2" />
@@ -46,6 +48,8 @@
         <!-- <v-list-item>행사안내</v-list-item> -->
       </v-list>
     </v-menu>
+
+
   </v-app-bar>
 </template>
 
