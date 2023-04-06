@@ -10,24 +10,42 @@
       <template v-slot:activator="{ on, attrs }">
         <v-btn v-bind="attrs" v-on="on" class="elevation-0"> KIWFF </v-btn>
       </template>
-
       <br /><br />
-
       <v-list>
-        <v-list-item>
-          <!-- <v-list-item-title> -->
-          소개
-          <!-- </v-list-item-title> -->
-        </v-list-item>
-
+        <v-list-item> 소개 </v-list-item>
         <v-list-item>개요</v-list-item>
         <v-list-item>movie market</v-list-item>
       </v-list>
     </v-menu>
 
-    <div>2023년 행사 안내</div>
+    <v-menu>
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn v-bind="attrs" v-on="on" class="elevation-0">
+          2023년 행사 안내
+        </v-btn>
+      </template>
+      <br /><br />
+      <v-list>
+        <v-list-item> 행사 일정 </v-list-item>
+        <v-list-item>시상안내</v-list-item>
+        <v-list-item>심사위원/멘토</v-list-item>
+        <v-list-item>행사안내</v-list-item>
+      </v-list>
+    </v-menu>
 
-    <div>출품/신청 안내</div>
+    <v-menu>
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn v-bind="attrs" v-on="on" class="elevation-0">
+          출품/신청 안내
+        </v-btn>
+      </template>
+      <br /><br />
+      <v-list>
+        <v-list-item>웹드라마 경쟁</v-list-item>
+        <v-list-item>학생공모</v-list-item>
+        <!-- <v-list-item>행사안내</v-list-item> -->
+      </v-list>
+    </v-menu>
   </v-app-bar>
 </template>
 
