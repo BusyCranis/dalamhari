@@ -1,5 +1,13 @@
 <template>
   <v-app>
+
+
+    <AppBar />
+
+
+
+
+
     <v-container
       id="app"
       class="fill-height setcolor"
@@ -16,6 +24,9 @@
 <script>
 import Mainbottom from "./mainbottom.vue";
 import Routermainview from "./routermainview.vue";
+import AppBar from "./AppBar.vue"
+
+
 
 export default {
   name: "Home",
@@ -23,6 +34,7 @@ export default {
   components: {
     Routermainview,
     Mainbottom,
+    AppBar
   },
 };
 </script>
