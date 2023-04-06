@@ -8,7 +8,11 @@
 
     <v-menu>
       <template v-slot:activator="{ on, attrs }">
-        <v-btn v-bind="attrs" v-on="on"> KIWFF </v-btn>
+        <v-btn v-bind="attrs" v-on="on"
+        
+           class="elevation-0"
+        
+        > KIWFF </v-btn>
       </template>
 
       <br /><br />
