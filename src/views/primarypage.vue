@@ -5,13 +5,13 @@
     <p>12122</p>
 
   
-    <div class="input00context">
+    <!-- <div class="input00context">
       <div class="icons">
         <div class="right-icon">
           <button @click="gologin">추가</button>
         </div>
       </div>
-    </div>
+    </div> -->
 
 
 
