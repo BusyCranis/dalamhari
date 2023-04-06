@@ -4,7 +4,7 @@
     <br />
     <p>안녕하세요! 오늘의 유통기한을 안내합니다12122</p>
 
-    <!-- <div class="justify0"> -->
+  
     <div class="input00context">
       <div class="icons">
         <div class="right-icon">
@@ -12,28 +12,21 @@
         </div>
       </div>
     </div>
-    <!-- </div> -->
 
-    <!-- <button @click="gocomp">look design</button> -->
 
-    <v-menu>
+    <!-- <v-menu>
       <template v-slot:activator="{ on, attrs }">
         <v-btn v-bind="attrs" v-on="on"> KIWFF </v-btn>
       </template>
-
       <br /><br />
-
       <v-list>
         <v-list-item>
-          <!-- <v-list-item-title> -->
           소개
-          <!-- </v-list-item-title> -->
         </v-list-item>
-
         <v-list-item>개요</v-list-item>
         <v-list-item>movie market</v-list-item>
       </v-list>
-    </v-menu>
+    </v-menu> -->
 
     <div v-for="item in foodlist" :key="item.id">
       <div id="tweet" v-show="isVideoMode" @click="agree(item.id)">

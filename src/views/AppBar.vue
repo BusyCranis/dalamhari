@@ -1,37 +1,33 @@
 <template>
-  <v-app-bar
-    class=""
-    color="white"
-    white
-    height="56"
-    fixed
-    hide-on-scroll
-    app
-  >
+  <v-app-bar class="" color="white" white height="94" fixed hide-on-scroll app>
     <v-toolbar-title class="pl-0" @click="goHome">
       <div class="d-flex align-center">
         <img src="/fstmovielogo.png" width="90px" class="ml-2" />
       </div>
     </v-toolbar-title>
 
-   
-    <!-- <v-menu>
-      <template v-slot:activator="{ props }">
-        <v-btn v-bind="props"> KIWFF </v-btn>
+    <v-menu>
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn v-bind="attrs" v-on="on"> KIWFF </v-btn>
       </template>
+
+      <br /><br />
+
       <v-list>
-        <v-list-item>소개</v-list-item>
+        <v-list-item>
+          <!-- <v-list-item-title> -->
+          소개
+          <!-- </v-list-item-title> -->
+        </v-list-item>
 
         <v-list-item>개요</v-list-item>
-
         <v-list-item>movie market</v-list-item>
       </v-list>
-    </v-menu> -->
+    </v-menu>
 
     <div>2023년 행사 안내</div>
 
     <div>출품/신청 안내</div>
- 
   </v-app-bar>
 </template>
 
