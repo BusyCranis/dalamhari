@@ -10,7 +10,7 @@
   >
     <v-toolbar-title class="pl-0" @click="goHome">
       <div class="d-flex align-center">
-        <img src="/svg/logo2201.svg" width="90px" class="ml-2" />
+        <img src="/fstmovielogo.png" width="90px" class="ml-2" />
       </div>
     </v-toolbar-title>
 
