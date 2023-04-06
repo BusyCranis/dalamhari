@@ -33,7 +33,7 @@ export default {
 }
 
 .setzindex {
-  z-index: 1;
+
 
   background: white;
 }
