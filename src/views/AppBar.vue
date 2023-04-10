@@ -86,10 +86,10 @@ export default {
   },
 
   mounted() {
-    //    this.app_version = process.env.VUE_APP_VERSION
-    // let logedIn = this.$cookies.get("token")
-    // if(logedIn) this.isLogedIn = true
-    // else this.isLogedIn = false
+
+
+
+
   },
 
   methods: {
@@ -130,7 +130,7 @@ export default {
         route: "login",
       });
     }, // login
-  },
+  }, 
 };
 </script>
 
