@@ -6,7 +6,6 @@
     height="94"
     fixed
     hide-on-scroll
-    @click="slttaghdr"
   >
     <v-toolbar-title class="pl-0" @click="goHome">
       <div class="d-flex align-center">
@@ -15,15 +14,15 @@
     </v-toolbar-title>
 
     <div class="dnidlcst">
-      <v-menu>
+      <v-menu class="elevation-0">
         <template v-slot:activator="{ on, attrs }">
           <v-btn v-bind="attrs" v-on="on" class="elevation-0"> KIWFF </v-btn>
         </template>
         <br /><br />
-        <v-list>
-          <v-list-item> 소개 </v-list-item>
-          <v-list-item>개요</v-list-item>
-          <v-list-item>movie market</v-list-item>
+        <v-list elevation="0" class="elevation-0">
+          <v-list-item class="elevation-0"> 소개 </v-list-item>
+          <v-list-item class="elevation-0">개요</v-list-item>
+          <v-list-item class="elevation-0">movie market</v-list-item>
         </v-list>
       </v-menu>
 
@@ -86,7 +85,23 @@ export default {
   },
 
   mounted() {
+      var bartitle = document.getElementById("whybartool").children[0];
 
+      console.log(bartitle);
+
+      bartitle.classList.add("invldctns");
+
+      bartitle.classList.remove("v-toolbar__content");
+
+      bartitle.style.display = "flex";
+
+      bartitle.style.justifyContent = "space-between";
+
+      bartitle.style.alignItems = "center";
+
+      console.dir(bartitle);
+
+      console.dir(bartitle.style);
 
 
 
