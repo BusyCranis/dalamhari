@@ -1,12 +1,6 @@
 <template>
   <v-app>
-
-
     <AppBar />
-
-
-
-
 
     <v-container
       id="app"
