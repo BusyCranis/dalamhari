@@ -27,7 +27,7 @@
         </template>
         <br /><br />
         <v-list class="">
-          <v-list-item> 소개 </v-list-item>
+          <v-list-item @click="gopage0"> 소개 </v-list-item>
           <v-list-item>개요</v-list-item>
           <v-list-item>movie market</v-list-item>
         </v-list>
@@ -124,7 +124,41 @@ export default {
   },
 
   methods: {
-    goloot0() {},
+    gopage0() {
+      this.$router.push({ name: "introduce" });
+    },
+
+    gopage1() {
+      this.$router.push({ name: "shortabout" });
+    },
+
+    gopage2() {
+      this.$router.push({ name: "moviemarket" });
+    },
+
+    gopage3() {
+      this.$router.push({ name: "schedule" });
+    },
+
+    gopage4() {
+      this.$router.push({ name: "award" });
+    },
+
+    gopage5() {
+      this.$router.push({ name: "mentor" });
+    },
+
+    gopage6() {
+      this.$router.push({ name: "showcase" });
+    },
+
+    gopage7() {
+      this.$router.push({ name: "webdrama" });
+    },
+
+    gopage8() {
+      this.$router.push({ name: "student" });
+    },
 
     slttaghdr() {
       var bartitle = document.getElementById("whybartool").children[0];
