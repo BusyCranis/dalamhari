@@ -104,29 +104,28 @@ export default {
   },
 
   mounted() {
-      var bartitle = document.getElementById("whybartool").children[0];
+    var bartitle = document.getElementById("whybartool").children[0];
 
-      console.log(bartitle);
+    console.log(bartitle);
 
-      bartitle.classList.add("invldctns");
+    bartitle.classList.add("invldctns");
 
-      bartitle.classList.remove("v-toolbar__content");
+    bartitle.classList.remove("v-toolbar__content");
 
-      bartitle.style.display = "flex";
+    bartitle.style.display = "flex";
 
-      bartitle.style.justifyContent = "space-between";
+    bartitle.style.justifyContent = "space-between";
 
-      bartitle.style.alignItems = "center";
+    bartitle.style.alignItems = "center";
 
-      console.dir(bartitle);
+    console.dir(bartitle);
 
-      console.dir(bartitle.style);
-
-
-
+    console.dir(bartitle.style);
   },
 
   methods: {
+    goloot0() {},
+
     slttaghdr() {
       var bartitle = document.getElementById("whybartool").children[0];
 
@@ -164,7 +163,7 @@ export default {
         route: "login",
       });
     }, // login
-  }, 
+  },
 };
 </script>
 
