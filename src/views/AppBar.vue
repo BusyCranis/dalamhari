@@ -19,28 +19,28 @@
           <v-btn
             v-bind="attrs"
             v-on="on"
-            class="elevation-0"
+            class="elevation-0 ma-0 pa-0"
             color="transparent"
           >
             KIWFF
           </v-btn>
         </template>
         <br /><br />
-        <v-list elevation="0" class="elevation-0">
-          <v-list-item class="elevation-0"> 소개 </v-list-item>
-          <v-list-item class="elevation-0">개요</v-list-item>
-          <v-list-item class="elevation-0">movie market</v-list-item>
+        <v-list class="">
+          <v-list-item > 소개 </v-list-item>
+          <v-list-item >개요</v-list-item>
+          <v-list-item >movie market</v-list-item>
         </v-list>
       </v-menu>
 
-      <div style="min-width: 42px"></div>
+      <div style="min-width: 30px"></div>
 
       <v-menu>
         <template v-slot:activator="{ on, attrs }">
           <v-btn
             v-bind="attrs"
             v-on="on"
-            class="elevation-0"
+            class="elevation-0 ma-0 pa-0"
             color="transparent"
           >
             2023년 행사 안내
@@ -55,14 +55,14 @@
         </v-list>
       </v-menu>
 
-      <div style="min-width: 42px"></div>
+      <div style="min-width: 30px"></div>
 
       <v-menu>
         <template v-slot:activator="{ on, attrs }">
           <v-btn
             v-bind="attrs"
             v-on="on"
-            class="elevation-0"
+            class="elevation-0 ma-0 pa-0"
             color="transparent"
           >
             출품/신청 안내
@@ -76,6 +76,8 @@
         </v-list>
       </v-menu>
     </div>
+
+    <div></div>
   </v-app-bar>
 </template>
 
