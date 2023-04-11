@@ -28,8 +28,8 @@
         <br /><br />
         <v-list class="">
           <v-list-item @click="gopage0">소개</v-list-item>
-          <v-list-item>개요</v-list-item>
-          <v-list-item>movie market</v-list-item>
+          <v-list-item @click="gopage1">개요</v-list-item>
+          <v-list-item @click="gopage2">movie market</v-list-item>
         </v-list>
       </v-menu>
 
@@ -48,10 +48,10 @@
         </template>
         <br /><br />
         <v-list>
-          <v-list-item>행사 일정</v-list-item>
-          <v-list-item>시상안내</v-list-item>
-          <v-list-item>심사위원/멘토</v-list-item>
-          <v-list-item>행사안내</v-list-item>
+          <v-list-item @click="gopage3">행사 일정</v-list-item>
+          <v-list-item @click="gopage4">시상안내</v-list-item>
+          <v-list-item @click="gopage5">심사위원/멘토</v-list-item>
+          <v-list-item @click="gopage6">행사안내</v-list-item>
         </v-list>
       </v-menu>
 
@@ -70,9 +70,8 @@
         </template>
         <br /><br />
         <v-list>
-          <v-list-item>웹드라마 경쟁</v-list-item>
-          <v-list-item>학생공모</v-list-item>
-          <!-- <v-list-item>행사안내</v-list-item> -->
+          <v-list-item @click="gopage7">웹드라마 경쟁</v-list-item>
+          <v-list-item @click="gopage8">학생공모</v-list-item>
         </v-list>
       </v-menu>
     </div>
