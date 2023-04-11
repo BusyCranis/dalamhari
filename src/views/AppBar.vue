@@ -27,7 +27,7 @@
         </template>
         <br /><br />
         <v-list class="">
-          <v-list-item @click="gopage0"> 소개 </v-list-item>
+          <v-list-item @click="gopage0">소개</v-list-item>
           <v-list-item>개요</v-list-item>
           <v-list-item>movie market</v-list-item>
         </v-list>
@@ -48,7 +48,7 @@
         </template>
         <br /><br />
         <v-list>
-          <v-list-item> 행사 일정 </v-list-item>
+          <v-list-item>행사 일정</v-list-item>
           <v-list-item>시상안내</v-list-item>
           <v-list-item>심사위원/멘토</v-list-item>
           <v-list-item>행사안내</v-list-item>
