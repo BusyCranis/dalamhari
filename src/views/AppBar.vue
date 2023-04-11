@@ -7,7 +7,7 @@
     fixed
     hide-on-scroll
   >
-    <v-toolbar-title class="pl-0" @click="goHome">
+    <v-toolbar-title class="pl-0" @click="go0home">
       <div class="d-flex align-center">
         <img src="/fstmovielogo.png" class="limitwidth ml-2" />
       </div>
@@ -157,6 +157,10 @@ export default {
 
     gopage8() {
       this.$router.push({ name: "student" });
+    },
+
+    go0home() {
+      this.$router.push({ name: "primarypage" });
     },
 
     slttaghdr() {
