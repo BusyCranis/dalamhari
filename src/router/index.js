@@ -67,27 +67,75 @@ const router = new VueRouter({
                 }, //
                 //
 
+                {
+                    path: '/introduce',
+                    name: 'introduce',
+                    component: () =>
+                        import ('../views/introduce.vue')
+                }, //
 
+                {
+                    path: '/shortabout',
+                    name: 'shortabout',
+                    component: () =>
+                        import ('../views/shortabout.vue')
+                }, //
 
+                {
+                    path: '/moviemarket',
+                    name: 'moviemarket',
+                    component: () =>
+                        import ('../views/moviemarket.vue')
+                }, //
 
+                {
+                    path: '/schedule',
+                    name: 'schedule',
+                    component: () =>
+                        import ('../views/schedule.vue')
+                }, //
 
+                {
+                    path: '/award',
+                    name: 'award',
+                    component: () =>
+                        import ('../views/award.vue')
+                }, //
 
+                {
+                    path: '/mentor',
+                    name: 'mentor',
+                    component: () =>
+                        import ('../views/mentor.vue')
+                }, //
 
+                {
+                    path: '/showcase',
+                    name: 'showcase',
+                    component: () =>
+                        import ('../views/showcase.vue')
+                }, //
 
+                {
+                    path: '/webdrama',
+                    name: 'webdrama',
+                    component: () =>
+                        import ('../views/webdrama.vue')
+                }, //
 
+                {
+                    path: '/student',
+                    name: 'student',
+                    component: () =>
+                        import ('../views/student.vue')
+                } //
 
-
-
-
-
-
-
-
-
-
-
-
-
+                // {
+                //     path: '/',
+                //     name: 'primarypage',
+                //     component: () =>
+                //         import ('../views/primarypage.vue')
+                // }, //
             ]
         },
 
