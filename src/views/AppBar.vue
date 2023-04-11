@@ -27,9 +27,9 @@
         </template>
         <br /><br />
         <v-list class="">
-          <v-list-item > 소개 </v-list-item>
-          <v-list-item >개요</v-list-item>
-          <v-list-item >movie market</v-list-item>
+          <v-list-item> 소개 </v-list-item>
+          <v-list-item>개요</v-list-item>
+          <v-list-item>movie market</v-list-item>
         </v-list>
       </v-menu>
 
