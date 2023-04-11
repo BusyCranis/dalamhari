@@ -70,6 +70,24 @@ const router = new VueRouter({
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             ]
         },
 
