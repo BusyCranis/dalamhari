@@ -16,7 +16,14 @@
     <div class="dnidlcst">
       <v-menu class="elevation-0">
         <template v-slot:activator="{ on, attrs }">
-          <v-btn v-bind="attrs" v-on="on" class="elevation-0"> KIWFF </v-btn>
+          <v-btn
+            v-bind="attrs"
+            v-on="on"
+            class="elevation-0"
+            color="transparent"
+          >
+            KIWFF
+          </v-btn>
         </template>
         <br /><br />
         <v-list elevation="0" class="elevation-0">
@@ -30,7 +37,12 @@
 
       <v-menu>
         <template v-slot:activator="{ on, attrs }">
-          <v-btn v-bind="attrs" v-on="on" class="elevation-0">
+          <v-btn
+            v-bind="attrs"
+            v-on="on"
+            class="elevation-0"
+            color="transparent"
+          >
             2023년 행사 안내
           </v-btn>
         </template>
@@ -47,7 +59,12 @@
 
       <v-menu>
         <template v-slot:activator="{ on, attrs }">
-          <v-btn v-bind="attrs" v-on="on" class="elevation-0">
+          <v-btn
+            v-bind="attrs"
+            v-on="on"
+            class="elevation-0"
+            color="transparent"
+          >
             출품/신청 안내
           </v-btn>
         </template>
