@@ -1,11 +1,5 @@
 <template>
   <div id="app">
-    <!-- <div v-if="$route.path !== '/'" class="nav">
-      <div></div>
-      <router-link :to="{name: 'primarypage'}"> 뒤로 </router-link>
-      <div></div>
-    </div> -->
-
     <router-view />
   </div>
 </template>

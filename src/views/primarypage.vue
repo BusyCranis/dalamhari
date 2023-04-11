@@ -2,9 +2,12 @@
   <div class="home">
     <br />
     <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <p>12122</p>
 
-  
     <!-- <div class="input00context">
       <div class="icons">
         <div class="right-icon">
@@ -12,9 +15,6 @@
         </div>
       </div>
     </div> -->
-
-
-
 
     <div v-for="item in foodlist" :key="item.id">
       <div id="tweet" v-show="isVideoMode" @click="agree(item.id)">

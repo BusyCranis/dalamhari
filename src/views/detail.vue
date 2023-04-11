@@ -1,13 +1,8 @@
 <template>
   <v-app>
     <SubAppBar />
-    <v-container
-      id="app"
-      class="fill-height  setcolor"
-      fluid
-      style="margin-bottom: 0px"
-    >
-      <routermainview class="fill-height   setzindex   "> </routermainview>
+    <v-container class="fill-height setcolor" fluid style="margin-bottom: 0px">
+      <routermainview class="fill-height setzindex"> </routermainview>
     </v-container>
 
     <mainbottom> </mainbottom>
@@ -29,8 +24,7 @@ export default {
   },
 };
 </script>
-<style scoped>  
-
+<style scoped>
 .setcolor {
   background: yellow;
 }
@@ -40,6 +34,4 @@ export default {
 
   background: white;
 }
-
-
 </style>

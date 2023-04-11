@@ -1,14 +1,17 @@
 <template>
-  <v-app>
+  <v-app
+  
+    class="ma-0   pa-0"
+  
+  >
     <AppBar />
 
     <v-container
-      id="app"
-      class="fill-height setcolor"
+      class="ma-0   pa-0    fill-height"
       fluid
       style="margin-bottom: 0px"
     >
-      <routermainview class="fill-height setzindex"> </routermainview>
+      <routermainview class="ma-0   pa-0        fill-height setzindex"> </routermainview>
     </v-container>
 
     <!-- <mainbottom> </mainbottom> -->
