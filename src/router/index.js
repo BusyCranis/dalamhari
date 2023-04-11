@@ -65,6 +65,9 @@ const router = new VueRouter({
                     component: () =>
                         import ('../views/primarypage.vue')
                 }, //
+                //
+
+
 
 
             ]
