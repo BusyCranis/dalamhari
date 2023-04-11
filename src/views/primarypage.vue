@@ -129,17 +129,15 @@ export default {
     },
 
     async bring() {
-      await axios
-        .get("/member/accounts")
-        .then((res) => {
-          // console.log(res.data.posts);
-          this.foodlist = res.data.posts;
-          this.loadfood(res.data.posts);
-          // this.limitlist = this.foodlist.map((food) => {
-          //   return this.counterMaker(food.limit);
-          // });
-          // console.log(this.limitlist);
-        });
+      await axios.get("/member/accounts").then((res) => {
+        // console.log(res.data.posts);
+        this.foodlist = res.data.posts;
+        this.loadfood(res.data.posts);
+        // this.limitlist = this.foodlist.map((food) => {
+        //   return this.counterMaker(food.limit);
+        // });
+        // console.log(this.limitlist);
+      });
     },
 
     starter() {
@@ -330,7 +328,7 @@ export default {
 };
 </script>
 
-<style scoped   lang="scss"  >
+<style scoped lang="scss">
 #frontpage {
   width: 225px;
 }
