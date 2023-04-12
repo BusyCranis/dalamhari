@@ -36,4 +36,17 @@ export default {
 .setzindex {
   background: white;
 }
+
+
+
+.wrapapp :not(.edxn0) {
+ 
+  text-align: center;
+  
+}
+
+
+
+
+
 </style>
