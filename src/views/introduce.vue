@@ -50,7 +50,7 @@ export default {
 
     basic.classList.remove("wrapapp");
 
-    basic.style.textAlign = "";
+    basic.style.textAlign = "justify";
 
     console.log(basic.style);
 
