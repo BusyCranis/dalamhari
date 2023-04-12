@@ -8,8 +8,6 @@
     <br />
     <p>코리아국제웹영화제(Korea International Web Film Festival)</p>
 
-
-
     <!-- <div v-for="item in foodlist" :key="item.id">
       <div id="tweet" v-show="isVideoMode" @click="agree(item.id)">
         <img :src="userData.pictureUrl" />
@@ -30,9 +28,6 @@
         </div>
       </div>
     </div> -->
-
-
-
   </div>
 </template>
 
@@ -314,23 +309,12 @@ export default {
   },
 
   async created() {
-
-
-
     // await this.getQuote();
     // await this.randomUser();
     // this.setRandomValue();
-
     // setTimeout(() => {
     //   this.isVideoMode = true;
     // }, 1000);
-
-
-
-
-
-
-
   },
 };
 </script>
