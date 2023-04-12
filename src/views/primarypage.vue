@@ -6,17 +6,11 @@
     <br />
     <br />
     <br />
-    <p></p>
+    <p>코리아국제웹영화제(Korea International Web Film Festival)</p>
 
-    <!-- <div class="input00context">
-      <div class="icons">
-        <div class="right-icon">
-          <button @click="gologin">추가</button>
-        </div>
-      </div>
-    </div> -->
 
-    <div v-for="item in foodlist" :key="item.id">
+
+    <!-- <div v-for="item in foodlist" :key="item.id">
       <div id="tweet" v-show="isVideoMode" @click="agree(item.id)">
         <img :src="userData.pictureUrl" />
         <div class="tweet-content">
@@ -35,7 +29,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
+
+
+
   </div>
 </template>
 
@@ -313,17 +310,27 @@ export default {
   },
 
   mounted() {
-    this.bring();
+    // this.bring();
   },
 
   async created() {
-    await this.getQuote();
-    await this.randomUser();
-    this.setRandomValue();
 
-    setTimeout(() => {
-      this.isVideoMode = true;
-    }, 1000);
+
+
+    // await this.getQuote();
+    // await this.randomUser();
+    // this.setRandomValue();
+
+    // setTimeout(() => {
+    //   this.isVideoMode = true;
+    // }, 1000);
+
+
+
+
+
+
+
   },
 };
 </script>
