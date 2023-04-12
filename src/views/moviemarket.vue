@@ -4,25 +4,7 @@
       <div>
         <div>
           <br /><br /><br /><br /><br /><br /><br />
-          <div id="edxn" class="edxn0 aligntext">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              
-          </div>
+          <div id="edxn" class="edxn0 aligntext"></div>
         </div>
       </div>
     </div>
@@ -34,7 +16,31 @@ export default {
     return {};
   },
 
-  methods: {},
+  methods: {
+    basicstudy() {
+      let basic = document.getElementById("edxn");
+
+      basic.style.textAlign = "";
+    },
+  },
+
+  mounted() {
+    let basic = document.getElementById("edxn");
+
+    basic.style.inheritAttrs = false;
+
+    basic.classList.remove("wrapapp");
+
+    basic.style.textAlign = "justify";
+
+    console.log(basic.style);
+
+    console.dir(basic.style);
+
+    console.log(basic);
+
+    console.dir(basic);
+  },
 };
 </script>
 <style></style>
