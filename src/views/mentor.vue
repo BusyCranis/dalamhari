@@ -4,7 +4,7 @@
       <div>
         <div>
           <br /><br /><br /><br /><br /><br /><br />
-          <div id="edxn" class="edxn0 aligntext"></div>
+          <div id="edxn" class="edxn0 aligntext">심사위원/멘토</div>
         </div>
       </div>
     </div>
