@@ -60,15 +60,9 @@ export default {
 
     console.dir(basic);
   },
-
-
-
-
-
-  
 };
 </script>
-<style       scoped     >
+<style scoped>
 .edxn0 {
   inherits: false;
 }
