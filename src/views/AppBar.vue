@@ -76,7 +76,9 @@
       </v-menu>
     </div>
 
-    <div></div>
+    <div class="minwdthon somehght">
+      <div></div>
+    </div>
   </v-app-bar>
 </template>
 
@@ -248,6 +250,14 @@ export default {
 
 .limitwidth {
   max-width: 90px;
+}
+
+.minwdthon {
+  width: 98px;
+}
+
+.somehght {
+  height: 15px;
 }
 
 .midabsol {
