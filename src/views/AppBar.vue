@@ -5,7 +5,6 @@
     white
     height="94"
     fixed
-    hide-on-scroll
   >
     <v-toolbar-title class="pl-0" @click="go0home">
       <div class="d-flex align-center">
