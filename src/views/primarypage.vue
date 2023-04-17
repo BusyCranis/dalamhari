@@ -4,15 +4,14 @@
     <br />
     <br />
     <br />
-    <br />
-    <br />
+    <!-- <br /> -->
+    <!-- <br /> -->
 
-    <img src="/fstmovielogo.png"  />
-
+    <div>
+      <img src="/fstmovielogo.png" class="uniquestat" />
+    </div>
 
     <p>코리아국제웹영화제(Korea International Web Film Festival)</p>
-
- 
   </div>
 </template>
 
@@ -305,6 +304,28 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.uniquestat {
+  width: 300px;
+
+  height: 300px;
+}
+
+.moreflex {
+  display: flex;
+
+  // align-items: flex-start;
+}
+
+// .flexstart {
+
+// align-items: flex-start;
+
+// }
+
+.pstflex {
+  justify-content: center;
+}
+
 #frontpage {
   width: 225px;
 }
