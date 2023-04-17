@@ -305,9 +305,9 @@ export default {
 
 <style scoped lang="scss">
 .uniquestat {
-  width: 333px;
+  width: 375px;
 
-  height: 333px;
+  height: 375px;
 }
 
 .moreflex {
