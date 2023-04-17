@@ -6,28 +6,13 @@
     <br />
     <br />
     <br />
+
+    <img src="/fstmovielogo.png"  />
+
+
     <p>코리아국제웹영화제(Korea International Web Film Festival)</p>
 
-    <!-- <div v-for="item in foodlist" :key="item.id">
-      <div id="tweet" v-show="isVideoMode" @click="agree(item.id)">
-        <img :src="userData.pictureUrl" />
-        <div class="tweet-content">
-          <div class="user-info mb-0">
-            <p class="name mb-0">
-              {{ item.name }}
-            </p>
-            <p class="username mb-0">{{ item.sttype }}</p>
-            <span></span>
-          </div>
-          <div class="tweet-body">
-            <p>{{ counterMaker(item.limit) }}일 남았습니다</p>
-            <p>
-              {{ item.limit }}
-            </p>
-          </div>
-        </div>
-      </div>
-    </div> -->
+ 
   </div>
 </template>
 
