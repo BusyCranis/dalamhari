@@ -1,11 +1,5 @@
 <template>
-  <v-app-bar
-    id="whybartool"
-    color="white"
-    white
-    height="94"
-    fixed
-  >
+  <v-app-bar id="whybartool" color="white" white height="94" fixed>
     <v-toolbar-title class="pl-0" @click="go0home">
       <div class="d-flex align-center">
         <img src="/fstmovielogo.png" class="limitwidth ml-2" />
@@ -13,6 +7,37 @@
     </v-toolbar-title>
 
     <div class="dnidlcst">
+      <v-menu class="elevation-0">
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+            v-bind="attrs"
+            v-on="on"
+            class="elevation-0 ma-0 pa-0"
+            color="transparent"
+          >
+            분야별 컨텐츠
+          </v-btn>
+        </template>
+        <br /><br />
+        <v-list class="">
+          <v-list-item @click="gopage0">연극</v-list-item>
+          <v-list-item @click="gopage1">음악</v-list-item>
+          <v-list-item @click="gopage2">미술</v-list-item>
+          <v-list-item @click="gopage0">건축</v-list-item>
+          <v-list-item @click="gopage1">사진</v-list-item>
+          <v-list-item @click="gopage2">영상</v-list-item>
+          <v-list-item @click="gopage0">도형</v-list-item>
+          <v-list-item @click="gopage1">편집</v-list-item>
+          <v-list-item @click="gopage2">방송</v-list-item>
+          <v-list-item @click="gopage0">실연</v-list-item>
+          <v-list-item @click="gopage1">음반</v-list-item>
+          <v-list-item @click="gopage2">데이터베이스</v-list-item>
+          <v-list-item @click="gopage0">기타</v-list-item>
+        </v-list>
+      </v-menu>
+
+      <div style="min-width: 30px"></div>
+
       <v-menu class="elevation-0">
         <template v-slot:activator="{ on, attrs }">
           <v-btn
