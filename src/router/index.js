@@ -128,7 +128,10 @@ const router = new VueRouter({
                     name: 'student',
                     component: () =>
                         import ('../views/student.vue')
-                } //
+                }, //
+
+
+
 
                 // {
                 //     path: '/',
