@@ -133,6 +133,12 @@ const router = new VueRouter({
 
 
 
+
+
+
+
+
+
                 // {
                 //     path: '/',
                 //     name: 'primarypage',

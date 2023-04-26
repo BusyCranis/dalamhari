@@ -29,10 +29,10 @@
           <v-list-item @click="gopage5">도형</v-list-item>
           <v-list-item @click="gopage6">편집</v-list-item>
           <v-list-item @click="gopage7">방송</v-list-item>
-          <v-list-item @click="gopage8">실연</v-list-item>
-          <v-list-item @click="gopage1">음반</v-list-item>
-          <v-list-item @click="gopage2">데이터베이스</v-list-item>
-          <v-list-item @click="gopage0">기타</v-list-item>
+          <v-list-item @click="gopage20">실연</v-list-item>
+          <v-list-item @click="gopage21">음반</v-list-item>
+          <v-list-item @click="gopage22">데이터베이스</v-list-item>
+          <v-list-item @click="gopage23">기타</v-list-item>
         </v-list>
       </v-menu>
 
@@ -183,6 +183,66 @@ export default {
 
     gopage8() {
       this.$router.push({ name: "student" });
+    },
+
+    gopage9() {
+      this.$router.push({ name: "orginfo" });
+    },
+
+    gopage10() {
+      this.$router.push({ name: "way" });
+    },
+
+    gopage11() {
+      this.$router.push({ name: "notice" });
+    },
+
+    gopage12() {
+      this.$router.push({ name: "news" });
+    },
+
+    gopage13() {
+      this.$router.push({ name: "faq" });
+    },
+
+    gopage14() {
+      this.$router.push({ name: "lecture" });
+    },
+
+    gopage15() {
+      this.$router.push({ name: "secondary" });
+    },
+
+    gopage16() {
+      this.$router.push({ name: "program" });
+    },
+
+    gopage17() {
+      this.$router.push({ name: "charbi" });
+    },
+
+    gopage18() {
+      this.$router.push({ name: "charci" });
+    },
+
+    gopage19() {
+      this.$router.push({ name: "dataroom" });
+    },
+
+    gopage20() {
+      this.$router.push({ name: "tlfdus" });
+    },
+
+    gopage21() {
+      this.$router.push({ name: "music" });
+    },
+
+    gopage22() {
+      this.$router.push({ name: "database" });
+    },
+
+    gopage23() {
+      this.$router.push({ name: "etc" });
     },
 
     go0home() {
