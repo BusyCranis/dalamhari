@@ -7,6 +7,26 @@
     </v-toolbar-title>
 
     <div class="dnidlcst">
+      <v-menu>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+            v-bind="attrs"
+            v-on="on"
+            class="elevation-0 ma-0 pa-0"
+            color="transparent"
+          >
+            디지털저작권재단 소개
+          </v-btn>
+        </template>
+        <br /><br />
+        <v-list>
+          <v-list-item @click="gopage7">협회 정보</v-list-item>
+          <v-list-item @click="gopage8">찾아오시는 길</v-list-item>
+        </v-list>
+      </v-menu>
+
+      <div style="min-width: 30px"></div>
+
       <v-menu class="elevation-0">
         <template v-slot:activator="{ on, attrs }">
           <v-btn
@@ -57,6 +77,28 @@
         </v-list>
       </v-menu>
 
+      <!-- <div style="min-width: 30px"></div> -->
+
+      <div style="min-width: 30px"></div>
+
+      <v-menu>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+            v-bind="attrs"
+            v-on="on"
+            class="elevation-0 ma-0 pa-0"
+            color="transparent"
+          >
+            캐릭터
+          </v-btn>
+        </template>
+        <br /><br />
+        <v-list>
+          <v-list-item @click="gopage7">BI</v-list-item>
+          <v-list-item @click="gopage8">CI</v-list-item>
+        </v-list>
+      </v-menu>
+
       <div style="min-width: 30px"></div>
 
       <v-menu>
@@ -76,26 +118,6 @@
           <v-list-item @click="gopage4">뉴스/보도자료</v-list-item>
           <v-list-item @click="gopage5">자주하는 질문</v-list-item>
           <v-list-item @click="gopage6">저작권 강의 신청</v-list-item>
-        </v-list>
-      </v-menu>
-
-      <div style="min-width: 30px"></div>
-
-      <v-menu>
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn
-            v-bind="attrs"
-            v-on="on"
-            class="elevation-0 ma-0 pa-0"
-            color="transparent"
-          >
-            캐릭터
-          </v-btn>
-        </template>
-        <br /><br />
-        <v-list>
-          <v-list-item @click="gopage7">BI</v-list-item>
-          <v-list-item @click="gopage8">CI</v-list-item>
         </v-list>
       </v-menu>
     </div>
