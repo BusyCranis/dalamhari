@@ -58,26 +58,23 @@
 
       <div style="min-width: 30px"></div>
 
-      <v-menu class="elevation-0">
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn
-            v-bind="attrs"
-            v-on="on"
-            class="elevation-0 ma-0 pa-0"
-            color="transparent"
-          >
-            KIWFF
-          </v-btn>
-        </template>
-        <br /><br />
-        <v-list class="">
-          <v-list-item @click="gopage0">소개</v-list-item>
-          <v-list-item @click="gopage1">개요</v-list-item>
-          <v-list-item @click="gopage2">movie market</v-list-item>
-        </v-list>
-      </v-menu>
+      <v-btn
+        @click="gopage15"
+        class="elevation-0 ma-0 pa-0"
+        color="transparent"
+      >
+        2차 저작물
+      </v-btn>
 
-      <!-- <div style="min-width: 30px"></div> -->
+      <div style="min-width: 30px"></div>
+
+      <v-btn
+        @click="gopage15"
+        class="elevation-0 ma-0 pa-0"
+        color="transparent"
+      >
+        컴퓨터 프로그램
+      </v-btn>
 
       <div style="min-width: 30px"></div>
 
@@ -98,6 +95,16 @@
           <v-list-item @click="gopage8">CI</v-list-item>
         </v-list>
       </v-menu>
+
+      <div style="min-width: 30px"></div>
+
+      <v-btn
+        @click="gopage15"
+        class="elevation-0 ma-0 pa-0"
+        color="transparent"
+      >
+        자료실
+      </v-btn>
 
       <div style="min-width: 30px"></div>
 
