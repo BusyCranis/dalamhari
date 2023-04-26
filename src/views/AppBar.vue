@@ -67,15 +67,15 @@
             class="elevation-0 ma-0 pa-0"
             color="transparent"
           >
-            2023년 행사 안내
+            소통광장
           </v-btn>
         </template>
         <br /><br />
         <v-list>
-          <v-list-item @click="gopage3">행사 일정</v-list-item>
-          <v-list-item @click="gopage4">시상안내</v-list-item>
-          <v-list-item @click="gopage5">심사위원/멘토</v-list-item>
-          <v-list-item @click="gopage6">행사안내</v-list-item>
+          <v-list-item @click="gopage3">공지사항</v-list-item>
+          <v-list-item @click="gopage4">뉴스/보도자료</v-list-item>
+          <v-list-item @click="gopage5">자주하는 질문</v-list-item>
+          <v-list-item @click="gopage6">저작권 강의 신청</v-list-item>
         </v-list>
       </v-menu>
 
@@ -89,13 +89,13 @@
             class="elevation-0 ma-0 pa-0"
             color="transparent"
           >
-            출품/신청 안내
+            캐릭터
           </v-btn>
         </template>
         <br /><br />
         <v-list>
-          <v-list-item @click="gopage7">웹드라마 경쟁</v-list-item>
-          <v-list-item @click="gopage8">학생공모</v-list-item>
+          <v-list-item @click="gopage7">BI</v-list-item>
+          <v-list-item @click="gopage8">CI</v-list-item>
         </v-list>
       </v-menu>
     </div>
