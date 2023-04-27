@@ -121,10 +121,10 @@
         </template>
         <br /><br />
         <v-list>
-          <v-list-item @click="gopage3">공지사항</v-list-item>
-          <v-list-item @click="gopage4">뉴스/보도자료</v-list-item>
-          <v-list-item @click="gopage5">자주하는 질문</v-list-item>
-          <v-list-item @click="gopage6">저작권 강의 신청</v-list-item>
+          <v-list-item @click="gopage11">공지사항</v-list-item>
+          <v-list-item @click="gopage12">뉴스/보도자료</v-list-item>
+          <v-list-item @click="gopage13">자주하는 질문</v-list-item>
+          <v-list-item @click="gopage14">저작권 강의 신청</v-list-item>
         </v-list>
       </v-menu>
     </div>
