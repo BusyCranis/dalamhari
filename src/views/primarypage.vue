@@ -7,11 +7,11 @@
     <!-- <br /> -->
     <!-- <br /> -->
 
-    <div>
+    <!-- <div>
       <img src="/fstmovielogo.png" class="uniquestat" />
     </div>
 
-    <p>코리아국제웹영화제(Korea International Web Film Festival)</p>
+    <p>코리아국제웹영화제(Korea International Web Film Festival)</p> -->
   </div>
 </template>
 
