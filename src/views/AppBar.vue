@@ -20,8 +20,8 @@
         </template>
         <br /><br />
         <v-list>
-          <v-list-item @click="gopage7">협회 정보</v-list-item>
-          <v-list-item @click="gopage8">찾아오시는 길</v-list-item>
+          <v-list-item @click="gopage9">협회 정보</v-list-item>
+          <v-list-item @click="gopage10">찾아오시는 길</v-list-item>
         </v-list>
       </v-menu>
 
@@ -91,8 +91,8 @@
         </template>
         <br /><br />
         <v-list>
-          <v-list-item @click="gopage7">BI</v-list-item>
-          <v-list-item @click="gopage8">CI</v-list-item>
+          <v-list-item @click="gopage17">BI</v-list-item>
+          <v-list-item @click="gopage18">CI</v-list-item>
         </v-list>
       </v-menu>
 
