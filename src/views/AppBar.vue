@@ -69,7 +69,7 @@
       <div style="min-width: 30px"></div>
 
       <v-btn
-        @click="gopage15"
+        @click="gopage16"
         class="elevation-0 ma-0 pa-0"
         color="transparent"
       >
@@ -99,7 +99,7 @@
       <div style="min-width: 30px"></div>
 
       <v-btn
-        @click="gopage15"
+        @click="gopage19"
         class="elevation-0 ma-0 pa-0"
         color="transparent"
       >
