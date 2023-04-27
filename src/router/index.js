@@ -130,7 +130,110 @@ const router = new VueRouter({
                         import ('../views/student.vue')
                 }, //
 
+                {
+                    path: '/orginfo',
+                    name: 'orginfo',
+                    component: () =>
+                        import ('../views/orginfo.vue')
+                }, //
 
+                {
+                    path: '/way',
+                    name: 'way',
+                    component: () =>
+                        import ('../views/way.vue')
+                }, //
+
+                {
+                    path: '/notice',
+                    name: 'notice',
+                    component: () =>
+                        import ('../views/notice.vue')
+                }, //
+
+                {
+                    path: '/news',
+                    name: 'news',
+                    component: () =>
+                        import ('../views/news.vue')
+                }, //
+
+                {
+                    path: '/faq',
+                    name: 'faq',
+                    component: () =>
+                        import ('../views/faq.vue')
+                }, //
+
+                {
+                    path: '/lecture',
+                    name: 'lecture',
+                    component: () =>
+                        import ('../views/lecture.vue')
+                }, //
+
+                {
+                    path: '/secondary',
+                    name: 'secondary',
+                    component: () =>
+                        import ('../views/secondary.vue')
+                }, //
+
+                {
+                    path: '/program',
+                    name: 'program',
+                    component: () =>
+                        import ('../views/program.vue')
+                }, //
+
+                {
+                    path: '/charbi',
+                    name: 'charbi',
+                    component: () =>
+                        import ('../views/charbi.vue')
+                }, //
+
+                {
+                    path: '/charci',
+                    name: 'charci',
+                    component: () =>
+                        import ('../views/charci.vue')
+                }, //
+
+                {
+                    path: '/dataroom',
+                    name: 'dataroom',
+                    component: () =>
+                        import ('../views/dataroom.vue')
+                }, //
+
+                {
+                    path: '/tlfdus',
+                    name: 'tlfdus',
+                    component: () =>
+                        import ('../views/tlfdus.vue')
+                }, //
+
+                {
+                    path: '/music',
+                    name: 'music',
+                    component: () =>
+                        import ('../views/music.vue')
+                }, //
+
+                {
+                    path: '/database',
+                    name: 'database',
+                    component: () =>
+                        import ('../views/database.vue')
+                }, //
+
+                {
+                    path: '/etc',
+                    name: 'etc',
+                    component: () =>
+                        import ('../views/etc.vue')
+                }, //
 
 
 
