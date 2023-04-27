@@ -3,11 +3,10 @@
     <div>
       <div>
         <div>
-          <br /><br /><br /><br /><br /><br /><br />
-          <!-- <br />
-          <br />
-          <br />
-          <br /> -->
+          <br /><br /><br /><br /><br />
+          <!-- <br /> -->
+          <!-- <br /> -->
+   
 
           <div id="edxn" class="edxn0 aligntext">
             디지털저작권재단 설립 목적과 활동<br /><br />
