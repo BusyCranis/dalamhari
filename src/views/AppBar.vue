@@ -20,6 +20,7 @@
         </template>
         <br /><br />
         <v-list>
+          <v-list-item @click="gopage9">인사말</v-list-item>
           <v-list-item @click="gopage9">협회 정보</v-list-item>
           <v-list-item @click="gopage10">찾아오시는 길</v-list-item>
         </v-list>
@@ -73,7 +74,7 @@
         class="elevation-0 ma-0 pa-0"
         color="transparent"
       >
-        컴퓨터 프로그램
+        소프트웨어
       </v-btn>
 
       <div style="min-width: 30px"></div>
