@@ -86,36 +86,6 @@
             class="elevation-0 ma-0 pa-0"
             color="transparent"
           >
-            캐릭터
-          </v-btn>
-        </template>
-        <br /><br />
-        <v-list>
-          <v-list-item @click="gopage17">BI</v-list-item>
-          <v-list-item @click="gopage18">CI</v-list-item>
-        </v-list>
-      </v-menu>
-
-      <div style="min-width: 30px"></div>
-
-      <v-btn
-        @click="gopage19"
-        class="elevation-0 ma-0 pa-0"
-        color="transparent"
-      >
-        자료실
-      </v-btn>
-
-      <div style="min-width: 30px"></div>
-
-      <v-menu>
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn
-            v-bind="attrs"
-            v-on="on"
-            class="elevation-0 ma-0 pa-0"
-            color="transparent"
-          >
             소통광장
           </v-btn>
         </template>
