@@ -28,6 +28,29 @@
 
       <div style="min-width: 30px"></div>
 
+      <v-menu>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+            v-bind="attrs"
+            v-on="on"
+            class="elevation-0 ma-0 pa-0"
+            color="transparent"
+          >
+            주요 사업
+          </v-btn>
+        </template>
+        <br /><br />
+        <v-list>
+          <v-list-item @click="gopage9">
+            클라우드 디지털 저작권 플랫폼
+          </v-list-item>
+          <v-list-item @click="gopage9">디지털 자산 감정 플랫폼</v-list-item>
+          <v-list-item @click="gopage10">기타 사업</v-list-item>
+        </v-list>
+      </v-menu>
+
+      <div style="min-width: 30px"></div>
+
       <v-menu class="elevation-0">
         <template v-slot:activator="{ on, attrs }">
           <v-btn
