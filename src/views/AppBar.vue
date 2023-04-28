@@ -268,6 +268,26 @@ export default {
       this.$router.push({ name: "etc" });
     },
 
+    gopage24() {
+      this.$router.push({ name: "greeting" });
+    },
+
+    gopage25() {
+      this.$router.push({ name: "cloud" });
+    },
+
+    gopage26() {
+      this.$router.push({ name: "estimate" });
+    },
+
+    gopage27() {
+      this.$router.push({ name: "otherbusyness" });
+    },
+
+    // gopage28() {
+    //   this.$router.push({ name: "etc" });
+    // },
+
     go0home() {
       this.$router.push({ name: "primarypage" });
     },
