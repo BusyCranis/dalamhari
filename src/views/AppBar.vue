@@ -20,7 +20,7 @@
         </template>
         <br /><br />
         <v-list>
-          <v-list-item @click="gopage9">인사말</v-list-item>
+          <v-list-item @click="gopage24">인사말</v-list-item>
           <v-list-item @click="gopage9">협회 정보</v-list-item>
           <v-list-item @click="gopage10">찾아오시는 길</v-list-item>
         </v-list>
@@ -41,11 +41,11 @@
         </template>
         <br /><br />
         <v-list>
-          <v-list-item @click="gopage9">
+          <v-list-item @click="gopage25">
             클라우드 디지털 저작권 플랫폼
           </v-list-item>
-          <v-list-item @click="gopage9">디지털 자산 감정 플랫폼</v-list-item>
-          <v-list-item @click="gopage10">기타 사업</v-list-item>
+          <v-list-item @click="gopage26">디지털 자산 감정 플랫폼</v-list-item>
+          <v-list-item @click="gopage27">기타 사업</v-list-item>
         </v-list>
       </v-menu>
 
