@@ -235,12 +235,33 @@ const router = new VueRouter({
                         import ('../views/etc.vue')
                 }, //
 
+                {
+                    path: '/greeting',
+                    name: 'greeting',
+                    component: () =>
+                        import ('../views/greeting.vue')
+                }, //
 
+                {
+                    path: '/cloud',
+                    name: 'cloud',
+                    component: () =>
+                        import ('../views/cloud.vue')
+                }, //
 
+                {
+                    path: '/estimate',
+                    name: 'estimate',
+                    component: () =>
+                        import ('../views/estimate.vue')
+                }, //
 
-
-
-
+                {
+                    path: '/otherbusyness',
+                    name: 'otherbusyness',
+                    component: () =>
+                        import ('../views/otherbusyness.vue')
+                } //
 
                 // {
                 //     path: '/',
