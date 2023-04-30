@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style   scoped >
-.setcolor {
+.set01color {
   background: yellow;
 }
 
