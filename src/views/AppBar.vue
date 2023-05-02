@@ -1,8 +1,8 @@
 <template>
-  <v-app-bar id="whybartool" color="white" white height="94" fixed>
+  <v-app-bar id="whybartool"   class="set101color"  color="white"    transparent    height="94" fixed>
     <v-toolbar-title class="pl-0" @click="go0home">
       <div class="d-flex align-center">
-        <img src="/fstmovielogo.png" class="limitwidth ml-2" />
+        <!-- <img src="/fstmovielogo.png" class="limitwidth ml-2" /> -->
       </div>
     </v-toolbar-title>
 
@@ -334,10 +334,36 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.set101color {
+  background-image: url("/supplynewsmain.jpeg");
+
+  /* background-size: cover; */
+
+  /* background-size: contain; */
+
+  background-size: cover;
+
+  /* background-size: 100% 50%; */
+
+  /* background-size: 100%; */
+
+  background-position: center;
+
+  /* background-position: top; */
+}
+
+
+
+
+
+
 .v-toolbar__title {
   font-size: 1rem !important;
   color: #969696;
 }
+
+
 
 .moreflex {
   display: flex;
