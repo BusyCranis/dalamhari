@@ -11,7 +11,7 @@ export default {};
 
 <style scoped>
 .setcolor {
-  background: blue
+  background: orange
 }
 
 .setzindex {
