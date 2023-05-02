@@ -12,7 +12,7 @@
         운영중인 매장
         <v-divider></v-divider>
 
-        <v-text-field v-model="shopitem"> 판매할 상품 이름 </v-text-field>
+        <!-- <v-text-field v-model="shopitem"> 판매할 상품 이름 </v-text-field> -->
    
         <v-btn @click="postselect"> 추가하기 </v-btn>
         <!-- <v-btn @click="selecteditem"> offline 추가하기 </v-btn> -->
@@ -30,12 +30,6 @@
       <v-btn @click="move3()"> 이용 내역 보러 가기 </v-btn>
       <v-btn @click="move4()"> 메시지 보러 가기 </v-btn>
 
-      <v-text-field v-model="signemail"> </v-text-field>
-      <v-text-field v-model="signpassword"> </v-text-field>
-
-      <v-btn @click="getboard"> 게시판 조회하기 </v-btn>
-      <v-btn @click="addboard"> 게시글 추가하기 </v-btn>
-      <v-btn @click="getmyboard"> 내 게시글만 보기 </v-btn>
 
       <div v-for="(a, i) in $store.state.foodstore" :key="i">
         {{ $store.state.foodstore[i] }}
