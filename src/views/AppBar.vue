@@ -469,7 +469,12 @@ export default {
 }
 
 .textcolor {
-  color: red;
+  color: rgb(255, 103, 53);
+
+
+  font-weight: 800;
+
+
 }
 
 .moreflex {
