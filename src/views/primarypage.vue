@@ -9,29 +9,25 @@
 
     <v-card>
       <v-list color="yellow lighten-5">
-        운영중인 매장
+        <!-- 운영중인 매장 -->
         <v-divider></v-divider>
 
         <!-- <v-text-field v-model="shopitem"> 판매할 상품 이름 </v-text-field> -->
 
-        <v-btn @click="addnews"> 추가하기 </v-btn>
-   
+        <!-- <v-btn @click="addnews"> 추가하기 </v-btn> -->
+
         <!-- <v-btn @click="postselect"> 추가하기 </v-btn> -->
         <!-- <v-btn @click="selecteditem"> offline 추가하기 </v-btn> -->
         <!-- <div v-for="nft in $store.state.allNFTs" :key="nft.id"> -->
-        <div v-for="(a, i) in $store.state.foodstore" :key="i">
+        <div v-for="(a, i) in newslist" :key="i">
           <v-divider></v-divider>
-          <div @click="savedchangeindex(i)">
-       
-            {{ $store.state.foodstore[i] }}
-
-    
+          <div @click="addnews(i)">
+            {{ newslist[i] }}
           </div>
         </div>
       </v-list>
       <!-- <v-btn @click="move3()"> 이용 내역 보러 가기 </v-btn>
       <v-btn @click="move4()"> 메시지 보러 가기 </v-btn> -->
-
 
       <div v-for="(a, i) in $store.state.foodstore" :key="i">
         {{ $store.state.foodstore[i] }}
@@ -45,9 +41,7 @@ import axios from "axios";
 import { ValidationProvider } from "vee-validate";
 import { mapState, mapActions, mapMutations } from "vuex";
 import Icons from "@/components/Icons";
-import newsData from "./newsData.js"
-
-
+import newsData from "./newsData.js";
 
 export default {
   name: "Home",
@@ -57,9 +51,7 @@ export default {
 
   data() {
     return {
-
       newslist: newsData,
-
 
       userlist: [],
 
@@ -124,26 +116,13 @@ export default {
     ...mapMutations(["updatecore"]),
     ...mapMutations(["submitlogout"]),
 
+    addnews(i) {
+      console.log(this.newslist);
 
-
-    addnews() {
-
-
-console.log(this.newslist)
-
-
-    
-
+        
 
 
     },
-
-
-
-
-
-
-
 
     freeze() {
       this.typestore = "냉동";
