@@ -11,7 +11,7 @@ export default {};
 
 <style scoped>
 .setcolor {
-  background: rgb(253, 191, 74)
+  background: rgb(255, 203, 90)
 }
 
 .setzindex {
