@@ -29,9 +29,9 @@ export default {
 </script>
 
 <style   scoped >
-.set01color {
+/* .set01color {
   background: yellow;
-}
+} */
 
 .setzindex {
   background: white;
