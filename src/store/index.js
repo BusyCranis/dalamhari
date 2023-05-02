@@ -4,57 +4,43 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
+    state: {
+        islogin: false,
 
-    islogin: false,
+        // paththis: window.location.pathname
 
+        foodstore: [],
 
-    // paththis: window.location.pathname
-
-
-    foodstore: [],
-
-    selectedFood: null
-
-
-
-
-
-
-
-
-
-  },
-  mutations: {
-
-    loginsuccess(state) {
-      state.islogin = true
+        selectedFood: null
     },
+    mutations: {
 
-    savefood(state, payload) {
+        loginsuccess(state) {
+            state.islogin = true
+        },
 
-      state.foodstore.push(payload)
+        savefood(state, payload) {
+
+            state.foodstore.push(payload)
+
+        },
+
+        loadfood(state, payload) {
+
+            state.foodstore = payload
+
+        },
+
+        insertfood(state, payload) {
+
+            state.selectedFood = payload
+
+        }
+
+
+
 
     },
-
-    loadfood(state, payload) {
-
-      state.foodstore = payload
-
-    },
-
-    insertfood(state, payload) {
-
-      state.selectedFood = payload
-
-    }
-
-
-
-
-  },
-  actions: {
-  },
-  modules: {
-  }
+    actions: {},
+    modules: {}
 })

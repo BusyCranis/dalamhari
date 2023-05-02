@@ -7,9 +7,40 @@
     <br />
     <br />
 
-   
+    <v-card>
+      <v-list color="yellow lighten-5">
+        운영중인 매장
+        <v-divider></v-divider>
 
-    <!-- <p>코리아국제웹영화제(Korea International Web Film Festival)</p> -->
+        <v-text-field v-model="shopitem"> 판매할 상품 이름 </v-text-field>
+   
+        <v-btn @click="postselect"> 추가하기 </v-btn>
+        <!-- <v-btn @click="selecteditem"> offline 추가하기 </v-btn> -->
+        <!-- <div v-for="nft in $store.state.allNFTs" :key="nft.id"> -->
+        <div v-for="(a, i) in $store.state.foodstore" :key="i">
+          <v-divider></v-divider>
+          <div @click="savedchangeindex(i)">
+       
+            {{ $store.state.foodstore[i] }}
+
+    
+          </div>
+        </div>
+      </v-list>
+      <v-btn @click="move3()"> 이용 내역 보러 가기 </v-btn>
+      <v-btn @click="move4()"> 메시지 보러 가기 </v-btn>
+
+      <v-text-field v-model="signemail"> </v-text-field>
+      <v-text-field v-model="signpassword"> </v-text-field>
+
+      <v-btn @click="getboard"> 게시판 조회하기 </v-btn>
+      <v-btn @click="addboard"> 게시글 추가하기 </v-btn>
+      <v-btn @click="getmyboard"> 내 게시글만 보기 </v-btn>
+
+      <div v-for="(a, i) in $store.state.foodstore" :key="i">
+        {{ $store.state.foodstore[i] }}
+      </div>
+    </v-card>
   </div>
 </template>
 
@@ -89,6 +120,15 @@ export default {
     ...mapMutations(["loadfood"]),
     ...mapMutations(["updatecore"]),
     ...mapMutations(["submitlogout"]),
+
+
+
+
+
+
+
+
+
 
     freeze() {
       this.typestore = "냉동";
