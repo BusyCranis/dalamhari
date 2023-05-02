@@ -1,5 +1,12 @@
 <template>
-  <v-app-bar id="whybartool"   class="set101color"    color="white" transparent height="94" fixed>
+  <v-app-bar
+    id="whybartool"
+    class="set101color"
+    color="white"
+    transparent
+    height="94"
+    fixed
+  >
     <v-toolbar-title class="pl-0" @click="go0home">
       <div class="d-flex align-center">
         <!-- <img src="/fstmovielogo.png" class="limitwidth ml-2" /> -->
@@ -12,7 +19,7 @@
           <v-btn
             v-bind="attrs"
             v-on="on"
-            class="elevation-0 ma-0 pa-0"
+            class="elevation-0 ma-0 pa-0 textcolor"
             color="transparent"
           >
             기관 소개
@@ -33,7 +40,7 @@
           <v-btn
             v-bind="attrs"
             v-on="on"
-            class="elevation-0 ma-0 pa-0"
+            class="elevation-0 ma-0 pa-0 textcolor"
             color="transparent"
           >
             공지사항
@@ -56,7 +63,7 @@
           <v-btn
             v-bind="attrs"
             v-on="on"
-            class="elevation-0 ma-0 pa-0"
+            class="elevation-0 ma-0 pa-0 textcolor"
             color="transparent"
           >
             업종별 유통뉴스
@@ -87,7 +94,7 @@
           <v-btn
             v-bind="attrs"
             v-on="on"
-            class="elevation-0 ma-0 pa-0"
+            class="elevation-0 ma-0 pa-0 textcolor"
             color="transparent"
           >
             종합뉴스
@@ -109,7 +116,7 @@
           <v-btn
             v-bind="attrs"
             v-on="on"
-            class="elevation-0 ma-0 pa-0"
+            class="elevation-0 ma-0 pa-0 textcolor"
             color="transparent"
           >
             창업 지원
@@ -140,7 +147,7 @@
           <v-btn
             v-bind="attrs"
             v-on="on"
-            class="elevation-0 ma-0 pa-0"
+            class="elevation-0 ma-0 pa-0 textcolor"
             color="transparent"
           >
             유통 종사자 기고
@@ -171,7 +178,7 @@
           <v-btn
             v-bind="attrs"
             v-on="on"
-            class="elevation-0 ma-0 pa-0"
+            class="elevation-0 ma-0 pa-0 textcolor"
             color="transparent"
           >
             온라인 유통거래시장
@@ -202,7 +209,7 @@
           <v-btn
             v-bind="attrs"
             v-on="on"
-            class="elevation-0 ma-0 pa-0"
+            class="elevation-0 ma-0 pa-0 textcolor"
             color="transparent"
           >
             커뮤니티
@@ -459,6 +466,10 @@ export default {
 .v-toolbar__title {
   font-size: 1rem !important;
   color: #969696;
+}
+
+.textcolor {
+  color: red;
 }
 
 .moreflex {
