@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar id="whybartool"   class="set101color"  color="white"    transparent    height="94" fixed>
+  <v-app-bar id="whybartool"   class="set101color"    color="white" transparent height="94" fixed>
     <v-toolbar-title class="pl-0" @click="go0home">
       <div class="d-flex align-center">
         <!-- <img src="/fstmovielogo.png" class="limitwidth ml-2" /> -->
@@ -15,7 +15,7 @@
             class="elevation-0 ma-0 pa-0"
             color="transparent"
           >
-            디지털저작권재단 소개
+            기관 소개
           </v-btn>
         </template>
         <br /><br />
@@ -36,7 +36,7 @@
             class="elevation-0 ma-0 pa-0"
             color="transparent"
           >
-            주요 사업
+            공지사항
           </v-btn>
         </template>
         <br /><br />
@@ -59,7 +59,7 @@
             class="elevation-0 ma-0 pa-0"
             color="transparent"
           >
-            분야별 컨텐츠
+            업종별 유통뉴스
           </v-btn>
         </template>
         <br /><br />
@@ -82,26 +82,6 @@
 
       <div style="min-width: 30px"></div>
 
-      <v-btn
-        @click="gopage15"
-        class="elevation-0 ma-0 pa-0"
-        color="transparent"
-      >
-        2차 저작물
-      </v-btn>
-
-      <div style="min-width: 30px"></div>
-
-      <v-btn
-        @click="gopage16"
-        class="elevation-0 ma-0 pa-0"
-        color="transparent"
-      >
-        소프트웨어
-      </v-btn>
-
-      <div style="min-width: 30px"></div>
-
       <v-menu>
         <template v-slot:activator="{ on, attrs }">
           <v-btn
@@ -110,7 +90,7 @@
             class="elevation-0 ma-0 pa-0"
             color="transparent"
           >
-            소통광장
+            종합뉴스
           </v-btn>
         </template>
         <br /><br />
@@ -119,6 +99,130 @@
           <v-list-item @click="gopage12">뉴스/보도자료</v-list-item>
           <v-list-item @click="gopage13">자주하는 질문</v-list-item>
           <v-list-item @click="gopage14">저작권 강의 신청</v-list-item>
+        </v-list>
+      </v-menu>
+
+      <div style="min-width: 30px"></div>
+
+      <v-menu class="elevation-0">
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+            v-bind="attrs"
+            v-on="on"
+            class="elevation-0 ma-0 pa-0"
+            color="transparent"
+          >
+            창업 지원
+          </v-btn>
+        </template>
+        <br /><br />
+        <v-list class="">
+          <v-list-item @click="gopage0">연극</v-list-item>
+          <v-list-item @click="gopage1">음악</v-list-item>
+          <v-list-item @click="gopage2">미술</v-list-item>
+          <v-list-item @click="gopage0">건축</v-list-item>
+          <v-list-item @click="gopage3">사진</v-list-item>
+          <v-list-item @click="gopage4">영상</v-list-item>
+          <v-list-item @click="gopage5">도형</v-list-item>
+          <v-list-item @click="gopage6">편집</v-list-item>
+          <v-list-item @click="gopage7">방송</v-list-item>
+          <v-list-item @click="gopage20">실연</v-list-item>
+          <v-list-item @click="gopage21">음반</v-list-item>
+          <v-list-item @click="gopage22">데이터베이스</v-list-item>
+          <v-list-item @click="gopage23">기타</v-list-item>
+        </v-list>
+      </v-menu>
+
+      <div style="min-width: 30px"></div>
+
+      <v-menu class="elevation-0">
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+            v-bind="attrs"
+            v-on="on"
+            class="elevation-0 ma-0 pa-0"
+            color="transparent"
+          >
+            유통 종사자 기고
+          </v-btn>
+        </template>
+        <br /><br />
+        <v-list class="">
+          <v-list-item @click="gopage0">연극</v-list-item>
+          <v-list-item @click="gopage1">음악</v-list-item>
+          <v-list-item @click="gopage2">미술</v-list-item>
+          <v-list-item @click="gopage0">건축</v-list-item>
+          <v-list-item @click="gopage3">사진</v-list-item>
+          <v-list-item @click="gopage4">영상</v-list-item>
+          <v-list-item @click="gopage5">도형</v-list-item>
+          <v-list-item @click="gopage6">편집</v-list-item>
+          <v-list-item @click="gopage7">방송</v-list-item>
+          <v-list-item @click="gopage20">실연</v-list-item>
+          <v-list-item @click="gopage21">음반</v-list-item>
+          <v-list-item @click="gopage22">데이터베이스</v-list-item>
+          <v-list-item @click="gopage23">기타</v-list-item>
+        </v-list>
+      </v-menu>
+
+      <div style="min-width: 30px"></div>
+
+      <v-menu class="elevation-0">
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+            v-bind="attrs"
+            v-on="on"
+            class="elevation-0 ma-0 pa-0"
+            color="transparent"
+          >
+            온라인 유통거래시장
+          </v-btn>
+        </template>
+        <br /><br />
+        <v-list class="">
+          <v-list-item @click="gopage0">연극</v-list-item>
+          <v-list-item @click="gopage1">음악</v-list-item>
+          <v-list-item @click="gopage2">미술</v-list-item>
+          <v-list-item @click="gopage0">건축</v-list-item>
+          <v-list-item @click="gopage3">사진</v-list-item>
+          <v-list-item @click="gopage4">영상</v-list-item>
+          <v-list-item @click="gopage5">도형</v-list-item>
+          <v-list-item @click="gopage6">편집</v-list-item>
+          <v-list-item @click="gopage7">방송</v-list-item>
+          <v-list-item @click="gopage20">실연</v-list-item>
+          <v-list-item @click="gopage21">음반</v-list-item>
+          <v-list-item @click="gopage22">데이터베이스</v-list-item>
+          <v-list-item @click="gopage23">기타</v-list-item>
+        </v-list>
+      </v-menu>
+
+      <div style="min-width: 30px"></div>
+
+      <v-menu class="elevation-0">
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+            v-bind="attrs"
+            v-on="on"
+            class="elevation-0 ma-0 pa-0"
+            color="transparent"
+          >
+            커뮤니티
+          </v-btn>
+        </template>
+        <br /><br />
+        <v-list class="">
+          <v-list-item @click="gopage0">연극</v-list-item>
+          <v-list-item @click="gopage1">음악</v-list-item>
+          <v-list-item @click="gopage2">미술</v-list-item>
+          <v-list-item @click="gopage0">건축</v-list-item>
+          <v-list-item @click="gopage3">사진</v-list-item>
+          <v-list-item @click="gopage4">영상</v-list-item>
+          <v-list-item @click="gopage5">도형</v-list-item>
+          <v-list-item @click="gopage6">편집</v-list-item>
+          <v-list-item @click="gopage7">방송</v-list-item>
+          <v-list-item @click="gopage20">실연</v-list-item>
+          <v-list-item @click="gopage21">음반</v-list-item>
+          <v-list-item @click="gopage22">데이터베이스</v-list-item>
+          <v-list-item @click="gopage23">기타</v-list-item>
         </v-list>
       </v-menu>
     </div>
@@ -334,7 +438,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .set101color {
   background-image: url("/supplynewsmain.jpeg");
 
@@ -353,17 +456,10 @@ export default {
   /* background-position: top; */
 }
 
-
-
-
-
-
 .v-toolbar__title {
   font-size: 1rem !important;
   color: #969696;
 }
-
-
 
 .moreflex {
   display: flex;
