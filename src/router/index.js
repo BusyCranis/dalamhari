@@ -261,7 +261,14 @@ const router = new VueRouter({
                     name: 'otherbusyness',
                     component: () =>
                         import ('../views/otherbusyness.vue')
-                } //
+                }, //
+                {
+                    path: '/selectednews',
+                    name: 'selectednews',
+                    component: () =>
+                        import ('../views/selectednews.vue')
+                }, //
+
 
                 // {
                 //     path: '/',
