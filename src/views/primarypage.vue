@@ -9,16 +9,9 @@
 
     <v-card>
       <v-list color="yellow lighten-5">
-        <!-- 운영중인 매장 -->
+     
         <v-divider></v-divider>
 
-        <!-- <v-text-field v-model="shopitem"> 판매할 상품 이름 </v-text-field> -->
-
-        <!-- <v-btn @click="addnews"> 추가하기 </v-btn> -->
-
-        <!-- <v-btn @click="postselect"> 추가하기 </v-btn> -->
-        <!-- <v-btn @click="selecteditem"> offline 추가하기 </v-btn> -->
-        <!-- <div v-for="nft in $store.state.allNFTs" :key="nft.id"> -->
         <div v-for="(a, i) in newslist" :key="i">
           <v-divider></v-divider>
           <div @click="addnews(i)">
@@ -26,8 +19,7 @@
           </div>
         </div>
       </v-list>
-      <!-- <v-btn @click="move3()"> 이용 내역 보러 가기 </v-btn>
-      <v-btn @click="move4()"> 메시지 보러 가기 </v-btn> -->
+ 
 
       <div v-for="(a, i) in $store.state.foodstore" :key="i">
         {{ $store.state.foodstore[i] }}
