@@ -446,7 +446,7 @@ export default {
 
 <style lang="scss" scoped>
 .set101color {
-  background-image: url("/supplynewsmain.jpeg");
+  background-image: url("/normalHeader.png");
 
   /* background-size: cover; */
 
