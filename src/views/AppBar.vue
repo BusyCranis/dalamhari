@@ -237,6 +237,10 @@
     <div class="minwdthon somehght">
       <div></div>
     </div>
+
+
+
+
   </v-app-bar>
 </template>
 
@@ -446,7 +450,7 @@ export default {
 
 <style lang="scss" scoped>
 .set101color {
-  background-image: url("/normalHeader.png");
+  background-image: url("/propertyDefault.png");
 
   /* background-size: cover; */
 
