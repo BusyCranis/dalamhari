@@ -6,7 +6,7 @@
     color="white"
     transparent
     height="94"
-    fixed
+   
 
 
   
@@ -40,7 +40,7 @@ export default {
 </script>
 <style    lang="scss" scoped>
 .set101color {
-  background-image: url("/propertyDefault.png");
+  background-image: url("/footerDefault.png");
 
   /* background-size: contain; */
 
