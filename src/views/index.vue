@@ -3,7 +3,7 @@
     <AppBar />
 
     <v-container class="ma-0 pa-0 fill-height" fluid style="margin-bottom: 0px">
-      <routermainview class="ma-0 pa-0 fill-height setzindex"> </routermainview>
+      <routermainview class="ma-0 pa-0 fill-height"> </routermainview>
     </v-container>
 
     <mainbottom> </mainbottom>
@@ -33,9 +33,9 @@ export default {
   background: yellow;
 } */
 
-.setzindex {
+/* .setzindex {
   background: white;
-}
+} */
 
 
 
