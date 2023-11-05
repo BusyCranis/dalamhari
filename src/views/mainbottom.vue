@@ -1,6 +1,5 @@
 <template>
   <v-bottom-navigation 
-  
     id="whybartool"
     class="set101color"
     color="white"
@@ -9,7 +8,8 @@
    
 
 
-  
+    @click="detectAction"
+
   >
     <!-- <v-btn value="recent"> 냉장고 </v-btn>
     <v-btn value="favorites" @click="makeAlert"> 메모 </v-btn>
@@ -25,6 +25,30 @@ export default {
     };
   },
   methods: {
+    detectAction(event) {
+      console.log(event.target)
+      event.stopPropagation();
+      
+
+      let posXrate = event.offsetX / event.target.clientWidth
+
+      let posYrate = event.offsetY / event.target.clientHeight
+
+
+
+
+      console.log("너비비율= " + posXrate + ",  높이비율= " + posYrate)
+
+
+
+
+
+    },
+
+
+
+
+
     move3() {
       this.$router.push({ name: "potenpage" });
     },

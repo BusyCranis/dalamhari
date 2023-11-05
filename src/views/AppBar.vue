@@ -286,8 +286,6 @@ export default {
   },
 
   methods: {
-
-
     detectAction(event) {
       console.log(event.target)
       event.stopPropagation();
