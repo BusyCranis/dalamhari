@@ -290,14 +290,19 @@ export default {
 
     detectAction(event) {
       console.log(event.target)
-
       event.stopPropagation();
       
 
       let posXrate = event.offsetX / event.target.clientWidth
 
+      let posYrate = event.offsetY / event.target.clientHeight
 
-      console.log(posXrate)
+
+
+
+      console.log("너비비율=" + posXrate + "높이비율=" + posYrate)
+
+
 
 
 
