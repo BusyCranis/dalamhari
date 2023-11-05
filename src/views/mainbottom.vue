@@ -4,7 +4,7 @@
     class="set101color"
     color="white"
     transparent
-    height="94"
+    min-height="94"
    
 
 
