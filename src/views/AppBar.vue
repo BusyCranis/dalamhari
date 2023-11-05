@@ -300,7 +300,7 @@ export default {
 
 
 
-      console.log("너비비율=" + posXrate + "높이비율=" + posYrate)
+      console.log("너비비율= " + posXrate + ",  높이비율= " + posYrate)
 
 
 
