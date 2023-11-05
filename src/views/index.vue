@@ -6,7 +6,7 @@
       <routermainview class="ma-0 pa-0 fill-height setzindex"> </routermainview>
     </v-container>
 
-    <!-- <mainbottom> </mainbottom> -->
+    <mainbottom> </mainbottom>
   </v-app>
 </template>
 
