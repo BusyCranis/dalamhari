@@ -1,6 +1,14 @@
 <template>
   <v-bottom-navigation 
   
+    id="whybartool"
+    class="set101color"
+    color="white"
+    transparent
+    height="94"
+    fixed
+
+
   
   >
     <!-- <v-btn value="recent"> 냉장고 </v-btn>
