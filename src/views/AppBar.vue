@@ -7,7 +7,7 @@
     height="94"
     fixed
   >
-    <v-toolbar-title class="pl-0" @click="go0home">
+    <!-- <v-toolbar-title class="pl-0" @click="go0home">
       <div class="d-flex align-center">
       </div>
     </v-toolbar-title>
@@ -233,7 +233,7 @@
     </div>
     <div class="minwdthon somehght">
       <div></div>
-    </div>
+    </div> -->
 
 
 
@@ -284,6 +284,15 @@ export default {
   },
 
   methods: {
+
+
+
+
+
+
+
+
+    
     gopage0() {
       this.$router.push({ name: "introduce" });
     },
