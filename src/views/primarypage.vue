@@ -1,5 +1,12 @@
 <template>
-  <div class="home">
+  <div class="home"
+  
+  
+  
+  
+  
+  
+  >
     <br />
     <br />
     <br />
@@ -335,6 +342,98 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.set101color {
+  background-image: url("/01-1 Home-unlogined.png");
+
+  /* background-size: contain; */
+
+  // background-size: cover;
+
+  /* background-size: 100% 50%; */
+
+  background-size: 100% 100%; 
+
+  background-position: center;
+
+  /* background-position: top; */
+}
+
+.v-toolbar__title {
+  font-size: 1rem !important;
+  color: #969696;
+}
+
+.textcolor {
+  color: rgb(255, 103, 53);
+
+
+  font-weight: 800;
+
+
+}
+
+.moreflex {
+  display: flex;
+
+  // align-items: flex-start;
+}
+
+// .flexstart {
+
+// align-items: flex-start;
+
+// }
+
+.pstflex {
+  justify-content: center;
+}
+
+.jstfcntr {
+  justify-content: space-between;
+}
+
+.invldctns {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.dnidlcst {
+  display: flex;
+
+  justify-content: center;
+}
+
+.parefix {
+  position: fixed;
+}
+
+.limitwidth {
+  max-width: 90px;
+}
+
+.minwdthon {
+  width: 98px;
+}
+
+.somehght {
+  height: 15px;
+}
+
+.midabsol {
+  position: absolute;
+}
+
+.midrelatv {
+  position: relative;
+}
+
+.upride {
+  z-index: 9999;
+}
+
+
+
 
 
 
