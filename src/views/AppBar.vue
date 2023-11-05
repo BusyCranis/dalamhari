@@ -9,7 +9,7 @@
   >
     <v-toolbar-title class="pl-0" @click="go0home">
       <div class="d-flex align-center">
-        <!-- <img src="/fstmovielogo.png" class="limitwidth ml-2" /> -->
+        
       </div>
     </v-toolbar-title>
 
