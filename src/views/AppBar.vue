@@ -6,6 +6,8 @@
     transparent
     height="94"
     fixed
+
+    @click="detectAction"
   >
     <!-- <v-toolbar-title class="pl-0" @click="go0home">
       <div class="d-flex align-center">
@@ -286,13 +288,28 @@ export default {
   methods: {
 
 
+    detectAction(event) {
+      console.log(event.target)
+
+      event.stopPropagation();
+      
+
+      let posXrate = event.offsetX / event.target.clientWidth
+
+
+      console.log(posXrate)
+
+
+
+    },
 
 
 
 
 
 
-    
+
+
     gopage0() {
       this.$router.push({ name: "introduce" });
     },
@@ -458,15 +475,13 @@ export default {
 .set101color {
   background-image: url("/propertyDefault.png");
 
-  /* background-size: cover; */
-
   /* background-size: contain; */
 
-  background-size: cover;
+  // background-size: cover;
 
   /* background-size: 100% 50%; */
 
-  /* background-size: 100%; */
+  background-size: 100% 100%; 
 
   background-position: center;
 
