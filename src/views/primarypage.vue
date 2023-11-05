@@ -1,6 +1,10 @@
 <template>
-  <div class="home"
+  <div 
   
+    id="whybartool"
+    class="set101color"
+    transparent
+    
   
   
   
@@ -14,11 +18,43 @@
     <br />
     <br />
 
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    
+   
+    
+
 
 
 
     
-    <v-card>
+    <!-- <v-card>
       <v-list color="yellow lighten-5">
         <v-divider></v-divider>
         <div v-for="(a, i) in newslist" :key="i">
@@ -32,7 +68,13 @@
       <div v-for="(a, i) in $store.state.foodstore" :key="i">
         {{ $store.state.foodstore[i] }}
       </div>
-    </v-card>
+    </v-card> -->
+
+
+
+
+
+
   </div>
 </template>
 
