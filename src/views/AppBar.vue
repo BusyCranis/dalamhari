@@ -9,10 +9,8 @@
   >
     <v-toolbar-title class="pl-0" @click="go0home">
       <div class="d-flex align-center">
-        
       </div>
     </v-toolbar-title>
-
     <div class="dnidlcst">
       <v-menu>
         <template v-slot:activator="{ on, attrs }">
@@ -233,7 +231,6 @@
         </v-list>
       </v-menu>
     </div>
-
     <div class="minwdthon somehght">
       <div></div>
     </div>
