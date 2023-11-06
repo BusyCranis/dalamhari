@@ -7,20 +7,20 @@
 
     <v-menu          id="identityinput">
         <template v-slot:activator="{ on, attrs }">
-          <v-btn
+          <div
             v-bind="attrs"
             v-on="on"
             class="elevation-0 ma-0 pa-0 textcolor"
             color="transparent"
           >
             기관 소개
-          </v-btn>
+          </div>
         </template>
         <br /><br />
         <v-list>
-          <v-list-item @click="gopage24">인사말</v-list-item>
-          <v-list-item @click="gopage9">협회 정보</v-list-item>
-          <v-list-item @click="gopage10">찾아오시는 길</v-list-item>
+          <v-list-item >인사말</v-list-item>
+          <v-list-item >협회 정보</v-list-item>
+          <v-list-item >찾아오시는 길</v-list-item>
         </v-list>
       </v-menu>
 
