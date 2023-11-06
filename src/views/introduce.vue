@@ -12,56 +12,55 @@
 
     <br />
 
-
-    <div        id="identityinput"     style="display: none">
-    <v-menu >
-      <template v-slot:activator="{ on, attrs }">
-        <div
-          id="specselection"
-          v-bind="attrs"
-          v-on="on"
-          class="elevation-0 ma-0 pa-0 textcolor"
-          color="transparent"
-        >
-          Identification
-        </div>
-      </template>
-      <br /><br />
-      <v-list>
-        <v-list-item>
+    <div id="identityinput" style="display: none" class="somerate">
+      <v-menu>
+        <template v-slot:activator="{ on, attrs }">
           <div
-            value="Individual Seller : I sell on Amazon by myself"
-            @click.self="selectValue"
+            id="specselection"
+            v-bind="attrs"
+            v-on="on"
+            class="elevation-0 ma-0 pa-0 textcolor"
+            color="transparent"
           >
-            Individual Seller : I sell on Amazon by myself
+            Identification
           </div>
-        </v-list-item>
-        <v-list-item>
-          <div
-            value="Individual Seller : I sell on Amazon by myself"
-            @click.self="selectValue"
+        </template>
+        <br /><br />
+        <v-list>
+          <v-list-item>
+            <div
+              value="Individual Seller : I sell on Amazon by myself"
+              @click.self="selectValue"
+            >
+              Individual Seller : I sell on Amazon by myself
+            </div>
+          </v-list-item>
+          <v-list-item>
+            <div
+              value="Individual Seller : I sell on Amazon by myself"
+              @click.self="selectValue"
+            >
+              Brand : I own private label brand products ans sell on Amazon
+            </div>
+          </v-list-item>
+          <v-list-item>
+            <div
+              value="Individual Seller : I sell on Amazon by myself"
+              @click.self="selectValue"
+            >
+              Consultant : I work with multiple brands & sellers on Amazon
+            </div></v-list-item
           >
-            Brand : I own private label brand products ans sell on Amazon
-          </div>
-        </v-list-item>
-        <v-list-item>
-          <div
-            value="Individual Seller : I sell on Amazon by myself"
-            @click.self="selectValue"
-          >
-            Consultant : I work with multiple brands & sellers on Amazon
-          </div></v-list-item
-        >
-        <v-list-item>
-          <div
-            value="Individual Seller : I sell on Amazon by myself"
-            @click.self="selectValue"
-          >
-            I am not selling on Amazon yet
-          </div>
-        </v-list-item>
-      </v-list>
-    </v-menu>
+          <v-list-item>
+            <div
+              value="Individual Seller : I sell on Amazon by myself"
+              @click.self="selectValue"
+            >
+              I am not selling on Amazon yet
+            </div>
+          </v-list-item>
+        </v-list>
+      </v-menu>
     </div>
 
     <br />
@@ -142,14 +141,14 @@ export default {
         event.target.clientWidth * 0.2975609756
       }px, ${event.target.clientHeight * 0.3981666666}px, 0 )`;
 
-      this.identityinput.style.transform = `translate3d( ${event.target.clientWidth * 0.2975609756}px, ${event.target.clientHeight * 0.45085365853658536}px, 0 )`
+      this.identityinput.style.transform = `translate3d( ${
+        event.target.clientWidth * 0.2975609756
+      }px, ${event.target.clientHeight * 0.45085365853658536}px, 0 )`;
 
       this.nameinput.style.display = "";
       this.emailinput.style.display = "";
       this.passwordinput.style.display = "";
-      this.identityinput.style.display = ""
-
-     
+      this.identityinput.style.display = "";
 
       console.log(this.passwordinput);
     },
@@ -214,5 +213,9 @@ export default {
 
 .aligntext {
   text-align: "";
+}
+
+.somerate {
+  width: 37.5%;
 }
 </style>
