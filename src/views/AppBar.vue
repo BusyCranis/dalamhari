@@ -299,14 +299,7 @@ export default {
         console.log("appbar joinus 버튼 클릭")
 
         this.gopage0()
-
-
-
-
       }
-
-
-
 
 
     },
