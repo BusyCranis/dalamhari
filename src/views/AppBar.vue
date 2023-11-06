@@ -287,18 +287,23 @@ export default {
 
   methods: {
     detectAction(event) {
-      console.log(event.target)
       event.stopPropagation();
-      
 
+      console.log(event.target)      
       let posXrate = event.offsetX / event.target.clientWidth
-
       let posYrate = event.offsetY / event.target.clientHeight
 
-
-
-
       console.log("너비비율= " + posXrate + ",  높이비율= " + posYrate)
+
+      if(posXrate > 0.8512195 && posYrate > 0.2340425 && posXrate < 0.9536585 && posYrate < 0.7234042) {
+        console.log("appbar joinus 버튼 클릭")
+
+        this.gopage0()
+
+
+
+
+      }
 
 
 
