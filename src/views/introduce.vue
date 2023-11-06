@@ -127,8 +127,6 @@ export default {
     this.nameinput = document.getElementById("nameinput")
     console.log(this.nameinput)
 
-
-
     this.emailinput = document.getElementById("emailinput")
     console.log(this.emailinput)
 
