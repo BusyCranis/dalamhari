@@ -19,27 +19,43 @@
           class="elevation-0 ma-0 pa-0 textcolor"
           color="transparent"
         >
-          기관 소개
+          Identification
         </div>
       </template>
       <br /><br />
       <v-list>
-        <v-list-item value="Individual Seller : I sell on Amazon by myself"
-          >Individual Seller : I sell on Amazon by myself</v-list-item
+        <v-list-item>
+          <div
+            value="Individual Seller : I sell on Amazon by myself"
+            @click.self="selectValue"
+          >
+            Individual Seller : I sell on Amazon by myself
+          </div>
+        </v-list-item>
+        <v-list-item>
+          <div
+            value="Individual Seller : I sell on Amazon by myself"
+            @click.self="selectValue"
+          >
+            Brand : I own private label brand products ans sell on Amazon
+          </div>
+        </v-list-item>
+        <v-list-item>
+          <div
+            value="Individual Seller : I sell on Amazon by myself"
+            @click.self="selectValue"
+          >
+            Consultant : I work with multiple brands & sellers on Amazon
+          </div></v-list-item
         >
-        <v-list-item
-          value="Brand : I own private label brand products ans sell on Amazon"
-          >Brand : I own private label brand products ans sell on
-          Amazon</v-list-item
-        >
-        <v-list-item
-          value="Consultant : I work with multiple brands & sellers on Amazon"
-          >Consultant : I work with multiple brands & sellers on
-          Amazon</v-list-item
-        >
-        <v-list-item value="I am not selling on Amazon yet"
-          >I am not selling on Amazon yet</v-list-item
-        >
+        <v-list-item>
+          <div
+            value="Individual Seller : I sell on Amazon by myself"
+            @click.self="selectValue"
+          >
+            I am not selling on Amazon yet
+          </div>
+        </v-list-item>
       </v-list>
     </v-menu>
 
@@ -107,11 +123,17 @@ export default {
       // }
       // "너비비율= 0.2951219512195122,  높이비율= 0.42916666666666664"
 
-      this.nameinput.style.transform = `translate3d( ${event.target.clientWidth * 0.2975609756}px, ${event.target.clientHeight * 0.298}px, 0 )`;
+      this.nameinput.style.transform = `translate3d( ${
+        event.target.clientWidth * 0.2975609756
+      }px, ${event.target.clientHeight * 0.298}px, 0 )`;
 
-      this.emailinput.style.transform = `translate3d( ${event.target.clientWidth * 0.2975609756 - 167}px, ${event.target.clientHeight * 0.3605416666}px, 0 )`;
+      this.emailinput.style.transform = `translate3d( ${
+        event.target.clientWidth * 0.2975609756 - 167
+      }px, ${event.target.clientHeight * 0.3605416666}px, 0 )`;
 
-      this.passwordinput.style.transform = `translate3d( ${event.target.clientWidth * 0.2975609756}px, ${event.target.clientHeight * 0.3981666666}px, 0 )`;
+      this.passwordinput.style.transform = `translate3d( ${
+        event.target.clientWidth * 0.2975609756
+      }px, ${event.target.clientHeight * 0.3981666666}px, 0 )`;
 
       this.nameinput.style.display = "";
       this.emailinput.style.display = "";
@@ -121,6 +143,16 @@ export default {
       // this.identityinput.style.display = ""
 
       console.log(this.passwordinput);
+    },
+
+    selectValue(event) {
+      event.stopPropagation();
+
+      console.log(event.target);
+      console.dir(event.target);
+      console.log(event.target.innerText);
+
+      this.specselection.textContent = event.target.innerText;
     },
 
     basicstudy() {
