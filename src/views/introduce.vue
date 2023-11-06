@@ -8,6 +8,8 @@
     <v-menu          id="identityinput">
         <template v-slot:activator="{ on, attrs }">
           <div
+
+            id="specselection"
             v-bind="attrs"
             v-on="on"
             class="elevation-0 ma-0 pa-0 textcolor"
@@ -68,7 +70,8 @@ export default {
       nameinput: null,
       emailinput: null,
       passwordinput: null,
-      identityinput: null
+      identityinput: null,
+      specselection: null
 
     };
   },
@@ -90,13 +93,8 @@ export default {
       // "너비비율= 0.2951219512195122,  높이비율= 0.42916666666666664"
 
       this.nameinput.style.transform = `translate3d( ${event.target.clientWidth * 0.2975609756}px, ${event.target.clientHeight * 0.298}px, 0 )`
-      // this.nameinput.style.display = ""
-
-
+   
       this.emailinput.style.transform = `translate3d( ${event.target.clientWidth * 0.2975609756 - 167}px, ${event.target.clientHeight * 0.3605416666}px, 0 )`
-
-      // this.nameinput.style.display = ""
-      // this.emailinput.style.display = ""
 
       this.passwordinput.style.transform = `translate3d( ${event.target.clientWidth * 0.2975609756}px, ${event.target.clientHeight * 0.3981666666}px, 0 )`
 
