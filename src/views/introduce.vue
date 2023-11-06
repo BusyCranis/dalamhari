@@ -4,7 +4,25 @@
     <input   id="emailinput"   style="display: none" />
     <br />
     <input   id="passwordinput"   style="display: none" />
-    <input   id="identityinput"   style="display: none" />
+
+    <v-menu          id="identityinput">
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+            v-bind="attrs"
+            v-on="on"
+            class="elevation-0 ma-0 pa-0 textcolor"
+            color="transparent"
+          >
+            기관 소개
+          </v-btn>
+        </template>
+        <br /><br />
+        <v-list>
+          <v-list-item @click="gopage24">인사말</v-list-item>
+          <v-list-item @click="gopage9">협회 정보</v-list-item>
+          <v-list-item @click="gopage10">찾아오시는 길</v-list-item>
+        </v-list>
+      </v-menu>
 
     <br />
     <br />
