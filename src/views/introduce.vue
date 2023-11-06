@@ -2,6 +2,7 @@
   <div id="whybartool" class="set101color" transparent @click.self="detectAction">
     <input   id="nameinput"   style="display: none" />
     <input   id="emailinput"   style="display: none" />
+    <br />
     <input   id="passwordinput"   style="display: none" />
     <input   id="identityinput"   style="display: none" />
 
@@ -68,7 +69,7 @@ export default {
       //   console.log("클릭")
       // }
       // this.nameinput.style.display = ""
-      // "너비비율= 0.2951219512195122,  높이비율= 0.36354166666666665"
+      // "너비비율= 0.2951219512195122,  높이비율= 0.42916666666666664"
 
       this.nameinput.style.transform = `translate3d( ${event.target.clientWidth * 0.2975609756}px, ${event.target.clientHeight * 0.298}px, 0 )`
       // this.nameinput.style.display = ""
@@ -76,16 +77,24 @@ export default {
 
       this.emailinput.style.transform = `translate3d( ${event.target.clientWidth * 0.2975609756 - 167}px, ${event.target.clientHeight * 0.3605416666}px, 0 )`
 
+      // this.nameinput.style.display = ""
+      // this.emailinput.style.display = ""
+
+      this.passwordinput.style.transform = `translate3d( ${event.target.clientWidth * 0.2975609756}px, ${event.target.clientHeight * 0.3981666666}px, 0 )`
+
+
       this.nameinput.style.display = ""
       this.emailinput.style.display = ""
+      this.passwordinput.style.display = ""
 
-      // this.passwordinput.style.transform = `translate3d( ${event.target.clientWidth * 0.2975609756}px, ${event.target.clientHeight * 0.298}px, 0 )`
-      // this.passwordinput.style.display = ""
+
 
       // this.identityinput.style.transform = `translate3d( ${event.target.clientWidth * 0.2975609756}px, ${event.target.clientHeight * 0.298}px, 0 )`
       // this.identityinput.style.display = ""
 
 
+
+      console.log(this.passwordinput)
 
 
 
