@@ -105,20 +105,13 @@ export default {
       // if(posXrate > 0.8512195 && posYrate > 0.2340425 && posXrate < 0.9536585 && posYrate < 0.7234042) {
       //   console.log("클릭")
       // }
-      // this.nameinput.style.display = ""
       // "너비비율= 0.2951219512195122,  높이비율= 0.42916666666666664"
 
-      this.nameinput.style.transform = `translate3d( ${
-        event.target.clientWidth * 0.2975609756
-      }px, ${event.target.clientHeight * 0.298}px, 0 )`;
+      this.nameinput.style.transform = `translate3d( ${event.target.clientWidth * 0.2975609756}px, ${event.target.clientHeight * 0.298}px, 0 )`;
 
-      this.emailinput.style.transform = `translate3d( ${
-        event.target.clientWidth * 0.2975609756 - 167
-      }px, ${event.target.clientHeight * 0.3605416666}px, 0 )`;
+      this.emailinput.style.transform = `translate3d( ${event.target.clientWidth * 0.2975609756 - 167}px, ${event.target.clientHeight * 0.3605416666}px, 0 )`;
 
-      this.passwordinput.style.transform = `translate3d( ${
-        event.target.clientWidth * 0.2975609756
-      }px, ${event.target.clientHeight * 0.3981666666}px, 0 )`;
+      this.passwordinput.style.transform = `translate3d( ${event.target.clientWidth * 0.2975609756}px, ${event.target.clientHeight * 0.3981666666}px, 0 )`;
 
       this.nameinput.style.display = "";
       this.emailinput.style.display = "";
