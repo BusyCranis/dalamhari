@@ -1,6 +1,9 @@
 <template>
   <div id="whybartool" class="set101color" transparent @click.self="detectAction">
     <input   id="nameinput"   style="display: none" />
+    <input   id="emailinput"   style="display: none" />
+    <input   id="passwordinput"   style="display: none" />
+    <input   id="identityinput"   style="display: none" />
 
     <br />
     <br />
@@ -43,8 +46,10 @@
 export default {
   data() {
     return {
-
-      nameinput: null
+      nameinput: null,
+      emailinput: null,
+      passwordinput: null,
+      identityinput: null
 
     };
   },
@@ -62,18 +67,23 @@ export default {
       // if(posXrate > 0.8512195 && posYrate > 0.2340425 && posXrate < 0.9536585 && posYrate < 0.7234042) {
       //   console.log("클릭")
       // }
-
       // this.nameinput.style.display = ""
-
-      // "너비비율= 0.4975609756097561,  높이비율= 0.728125"
-
+      // "너비비율= 0.2951219512195122,  높이비율= 0.36354166666666665"
 
       this.nameinput.style.transform = `translate3d( ${event.target.clientWidth * 0.2975609756}px, ${event.target.clientHeight * 0.298}px, 0 )`
+      // this.nameinput.style.display = ""
 
 
-
+      this.emailinput.style.transform = `translate3d( ${event.target.clientWidth * 0.2975609756 - 167}px, ${event.target.clientHeight * 0.3605416666}px, 0 )`
 
       this.nameinput.style.display = ""
+      this.emailinput.style.display = ""
+
+      // this.passwordinput.style.transform = `translate3d( ${event.target.clientWidth * 0.2975609756}px, ${event.target.clientHeight * 0.298}px, 0 )`
+      // this.passwordinput.style.display = ""
+
+      // this.identityinput.style.transform = `translate3d( ${event.target.clientWidth * 0.2975609756}px, ${event.target.clientHeight * 0.298}px, 0 )`
+      // this.identityinput.style.display = ""
 
 
 
@@ -90,8 +100,22 @@ export default {
 
   mounted() {
     this.nameinput = document.getElementById("nameinput")
-
     console.log(this.nameinput)
+
+
+
+    this.emailinput = document.getElementById("emailinput")
+    console.log(this.emailinput)
+
+    this.passwordinput = document.getElementById("passwordinput")
+    console.log(this.passwordinput)
+
+    this.identityinput = document.getElementById("identityinput")
+    console.log(this.identityinput)
+
+
+
+
 
 
 
