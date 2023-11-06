@@ -5,6 +5,7 @@
     transparent
     
   
+    @click="detectAction"
   
   
   
@@ -69,6 +70,28 @@ export default {
   },
 
   methods: {
+
+
+    detectAction(event) {
+      event.stopPropagation();
+
+      console.log(event.target)      
+      let posXrate = event.offsetX / event.target.clientWidth
+      let posYrate = event.offsetY / event.target.clientHeight
+
+      console.log("너비비율= " + posXrate + ",  높이비율= " + posYrate)
+
+      // if(posXrate > 0.8512195 && posYrate > 0.2340425 && posXrate < 0.9536585 && posYrate < 0.7234042) {
+      //   console.log("클릭")
+      // }
+
+
+    },
+
+
+
+
+
     basicstudy() {
       let basic = document.getElementById("edxn");
 
