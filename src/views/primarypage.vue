@@ -54,21 +54,7 @@
 
 
     
-    <!-- <v-card>
-      <v-list color="yellow lighten-5">
-        <v-divider></v-divider>
-        <div v-for="(a, i) in newslist" :key="i">
-          <v-divider></v-divider>
-          <div @click="addnews(i)">
-            {{ newslist[i].title }}
-          </div>
-        </div>
-      </v-list>
- 
-      <div v-for="(a, i) in $store.state.foodstore" :key="i">
-        {{ $store.state.foodstore[i] }}
-      </div>
-    </v-card> -->
+   
 
 
 
