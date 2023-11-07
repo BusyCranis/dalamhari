@@ -147,7 +147,7 @@ export default {
         event.target.clientWidth * 0.2975609756
       }px, ${event.target.clientHeight * 0.3981666666}px, 0 )`;
 
-      this.identityinput.style.transform = `translate3d( ${event.target.clientWidth * 0.2975609756}px, ${event.target.clientHeight * 0.44185365853658536}px, 0 )`;
+      this.identityinput.style.transform = `translate3d( ${event.target.clientWidth * 0.2975609756}px, ${event.target.clientHeight * 0.43935365853658536}px, 0 )`;
 
       this.activebox.style.transform = `translate3d( ${event.target.clientWidth * 0.2935609756}px, ${event.target.clientHeight * 0.6203255813}px, 0 )`
 
