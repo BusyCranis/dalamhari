@@ -13,8 +13,8 @@
     <br />
 
     <div id="identityinput" style="display: none" class="somerate">
-      <v-menu>
-        <template v-slot:activator="{ on, attrs }">
+      <v-menu  id="innermenu"  class="menusize">
+        <template       v-slot:activator="{ on, attrs }">
           <div
             id="specselection"
             v-bind="attrs"
@@ -26,7 +26,7 @@
           </div>
         </template>
         <br /><br />
-        <v-list>
+        <v-list   >
           <v-list-item>
             <div
               value="Individual Seller : I sell on Amazon by myself"
@@ -109,6 +109,9 @@ export default {
       passwordinput: null,
       identityinput: null,
       specselection: null,
+      innermenu: null,
+      innertemplate: null,
+      innerlist: null
     };
   },
 
@@ -187,6 +190,17 @@ export default {
 
     console.log(this.specselection);
     console.log(this.specselection.textContent);
+
+    this.innermenu = document.getElementById("innermenu")
+
+    console.log(this.innermenu);
+
+    // this.innertemplate = document.getElementById("innertemplate")
+    // console.log(this.innertemplate);
+    // this.innerlist = document.getElementById("innerlist")
+    // console.log(this.innerlist);
+
+
   },
 };
 </script>
@@ -217,5 +231,20 @@ export default {
 
 .somerate {
   width: 37.5%;
+}
+
+.menusize {
+
+  max-width: 100%;
+
+}
+
+.v-menu__content {
+
+
+  max-width: 40%;
+
+
+
 }
 </style>
