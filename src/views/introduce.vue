@@ -63,6 +63,8 @@
       </v-menu>
     </div>
 
+
+    <input id="activebox" style="display: none"   type="checkbox" />
     <br />
     <br />
     <br />
@@ -111,7 +113,8 @@ export default {
       specselection: null,
       innermenu: null,
       innertemplate: null,
-      innerlist: null
+      innerlist: null,
+      activebox: nulll
     };
   },
 
@@ -130,7 +133,7 @@ export default {
       // if(posXrate > 0.8512195 && posYrate > 0.2340425 && posXrate < 0.9536585 && posYrate < 0.7234042) {
       //   console.log("클릭")
       // }
-      // "너비비율= 0.2951219512195122,  높이비율= 0.49085365853658536"
+      // "너비비율= 0.2951219512195122,  높이비율= 0.6773255813953488"
 
       this.nameinput.style.transform = `translate3d( ${
         event.target.clientWidth * 0.2975609756
@@ -146,10 +149,15 @@ export default {
 
       this.identityinput.style.transform = `translate3d( ${event.target.clientWidth * 0.2975609756}px, ${event.target.clientHeight * 0.44185365853658536}px, 0 )`;
 
+      this.activebox.style.transform = `translate3d( ${event.target.clientWidth * 0.2935609756}px, ${event.target.clientHeight * 0.6203255813}px, 0 )`
+
+
       this.nameinput.style.display = "";
       this.emailinput.style.display = "";
       this.passwordinput.style.display = "";
       this.identityinput.style.display = "";
+      this.activebox.style.display = "";
+
 
       console.log(this.passwordinput);
     },
@@ -193,10 +201,10 @@ export default {
 
     console.log(this.innermenu);
 
-    // this.innertemplate = document.getElementById("innertemplate")
-    // console.log(this.innertemplate);
-    // this.innerlist = document.getElementById("innerlist")
-    // console.log(this.innerlist);
+    this.activebox = document.getElementById("activebox")
+
+    console.log(this.activebox);
+    
 
 
   },
