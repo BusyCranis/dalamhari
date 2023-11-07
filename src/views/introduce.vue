@@ -22,7 +22,7 @@
             class="elevation-0 ma-0 pa-0 textcolor"
             color="transparent"
           >
-            Identification
+            ""
           </div>
         </template>
         <br /><br />
