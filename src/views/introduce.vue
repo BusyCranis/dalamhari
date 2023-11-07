@@ -19,7 +19,7 @@
             id="specselection"
             v-bind="attrs"
             v-on="on"
-            class="elevation-0 ma-0 pa-0 textcolor"
+            class="elevation-0 ma-0 pa-0 textcolor spacetext"
             color="transparent"
           >
             ""
@@ -253,4 +253,14 @@ export default {
 
 
 }
+
+
+.spacetext {
+
+  max-height: 25px;
+
+
+}
+
+
 </style>
