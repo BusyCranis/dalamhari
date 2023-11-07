@@ -114,7 +114,7 @@ export default {
       innermenu: null,
       innertemplate: null,
       innerlist: null,
-      activebox: nulll
+      activebox: null
     };
   },
 
