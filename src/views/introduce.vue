@@ -229,7 +229,17 @@ export default {
 
       console.log("너비비율= " + posXrate + ",  높이비율= " + posYrate);
 
-      
+      // "너비비율= 0.43658536585365854,  높이비율= 0.7134146341463414"
+
+      // "너비비율= 0.5658536585365853,  높이비율= 0.7428861788617886"
+
+
+      if(posXrate > 0.43658536585 && posYrate > 0.71341463414 && posXrate < 0.5658536585 && posYrate < 0.7428861788) {
+        console.log("클릭")
+        // this.$router.push({ name: "shortabout" });
+      }
+     
+
      
 
     },
