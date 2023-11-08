@@ -203,13 +203,13 @@ export default {
 
       if (posXrate > 0.36585365853658536 && posYrate > 0.7479166666666667 && posXrate < 0.4585365853658537 && posYrate < 0.8114583333333333) {
         console.log("클릭")
-        this.$router.push({ name: "schedule" });
+        this.$router.push({ name: "award" });
       }
 
 
       if (posXrate > 0.6560975609756098 && posYrate > 0.7479166666666667 && posXrate < 0.7585365853658537 && posYrate < 0.8114583333333333) {
         console.log("클릭")
-        this.$router.push({ name: "schedule" });
+        this.$router.push({ name: "mentor" });
       }
 
 

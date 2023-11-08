@@ -1,129 +1,222 @@
 <template>
-  <div>
-    <div>
-      <div>
-        <div>
-          <br /><br /><br /><br /><br /><br /><br />
-          <div id="edxn" class="edxn0 aligntext">
-            1 특별상 <br />
-
-            2 베스트 특수시각효과상 ​ <br />
-
-            3 베스트 음악상 <br />
-
-            4 베스트 음악상 <br />
-
-            5 베스트 브랜드 시리즈 <br />
-
-            6 베스트 브랜드 시리즈 <br />
-
-            7 브레이브 뉴시리즈 - 특별상<br />
-
-            8 브레이브 뉴시리즈 - 특별상<br />
-
-            9 베스트 편집상<br />
-
-            10 베스트 편집상<br />
-
-            11 베스트 프로덕션 디자인상<br />
-
-            12 베스트 프로덕션 디자인상<br />
-
-            13 베스트 스크린플레이상<br />
-
-            14 베스트 앙상블 캐스트<br />
-
-            15 베스트 라이징스타<br />
-
-            16 베스트 라이징스타<br />
-
-            17 외국 게스트스타상<br />
-
-            18 한국 게스트스타상​<br />
-
-            19 베스트 촬영상<br />
-
-            20 베스트 촬영상<br />
-
-            21 베스트 컨셉<br />
-
-            22 베스트 애니메이션<br />
-
-            23 베스트 파일럿<br />
-
-            24 베스트 호러<br />
-
-            25 베스트다큐멘터리/리얼리티<br />
-
-            26 베스트다큐멘터리/리얼리티<br />
-
-            27 베스트 서스펜스스릴러<br />
-
-            28 베스트 서스펜스스릴러<br />
-
-            29 베스트 사이언스픽션 ​<br />
-
-            30 베스트 사이언스픽션<br />
-
-            31 베스트 액션<br />
-
-            32 외국 스케치코미디상 ​ ​<br />
-
-            33 한국 스케치코미디상<br />
-
-            34 외국 베스트코미디상 ​<br />
-
-            35 한국 베스트코미디상<br />
-
-            36 외국 드라메디상 ​ ​<br />
-
-            37 한국 드라메디상<br />
-
-            38 외국 베스트드라마상 ​<br />
-
-            39 한국 베스트드라마상<br />
-
-            40 베스트 크리에이터상<br />
-
-            41 베스트 크리에이터상<br />
-
-            42 외국 남우조연상<br />
-
-            43 한국 남우조연상<br />
-
-            44 외국 여우조연상<br />
-
-            45 한국 여우조연상<br />
-
-            46 베스트 감독상<br />
-
-            47 외국 남우주연상<br />
-
-            48 한국 남우주연상<br />
-
-            49 외국 여우주연상 ​<br />
-
-            50 한국 여우주연상<br />
-
-            51 대상<br />
-
-            52 대상 <br />
-
-            시상 내역은 2023년 코리아국제웹영화제 기준이며, 모든 시상내역과
-            명칭은 영화제 사정에 따라 변경될 수 있습니다.
-          </div>
-        </div>
-      </div>
+  <div id="why0bartool" class="set101color" transparent @click.self="checkStuff">
+    <!-- <input id="nameinput" style="display: none" />
+    <input id="emailinput" style="display: none" />
+    <br />
+    <input id="passwordinput" style="display: none" />
+    <br />
+    <div id="identityinput" style="display: none" class="somerate">
     </div>
+    <input id="activebox" style="display: none" type="checkbox" /> -->
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
   </div>
 </template>
 <script>
 export default {
   data() {
-    return {};
+    return {
+      nameinput: null,
+      emailinput: null,
+      passwordinput: null,
+      identityinput: null,
+      specselection: null,
+      innermenu: null,
+      innertemplate: null,
+      innerlist: null,
+      activebox: null,
+      why0bartool: null
+    };
   },
 
   methods: {
+
+    setAllElement(callback) {
+      this.why0bartool = document.getElementById("why0bartool")
+
+      console.log(this.why0bartool);
+
+      this.nameinput = document.getElementById("nameinput");
+      console.log(this.nameinput);
+
+      this.emailinput = document.getElementById("emailinput");
+      console.log(this.emailinput);
+
+      this.passwordinput = document.getElementById("passwordinput");
+      console.log(this.passwordinput);
+
+      this.identityinput = document.getElementById("identityinput");
+      console.log(this.identityinput);
+
+      this.specselection = document.getElementById("specselection");
+
+      console.log(this.specselection);
+      console.log(this.specselection.textContent);
+
+      this.innermenu = document.getElementById("innermenu")
+
+      console.log(this.innermenu);
+
+      this.activebox = document.getElementById("activebox")
+
+      console.log(this.activebox);
+
+
+      callback()
+    },
+
+
+
+    getDetection(callback) {
+      console.log(this.why0bartool);
+      console.log(this.identityinput);
+
+      this.nameinput.style.transform = `translate3d( ${this.why0bartool.clientWidth * 0.2975609756
+        }px, ${this.why0bartool.clientHeight * 0.298}px, 0 )`;
+
+      this.emailinput.style.transform = `translate3d( ${this.why0bartool.clientWidth * 0.2975609756 - 167
+        }px, ${this.why0bartool.clientHeight * 0.3605416666}px, 0 )`;
+
+      this.passwordinput.style.transform = `translate3d( ${this.why0bartool.clientWidth * 0.2975609756
+        }px, ${this.why0bartool.clientHeight * 0.3981666666}px, 0 )`;
+
+      this.identityinput.style.transform = `translate3d( ${this.why0bartool.clientWidth * 0.2975609756}px, ${this.why0bartool.clientHeight * 0.43935365853658536}px, 0 )`;
+
+      this.activebox.style.transform = `translate3d( ${this.why0bartool.clientWidth * 0.2910609756}px, ${this.why0bartool.clientHeight * 0.5975}px, 0 )`
+
+
+      this.nameinput.style.display = "";
+      this.emailinput.style.display = "";
+      this.passwordinput.style.display = "";
+      this.identityinput.style.display = "";
+      this.activebox.style.display = "";
+
+
+      console.log(this.passwordinput);
+
+
+      if (typeof callback == "function") {
+        callback()
+      }
+
+
+    },
+
+    detectAction(event) {
+      event.stopPropagation();
+
+      console.log(event.target);
+      let posXrate = event.offsetX / event.target.clientWidth;
+      let posYrate = event.offsetY / event.target.clientHeight;
+
+      console.log("너비비율= " + posXrate + ",  높이비율= " + posYrate);
+
+      console.log(this.identityinput);
+
+
+
+      this.nameinput.style.transform = `translate3d( ${event.target.clientWidth * 0.2975609756
+        }px, ${event.target.clientHeight * 0.298}px, 0 )`;
+
+      this.emailinput.style.transform = `translate3d( ${event.target.clientWidth * 0.2975609756 - 167
+        }px, ${event.target.clientHeight * 0.3605416666}px, 0 )`;
+
+      this.passwordinput.style.transform = `translate3d( ${event.target.clientWidth * 0.2975609756
+        }px, ${event.target.clientHeight * 0.3981666666}px, 0 )`;
+
+      this.identityinput.style.transform = `translate3d( ${event.target.clientWidth * 0.2975609756}px, ${event.target.clientHeight * 0.43935365853658536}px, 0 )`;
+
+      this.activebox.style.transform = `translate3d( ${event.target.clientWidth * 0.2910609756}px, ${event.target.clientHeight * 0.5975}px, 0 )`
+
+      this.nameinput.style.display = "";
+      this.emailinput.style.display = "";
+      this.passwordinput.style.display = "";
+      this.identityinput.style.display = "";
+      this.activebox.style.display = "";
+
+      console.log(this.passwordinput);
+    },
+
+
+
+    selectValue(event) {
+      event.stopPropagation();
+
+      console.log(event.target);
+      console.dir(event.target);
+      console.log(event.target.innerText);
+
+      this.specselection.textContent = event.target.innerText;
+    },
+
+    checkStuff(event) {
+      event.stopPropagation();
+
+      console.log(event.target);
+      let posXrate = event.offsetX / event.target.clientWidth;
+      let posYrate = event.offsetY / event.target.clientHeight;
+
+      console.log("너비비율= " + posXrate + ",  높이비율= " + posYrate);
+
+      // "너비비율= 0.6560975609756098,  높이비율= 0.7479166666666667"
+
+      // "너비비율= 0.7585365853658537,  높이비율= 0.8114583333333333"
+
+
+      if (posXrate > 0.07317073170731707 && posYrate > 0.7479166666666667 && posXrate < 0.17560975609756097 && posYrate < 0.8114583333333333) {
+        console.log("클릭")
+        this.$router.push({ name: "schedule" });
+      }
+
+      if (posXrate > 0.36585365853658536 && posYrate > 0.7479166666666667 && posXrate < 0.4585365853658537 && posYrate < 0.8114583333333333) {
+        console.log("클릭")
+        this.$router.push({ name: "award" });
+      }
+
+
+      if (posXrate > 0.6560975609756098 && posYrate > 0.7479166666666667 && posXrate < 0.7585365853658537 && posYrate < 0.8114583333333333) {
+        console.log("클릭")
+        this.$router.push({ name: "mentor" });
+      }
+
+
+
+
+    },
+
     basicstudy() {
       let basic = document.getElementById("edxn");
 
@@ -132,22 +225,72 @@ export default {
   },
 
   mounted() {
-    let basic = document.getElementById("edxn");
+    this.setAllElement(() => {
+      this.getDetection(() => {
+        setTimeout(this.getDetection(() => {
+          setInterval(
+            this.getDetection, 100)
+        }), 50);
+      })
+    })
 
-    basic.style.inheritAttrs = false;
 
-    basic.classList.remove("wrapapp");
 
-    basic.style.textAlign = "justify";
 
-    console.log(basic.style);
 
-    console.dir(basic.style);
 
-    console.log(basic);
-
-    console.dir(basic);
   },
 };
 </script>
-<style></style>
+<style scoped>
+.set101color {
+  background-image: url("/01-4 Home-logined.png");
+
+  /* background-size: contain; */
+
+  /*  background-size: cover; */
+
+  /* background-size: 100% 50%; */
+
+  background-size: 100% 100%;
+
+  background-position: center;
+
+  /* background-position: top; */
+}
+
+.edxn0 {
+  inherits: false;
+}
+
+.aligntext {
+  text-align: "";
+}
+
+.somerate {
+  width: 37.5%;
+}
+
+.menusize {
+
+  max-width: 100%;
+
+}
+
+.v-menu__content {
+
+
+  max-width: 40%;
+
+
+
+}
+
+
+.spacetext {
+
+  max-height: 25px;
+
+
+}
+</style>
