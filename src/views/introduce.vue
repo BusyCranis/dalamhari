@@ -220,9 +220,17 @@ export default {
       this.specselection.textContent = event.target.innerText;
     },
 
-    checkStuff() {
+    checkStuff(event) {
+      event.stopPropagation();
 
-      console.log("check")
+      console.log(event.target);
+      let posXrate = event.offsetX / event.target.clientWidth;
+      let posYrate = event.offsetY / event.target.clientHeight;
+
+      console.log("너비비율= " + posXrate + ",  높이비율= " + posYrate);
+
+      
+     
 
     },
 
