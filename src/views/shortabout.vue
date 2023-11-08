@@ -1,48 +1,14 @@
 <template>
   <div id="why0bartool" class="set101color" transparent @click.self="checkStuff">
-    <input id="nameinput" style="display: none" />
+    <!-- <input id="nameinput" style="display: none" />
     <input id="emailinput" style="display: none" />
     <br />
     <input id="passwordinput" style="display: none" />
-
     <br />
-
-    <div id="identityinput" style="display: none" class="somerate">
-      <v-menu id="innermenu" class="menusize">
-        <template v-slot:activator="{ on, attrs }">
-          <div id="specselection" v-bind="attrs" v-on="on" class="elevation-0 ma-0 pa-0 textcolor spacetext"
-            color="transparent">
-            ""
-          </div>
-        </template>
-        <br /><br />
-        <v-list>
-          <v-list-item>
-            <div value="Individual Seller : I sell on Amazon by myself" @click.self="selectValue">
-              Individual Seller : I sell on Amazon by myself
-            </div>
-          </v-list-item>
-          <v-list-item>
-            <div value="Individual Seller : I sell on Amazon by myself" @click.self="selectValue">
-              Brand : I own private label brand products ans sell on Amazon
-            </div>
-          </v-list-item>
-          <v-list-item>
-            <div value="Individual Seller : I sell on Amazon by myself" @click.self="selectValue">
-              Consultant : I work with multiple brands & sellers on Amazon
-            </div>
-          </v-list-item>
-          <v-list-item>
-            <div value="Individual Seller : I sell on Amazon by myself" @click.self="selectValue">
-              I am not selling on Amazon yet
-            </div>
-          </v-list-item>
-        </v-list>
-      </v-menu>
-    </div>
+    <input id="activebox" style="display: none" type="checkbox" /> -->
 
 
-    <input id="activebox" style="display: none" type="checkbox" />
+
     <br />
     <br />
     <br />
