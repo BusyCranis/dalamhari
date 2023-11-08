@@ -208,7 +208,7 @@ export default {
       console.log(this.passwordinput);
     },
 
-    
+
 
     selectValue(event) {
       event.stopPropagation();
@@ -234,23 +234,6 @@ export default {
   },
 
   mounted() {
-    // this.why0bartool = document.getElementById("why0bartool")
-    // this.nameinput = document.getElementById("nameinput");
-    // console.log(this.nameinput);
-    // this.emailinput = document.getElementById("emailinput");
-    // console.log(this.emailinput);
-    // this.passwordinput = document.getElementById("passwordinput");
-    // console.log(this.passwordinput);
-    // this.identityinput = document.getElementById("identityinput");
-    // console.log(this.identityinput);
-    // this.specselection = document.getElementById("specselection");
-    // console.log(this.specselection);
-    // console.log(this.specselection.textContent);
-    // this.innermenu = document.getElementById("innermenu")
-    // console.log(this.innermenu);
-    // this.activebox = document.getElementById("activebox")
-    // console.log(this.activebox);
-
     this.setAllElement(() => {
       this.getDetection(() => {
         setTimeout(this.getDetection(() => {
@@ -260,11 +243,7 @@ export default {
       })
     })
 
-    // this.getDetection()
-
-
-
-
+   
 
 
 
