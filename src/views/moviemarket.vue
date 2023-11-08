@@ -146,10 +146,7 @@ export default {
 
       console.log(this.identityinput);
 
-      // if(posXrate > 0.8512195 && posYrate > 0.2340425 && posXrate < 0.9536585 && posYrate < 0.7234042) {
-      //   console.log("클릭")
-      // }
-      // "너비비율= 0.2951219512195122,  높이비율= 0.6773255813953488"
+ 
 
       this.nameinput.style.transform = `translate3d( ${event.target.clientWidth * 0.2975609756
         }px, ${event.target.clientHeight * 0.298}px, 0 )`;
@@ -194,20 +191,26 @@ export default {
 
       console.log("너비비율= " + posXrate + ",  높이비율= " + posYrate);
 
-      // "너비비율= 0.43658536585365854,  높이비율= 0.5711382113821138"
+      // "너비비율= 0.6560975609756098,  높이비율= 0.7479166666666667"
 
-      // "너비비율= 0.5463414634146342,  높이비율= 0.608739837398374"
+      // "너비비율= 0.7585365853658537,  높이비율= 0.8114583333333333"
 
 
-      if (posXrate > 0.43658536585365854 && posYrate > 0.5711382113821138 && posXrate < 0.5463414634146342 && posYrate < 0.608739837398374) {
+      if (posXrate > 0.07317073170731707 && posYrate > 0.7479166666666667 && posXrate < 0.17560975609756097 && posYrate < 0.8114583333333333) {
         console.log("클릭")
-        this.$router.push({ name: "moviemarket" });
+        this.$router.push({ name: "schedule" });
       }
 
-      // if (posXrate > 0.5707317073170731 && posYrate > 0.7723577235772358 && posXrate < 0.6121951219512195 && posYrate < 0.782520325203252) {
-      //   console.log("클릭")
-      //   this.$router.push({ name: "shortabout" });
-      // }
+      if (posXrate > 0.36585365853658536 && posYrate > 0.7479166666666667 && posXrate < 0.4585365853658537 && posYrate < 0.8114583333333333) {
+        console.log("클릭")
+        this.$router.push({ name: "schedule" });
+      }
+
+
+      if (posXrate > 0.6560975609756098 && posYrate > 0.7479166666666667 && posXrate < 0.7585365853658537 && posYrate < 0.8114583333333333) {
+        console.log("클릭")
+        this.$router.push({ name: "schedule" });
+      }
 
 
 
