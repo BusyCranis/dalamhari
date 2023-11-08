@@ -229,20 +229,20 @@ export default {
 
       console.log("너비비율= " + posXrate + ",  높이비율= " + posYrate);
 
-      // "너비비율= 0.5707317073170731,  높이비율= 0.7723577235772358"
+      // "너비비율= 0.43658536585365854,  높이비율= 0.5711382113821138"
 
-      // "너비비율= 0.6121951219512195,  높이비율= 0.782520325203252"
+      // "너비비율= 0.5463414634146342,  높이비율= 0.608739837398374"
 
 
-      if (posXrate > 0.43658536585 && posYrate > 0.71341463414 && posXrate < 0.5658536585 && posYrate < 0.7428861788) {
+      if (posXrate > 0.43658536585365854 && posYrate > 0.5711382113821138 && posXrate < 0.5463414634146342 && posYrate < 0.608739837398374) {
         console.log("클릭")
-
+        this.$router.push({ name: "moviemarket" });
       }
 
-      if (posXrate > 0.5707317073170731 && posYrate > 0.7723577235772358 && posXrate < 0.6121951219512195 && posYrate < 0.782520325203252) {
-        console.log("클릭")
-        this.$router.push({ name: "shortabout" });
-      }
+      // if (posXrate > 0.5707317073170731 && posYrate > 0.7723577235772358 && posXrate < 0.6121951219512195 && posYrate < 0.782520325203252) {
+      //   console.log("클릭")
+      //   this.$router.push({ name: "shortabout" });
+      // }
 
 
 
