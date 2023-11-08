@@ -244,7 +244,7 @@ export default {
 </script>
 <style scoped>
 .set101color {
-  background-image: url("/01-4 Home-logined.png");
+  background-image: url("/02-1 Analysis-Sales Trend.png");
 
   /* background-size: contain; */
 
