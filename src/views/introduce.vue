@@ -1,10 +1,5 @@
 <template>
-  <div
-    id="whybartool"
-    class="set101color"
-    transparent
-    @click.self="detectAction"
-  >
+  <div id="why0bartool" class="set101color" transparent @click.self="checkStuff">
     <input id="nameinput" style="display: none" />
     <input id="emailinput" style="display: none" />
     <br />
@@ -13,49 +8,32 @@
     <br />
 
     <div id="identityinput" style="display: none" class="somerate">
-      <v-menu  id="innermenu"  class="menusize">
-        <template       v-slot:activator="{ on, attrs }">
-          <div
-            id="specselection"
-            v-bind="attrs"
-            v-on="on"
-            class="elevation-0 ma-0 pa-0 textcolor spacetext"
-            color="transparent"
-          >
+      <v-menu id="innermenu" class="menusize">
+        <template v-slot:activator="{ on, attrs }">
+          <div id="specselection" v-bind="attrs" v-on="on" class="elevation-0 ma-0 pa-0 textcolor spacetext"
+            color="transparent">
             ""
           </div>
         </template>
         <br /><br />
-        <v-list   >
+        <v-list>
           <v-list-item>
-            <div
-              value="Individual Seller : I sell on Amazon by myself"
-              @click.self="selectValue"
-            >
+            <div value="Individual Seller : I sell on Amazon by myself" @click.self="selectValue">
               Individual Seller : I sell on Amazon by myself
             </div>
           </v-list-item>
           <v-list-item>
-            <div
-              value="Individual Seller : I sell on Amazon by myself"
-              @click.self="selectValue"
-            >
+            <div value="Individual Seller : I sell on Amazon by myself" @click.self="selectValue">
               Brand : I own private label brand products ans sell on Amazon
             </div>
           </v-list-item>
           <v-list-item>
-            <div
-              value="Individual Seller : I sell on Amazon by myself"
-              @click.self="selectValue"
-            >
+            <div value="Individual Seller : I sell on Amazon by myself" @click.self="selectValue">
               Consultant : I work with multiple brands & sellers on Amazon
-            </div></v-list-item
-          >
+            </div>
+          </v-list-item>
           <v-list-item>
-            <div
-              value="Individual Seller : I sell on Amazon by myself"
-              @click.self="selectValue"
-            >
+            <div value="Individual Seller : I sell on Amazon by myself" @click.self="selectValue">
               I am not selling on Amazon yet
             </div>
           </v-list-item>
@@ -64,7 +42,7 @@
     </div>
 
 
-    <input id="activebox" style="display: none"   type="checkbox" />
+    <input id="activebox" style="display: none" type="checkbox" />
     <br />
     <br />
     <br />
@@ -114,11 +92,84 @@ export default {
       innermenu: null,
       innertemplate: null,
       innerlist: null,
-      activebox: null
+      activebox: null,
+      why0bartool: null
     };
   },
 
   methods: {
+
+    setAllElement(callback) {
+      this.why0bartool = document.getElementById("why0bartool")
+
+      console.log(this.why0bartool);
+
+      this.nameinput = document.getElementById("nameinput");
+      console.log(this.nameinput);
+
+      this.emailinput = document.getElementById("emailinput");
+      console.log(this.emailinput);
+
+      this.passwordinput = document.getElementById("passwordinput");
+      console.log(this.passwordinput);
+
+      this.identityinput = document.getElementById("identityinput");
+      console.log(this.identityinput);
+
+      this.specselection = document.getElementById("specselection");
+
+      console.log(this.specselection);
+      console.log(this.specselection.textContent);
+
+      this.innermenu = document.getElementById("innermenu")
+
+      console.log(this.innermenu);
+
+      this.activebox = document.getElementById("activebox")
+
+      console.log(this.activebox);
+
+
+      callback()
+    },
+
+
+
+    getDetection(callback) {
+      console.log(this.why0bartool);
+      console.log(this.identityinput);
+
+      this.nameinput.style.transform = `translate3d( ${this.why0bartool.clientWidth * 0.2975609756
+        }px, ${this.why0bartool.clientHeight * 0.298}px, 0 )`;
+
+      this.emailinput.style.transform = `translate3d( ${this.why0bartool.clientWidth * 0.2975609756 - 167
+        }px, ${this.why0bartool.clientHeight * 0.3605416666}px, 0 )`;
+
+      this.passwordinput.style.transform = `translate3d( ${this.why0bartool.clientWidth * 0.2975609756
+        }px, ${this.why0bartool.clientHeight * 0.3981666666}px, 0 )`;
+
+      this.identityinput.style.transform = `translate3d( ${this.why0bartool.clientWidth * 0.2975609756}px, ${this.why0bartool.clientHeight * 0.43935365853658536}px, 0 )`;
+
+      this.activebox.style.transform = `translate3d( ${this.why0bartool.clientWidth * 0.2910609756}px, ${this.why0bartool.clientHeight * 0.5975}px, 0 )`
+
+
+      this.nameinput.style.display = "";
+      this.emailinput.style.display = "";
+      this.passwordinput.style.display = "";
+      this.identityinput.style.display = "";
+      this.activebox.style.display = "";
+
+
+      console.log(this.passwordinput);
+
+
+      if (typeof callback == "function") {
+        callback()
+      }
+
+
+    },
+
     detectAction(event) {
       event.stopPropagation();
 
@@ -135,29 +186,24 @@ export default {
       // }
       // "너비비율= 0.2951219512195122,  높이비율= 0.6773255813953488"
 
-      this.nameinput.style.transform = `translate3d( ${
-        event.target.clientWidth * 0.2975609756
-      }px, ${event.target.clientHeight * 0.298}px, 0 )`;
+      this.nameinput.style.transform = `translate3d( ${event.target.clientWidth * 0.2975609756
+        }px, ${event.target.clientHeight * 0.298}px, 0 )`;
 
-      this.emailinput.style.transform = `translate3d( ${
-        event.target.clientWidth * 0.2975609756 - 167
-      }px, ${event.target.clientHeight * 0.3605416666}px, 0 )`;
+      this.emailinput.style.transform = `translate3d( ${event.target.clientWidth * 0.2975609756 - 167
+        }px, ${event.target.clientHeight * 0.3605416666}px, 0 )`;
 
-      this.passwordinput.style.transform = `translate3d( ${
-        event.target.clientWidth * 0.2975609756
-      }px, ${event.target.clientHeight * 0.3981666666}px, 0 )`;
+      this.passwordinput.style.transform = `translate3d( ${event.target.clientWidth * 0.2975609756
+        }px, ${event.target.clientHeight * 0.3981666666}px, 0 )`;
 
       this.identityinput.style.transform = `translate3d( ${event.target.clientWidth * 0.2975609756}px, ${event.target.clientHeight * 0.43935365853658536}px, 0 )`;
 
       this.activebox.style.transform = `translate3d( ${event.target.clientWidth * 0.2910609756}px, ${event.target.clientHeight * 0.5975}px, 0 )`
-
 
       this.nameinput.style.display = "";
       this.emailinput.style.display = "";
       this.passwordinput.style.display = "";
       this.identityinput.style.display = "";
       this.activebox.style.display = "";
-
 
       console.log(this.passwordinput);
     },
@@ -172,6 +218,12 @@ export default {
       this.specselection.textContent = event.target.innerText;
     },
 
+    checkStuff() {
+
+      console.log("check")
+
+    },
+
     basicstudy() {
       let basic = document.getElementById("edxn");
 
@@ -180,31 +232,39 @@ export default {
   },
 
   mounted() {
-    this.nameinput = document.getElementById("nameinput");
-    console.log(this.nameinput);
+    // this.why0bartool = document.getElementById("why0bartool")
+    // this.nameinput = document.getElementById("nameinput");
+    // console.log(this.nameinput);
+    // this.emailinput = document.getElementById("emailinput");
+    // console.log(this.emailinput);
+    // this.passwordinput = document.getElementById("passwordinput");
+    // console.log(this.passwordinput);
+    // this.identityinput = document.getElementById("identityinput");
+    // console.log(this.identityinput);
+    // this.specselection = document.getElementById("specselection");
+    // console.log(this.specselection);
+    // console.log(this.specselection.textContent);
+    // this.innermenu = document.getElementById("innermenu")
+    // console.log(this.innermenu);
+    // this.activebox = document.getElementById("activebox")
+    // console.log(this.activebox);
 
-    this.emailinput = document.getElementById("emailinput");
-    console.log(this.emailinput);
+    this.setAllElement(() => {
+      this.getDetection(() => {
+        setTimeout(this.getDetection(() => {
+          setInterval(
+            this.getDetection, 100)
+        }), 50);
+      })
+    })
 
-    this.passwordinput = document.getElementById("passwordinput");
-    console.log(this.passwordinput);
+    // this.getDetection()
 
-    this.identityinput = document.getElementById("identityinput");
-    console.log(this.identityinput);
 
-    this.specselection = document.getElementById("specselection");
 
-    console.log(this.specselection);
-    console.log(this.specselection.textContent);
 
-    this.innermenu = document.getElementById("innermenu")
 
-    console.log(this.innermenu);
 
-    this.activebox = document.getElementById("activebox")
-
-    console.log(this.activebox);
-    
 
 
   },
@@ -261,6 +321,4 @@ export default {
 
 
 }
-
-
 </style>
