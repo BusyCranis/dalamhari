@@ -208,6 +208,8 @@ export default {
       console.log(this.passwordinput);
     },
 
+    
+
     selectValue(event) {
       event.stopPropagation();
 
