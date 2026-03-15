@@ -1,76 +1,70 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
-import vuetify from './plugins/vuetify'
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./router";
+import store from "./store";
+import vuetify from "./plugins/vuetify";
 
-import 'normalize.css'
+import "normalize.css";
 
-import 'reset-css'
+import "reset-css";
 
-import '@oruga-ui/oruga/dist/oruga.css'
+import "@oruga-ui/oruga/dist/oruga.css";
 
-import Oruga from '@oruga-ui/oruga'
+import Oruga from "@oruga-ui/oruga";
 
-import './assets/tailwindcss.css';
+import "./assets/tailwindcss.css";
 
-import './assets/oruga-tailwindcss.css';
+import "./assets/oruga-tailwindcss.css";
 
-
-
-Vue.config.productionTip = false
-
+Vue.config.productionTip = false;
 
 Vue.use(Oruga, {
-  iconPack: 'fas',
-  iconComponent: 'vue-fontawesome',
+  iconPack: "fas",
+  iconComponent: "vue-fontawesome",
   statusIcon: false,
   button: {
     override: true,
-    rootClass: 'btn',
+    rootClass: "btn",
   },
   radio: {
-    rootClass: 'radio',
-    labelClass: 'radio-label',
-    checkClass: 'radio-check',
-    checkedClass: 'radio-checked'
+    rootClass: "radio",
+    labelClass: "radio-label",
+    checkClass: "radio-check",
+    checkedClass: "radio-checked",
   },
   field: {
     override: true,
-    labelClass: 'field-label',
-    messageClass: 'text-xs italic',
-    variantClass: 'field-'
+    labelClass: "field-label",
+    messageClass: "text-xs italic",
+    variantClass: "field-",
   },
   input: {
     override: true,
-    inputClass: 'input focus:outline-none focus:shadow-outline',
-    roundedClass: 'rounded',
-    variantClass: 'input-'
+    inputClass: "input focus:outline-none focus:shadow-outline",
+    roundedClass: "rounded",
+    variantClass: "input-",
   },
   dropdown: {
-    menuClass: 'dropdown-menu',
-    itemClass: 'dropdown-item',
-    itemActiveClass: 'dropdown-item-active'
+    menuClass: "dropdown-menu",
+    itemClass: "dropdown-item",
+    itemActiveClass: "dropdown-item-active",
   },
   loading: {
-    overlayClass: 'loading-background'
+    overlayClass: "loading-background",
   },
   icon: {
     override: true,
-    spinClass: 'fa-spin'
+    spinClass: "fa-spin",
   },
   switch: {
-    checkClass: 'switch',
-    labelClass: 'switch-label',
+    checkClass: "switch",
+    labelClass: "switch-label",
   },
-})
-
-
-
+});
 
 new Vue({
   router,
   store,
   vuetify,
-  render: h => h(App)
-}).$mount('#app')
+  render: (h) => h(App),
+}).$mount("#app");

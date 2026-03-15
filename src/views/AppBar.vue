@@ -6,7 +6,6 @@
     transparent
     height="94"
     fixed
-
     @click="detectAction"
   >
     <!-- <v-toolbar-title class="pl-0" @click="go0home">
@@ -236,10 +235,6 @@
     <div class="minwdthon somehght">
       <div></div>
     </div> -->
-
-
-
-
   </v-app-bar>
 </template>
 
@@ -289,33 +284,32 @@ export default {
     detectAction(event) {
       event.stopPropagation();
 
-      console.log(event.target)      
-      let posXrate = event.offsetX / event.target.clientWidth
-      let posYrate = event.offsetY / event.target.clientHeight
+      console.log(event.target);
+      let posXrate = event.offsetX / event.target.clientWidth;
+      let posYrate = event.offsetY / event.target.clientHeight;
 
-      console.log("너비비율= " + posXrate + ",  높이비율= " + posYrate)
+      console.log("너비비율= " + posXrate + ",  높이비율= " + posYrate);
 
-      if(posXrate > 0.8512195 && posYrate > 0.2340425 && posXrate < 0.9536585 && posYrate < 0.7234042) {
-        console.log("appbar joinus 버튼 클릭")
+      if (
+        posXrate > 0.8512195 &&
+        posYrate > 0.2340425 &&
+        posXrate < 0.9536585 &&
+        posYrate < 0.7234042
+      ) {
+        console.log("appbar joinus 버튼 클릭");
         this.$router.push({ name: "introduce" });
       }
 
-    
-      if (posXrate > 0.024390243902439025 && posYrate > 0.2872340425531915 && posXrate < 0.22926829268292684 && posYrate < 0.723404255319149) {
-        console.log("버튼 클릭")
+      if (
+        posXrate > 0.024390243902439025 &&
+        posYrate > 0.2872340425531915 &&
+        posXrate < 0.22926829268292684 &&
+        posYrate < 0.723404255319149
+      ) {
+        console.log("버튼 클릭");
         this.$router.push({ name: "primarypage" });
       }
-
-
-
     },
-
-
-
-
-
-
-
 
     gopage0() {
       this.$router.push({ name: "introduce" });
@@ -488,7 +482,7 @@ export default {
 
   /* background-size: 100% 50%; */
 
-  background-size: 100% 100%; 
+  background-size: 100% 100%;
 
   background-position: center;
 
@@ -503,10 +497,7 @@ export default {
 .textcolor {
   color: rgb(255, 103, 53);
 
-
   font-weight: 800;
-
-
 }
 
 .moreflex {
