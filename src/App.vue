@@ -18,7 +18,7 @@ export default {
 
   methods: {
     checkwindow() {
-      console.log(this.screenview);
+      // console.log(this.screenview);
     },
   },
 
