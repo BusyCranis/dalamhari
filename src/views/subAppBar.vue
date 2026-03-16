@@ -1,12 +1,24 @@
 <template>
   <div>
-    <router-link :to="{ name: 'primarypage' }" class="getflex">
+    <router-link :to="parentPath" class="getflex">
       <img src="@/assets/뒤로가기.png" class="backbtn" />
     </router-link>
   </div>
 </template>
 <script>
-export default {};
+export default {
+  computed: {
+    parentPath() {
+      // "/introduce/detail/ledger" => "/introduce"
+      // "/schedule/detail/info" => "/schedule"
+      const segments = this.$route.path.split("/").filter(Boolean);
+      if (segments.length >= 1) {
+        return "/" + segments[0];
+      }
+      return "/";
+    },
+  },
+};
 </script>
 <style>
 .backbtn {

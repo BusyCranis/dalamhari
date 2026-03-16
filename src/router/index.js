@@ -204,14 +204,15 @@ const router = new VueRouter({
       ],
     },
 
+    // ── 레이아웃 2: detail.vue (SubAppBar 뒤로가기 헤더) ── depth ≥ 2
     {
-      path: "/introduce/detail",
+      path: "/",
       component: () => import("../views/detail.vue"),
       children: [
+        // /introduce 섹션
         {
           name: "ledger",
           path: "/introduce/detail/ledger",
-
           component: () => import("../views/ledger.vue"),
         },
 
@@ -226,6 +227,8 @@ const router = new VueRouter({
           name: "lawagree",
           component: Lawpage,
         },
+
+        // 새로운 depth ≥ 2 라우트는 여기에 추가
       ],
     },
 
