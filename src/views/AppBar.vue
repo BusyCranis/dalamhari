@@ -1,6 +1,6 @@
 <template>
   <v-app-bar id="whybartool" transparent height="94" fixed>
-    <button>로고</button>
+    <button>로고 이미지</button>
   </v-app-bar>
 </template>
 
