@@ -1,16 +1,5 @@
 <template>
-  <div 
-  
-    id="whybartool"
-    class="set101color"
-    transparent
-    
-  
-  
-  
-  
-  
-  >
+  <div id="whybartool" class="set101color" transparent>
     <br />
     <br />
     <br />
@@ -46,21 +35,6 @@
     <br />
     <br />
     <br />
-    
-   
-    
-
-
-
-
-    
-   
-
-
-
-
-
-
   </div>
 </template>
 
@@ -145,17 +119,15 @@ export default {
     ...mapMutations(["submitlogout"]),
 
     addnews(i) {
-    //   console.log(this.newslist);
+      //   console.log(this.newslist);
 
-      let specnews = this.newslist[i]
+      let specnews = this.newslist[i];
 
-      console.log(specnews)
-      
-      this.insertfood(specnews)
+      console.log(specnews);
+
+      this.insertfood(specnews);
 
       this.$router.push({ name: "selectednews" });
-
-
     },
 
     freeze() {
@@ -276,18 +248,13 @@ export default {
           return time;
         }
       };
-
-      // document.getElementById("days").textContent = format(remainingDate);
-      // document.getElementById("hours").textContent = format(remainingHours);
-      // document.getElementById("nin").textContent = format(remainingMin);
-      // document.getElementById("sec").textContent = format(remainingSec);
     },
 
     returnele() {},
 
     agree(id) {
       let item0 = this.$store.state.foodstore.filter(
-        (item) => item.id === id
+        (item) => item.id === id,
       )[0];
 
       this.insertfood(item0);
@@ -358,14 +325,7 @@ export default {
     // this.bring();
   },
 
-  async created() {
-    // await this.getQuote();
-    // await this.randomUser();
-    // this.setRandomValue();
-    // setTimeout(() => {
-    //   this.isVideoMode = true;
-    // }, 1000);
-  },
+  async created() {},
 };
 </script>
 
@@ -373,17 +333,9 @@ export default {
 .set101color {
   background-image: url("/01-1 Home-unlogined.png");
 
-  /* background-size: contain; */
-
-  // background-size: cover;
-
-  /* background-size: 100% 50%; */
-
-  background-size: 100% 100%; 
+  background-size: 100% 100%;
 
   background-position: center;
-
-  /* background-position: top; */
 }
 
 .v-toolbar__title {
@@ -394,10 +346,7 @@ export default {
 .textcolor {
   color: rgb(255, 103, 53);
 
-
   font-weight: 800;
-
-
 }
 
 .moreflex {
@@ -459,22 +408,6 @@ export default {
 .upride {
   z-index: 9999;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media (max-width: 758px) {
   #input-context {

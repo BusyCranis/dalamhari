@@ -17,223 +17,142 @@ export default {
   },
 
   computed: {
-    isLogedIn() {
-      console.log("test");
-      let result = false;
-      let flag = this.$store.getters.getUserData;
-      if (flag) result = true;
-      return result;
-    },
+    // isLogedIn() {
+    //   console.log("test");
+    //   let result = false;
+    //   let flag = this.$store.getters.getUserData;
+    //   if (flag) result = true;
+    //   return result;
+    // },
   },
 
   mounted() {
-    var bartitle = document.getElementById("whybartool").children[0];
-
-    console.log(bartitle);
-
-    bartitle.classList.add("invldctns");
-
-    bartitle.classList.remove("v-toolbar__content");
-
-    bartitle.style.display = "flex";
-
-    bartitle.style.justifyContent = "space-between";
-
-    bartitle.style.alignItems = "center";
-
-    console.dir(bartitle);
-
-    console.dir(bartitle.style);
+    // var bartitle = document.getElementById("whybartool").children[0];
+    // console.log(bartitle);
+    // bartitle.classList.add("invldctns");
+    // bartitle.classList.remove("v-toolbar__content");
+    // bartitle.style.display = "flex";
+    // bartitle.style.justifyContent = "space-between";
+    // bartitle.style.alignItems = "center";
+    // console.dir(bartitle);
+    // console.dir(bartitle.style);
   },
 
   methods: {
-    detectAction(event) {
-      event.stopPropagation();
-
-      console.log(event.target);
-      let posXrate = event.offsetX / event.target.clientWidth;
-      let posYrate = event.offsetY / event.target.clientHeight;
-
-      console.log("너비비율= " + posXrate + ",  높이비율= " + posYrate);
-
-      if (
-        posXrate > 0.8512195 &&
-        posYrate > 0.2340425 &&
-        posXrate < 0.9536585 &&
-        posYrate < 0.7234042
-      ) {
-        console.log("appbar joinus 버튼 클릭");
-        this.$router.push({ name: "introduce" });
-      }
-
-      if (
-        posXrate > 0.024390243902439025 &&
-        posYrate > 0.2872340425531915 &&
-        posXrate < 0.22926829268292684 &&
-        posYrate < 0.723404255319149
-      ) {
-        console.log("버튼 클릭");
-        this.$router.push({ name: "primarypage" });
-      }
-    },
-
-    gopage0() {
-      this.$router.push({ name: "introduce" });
-    },
-
-    gopage1() {
-      this.$router.push({ name: "shortabout" });
-    },
-
-    gopage2() {
-      this.$router.push({ name: "moviemarket" });
-    },
-
-    gopage3() {
-      this.$router.push({ name: "schedule" });
-    },
-
-    gopage4() {
-      this.$router.push({ name: "award" });
-    },
-
-    gopage5() {
-      this.$router.push({ name: "mentor" });
-    },
-
-    gopage6() {
-      this.$router.push({ name: "showcase" });
-    },
-
-    gopage7() {
-      this.$router.push({ name: "webdrama" });
-    },
-
-    gopage8() {
-      this.$router.push({ name: "student" });
-    },
-
-    gopage9() {
-      this.$router.push({ name: "orginfo" });
-    },
-
-    gopage10() {
-      this.$router.push({ name: "way" });
-    },
-
-    gopage11() {
-      this.$router.push({ name: "notice" });
-    },
-
-    gopage12() {
-      this.$router.push({ name: "news" });
-    },
-
-    gopage13() {
-      this.$router.push({ name: "faq" });
-    },
-
-    gopage14() {
-      this.$router.push({ name: "lecture" });
-    },
-
-    gopage15() {
-      this.$router.push({ name: "secondary" });
-    },
-
-    gopage16() {
-      this.$router.push({ name: "program" });
-    },
-
-    gopage17() {
-      this.$router.push({ name: "charbi" });
-    },
-
-    gopage18() {
-      this.$router.push({ name: "charci" });
-    },
-
-    gopage19() {
-      this.$router.push({ name: "dataroom" });
-    },
-
-    gopage20() {
-      this.$router.push({ name: "tlfdus" });
-    },
-
-    gopage21() {
-      this.$router.push({ name: "music" });
-    },
-
-    gopage22() {
-      this.$router.push({ name: "database" });
-    },
-
-    gopage23() {
-      this.$router.push({ name: "etc" });
-    },
-
-    gopage24() {
-      this.$router.push({ name: "greeting" });
-    },
-
-    gopage25() {
-      this.$router.push({ name: "cloud" });
-    },
-
-    gopage26() {
-      this.$router.push({ name: "estimate" });
-    },
-
-    gopage27() {
-      this.$router.push({ name: "otherbusyness" });
-    },
-
-    // gopage28() {
+    // gopage0() {
+    //   this.$router.push({ name: "introduce" });
+    // },
+    // gopage1() {
+    //   this.$router.push({ name: "shortabout" });
+    // },
+    // gopage2() {
+    //   this.$router.push({ name: "moviemarket" });
+    // },
+    // gopage3() {
+    //   this.$router.push({ name: "schedule" });
+    // },
+    // gopage4() {
+    //   this.$router.push({ name: "award" });
+    // },
+    // gopage5() {
+    //   this.$router.push({ name: "mentor" });
+    // },
+    // gopage6() {
+    //   this.$router.push({ name: "showcase" });
+    // },
+    // gopage7() {
+    //   this.$router.push({ name: "webdrama" });
+    // },
+    // gopage8() {
+    //   this.$router.push({ name: "student" });
+    // },
+    // gopage9() {
+    //   this.$router.push({ name: "orginfo" });
+    // },
+    // gopage10() {
+    //   this.$router.push({ name: "way" });
+    // },
+    // gopage11() {
+    //   this.$router.push({ name: "notice" });
+    // },
+    // gopage12() {
+    //   this.$router.push({ name: "news" });
+    // },
+    // gopage13() {
+    //   this.$router.push({ name: "faq" });
+    // },
+    // gopage14() {
+    //   this.$router.push({ name: "lecture" });
+    // },
+    // gopage15() {
+    //   this.$router.push({ name: "secondary" });
+    // },
+    // gopage16() {
+    //   this.$router.push({ name: "program" });
+    // },
+    // gopage17() {
+    //   this.$router.push({ name: "charbi" });
+    // },
+    // gopage18() {
+    //   this.$router.push({ name: "charci" });
+    // },
+    // gopage19() {
+    //   this.$router.push({ name: "dataroom" });
+    // },
+    // gopage20() {
+    //   this.$router.push({ name: "tlfdus" });
+    // },
+    // gopage21() {
+    //   this.$router.push({ name: "music" });
+    // },
+    // gopage22() {
+    //   this.$router.push({ name: "database" });
+    // },
+    // gopage23() {
     //   this.$router.push({ name: "etc" });
     // },
-
-    go0home() {
-      this.$router.push({ name: "primarypage" });
-    },
-
-    slttaghdr() {
-      var bartitle = document.getElementById("whybartool").children[0];
-
-      console.log(bartitle);
-
-      bartitle.classList.add("invldctns");
-
-      bartitle.classList.remove("v-toolbar__content");
-
-      bartitle.style.display = "flex";
-
-      bartitle.style.justifyContent = "space-between";
-
-      bartitle.style.alignItems = "center";
-
-      console.dir(bartitle);
-
-      console.dir(bartitle.style);
-    },
-
-    goHome() {
-      console.log("Glicked go home....");
-      this.$router.push("/home/home");
-      this.$store.commit({
-        type: "setCurrentRoute",
-        route: "/home",
-      });
-    }, // goHome
-
-    login() {
-      this.$store.commit({ type: "setSubPage", sub_page: "로그인" });
-      this.$router.push("/sign/login");
-      this.$store.commit({
-        type: "setCurrentRoute",
-        route: "login",
-      });
-    }, // login
+    // gopage24() {
+    //   this.$router.push({ name: "greeting" });
+    // },
+    // gopage25() {
+    //   this.$router.push({ name: "cloud" });
+    // },
+    // gopage26() {
+    //   this.$router.push({ name: "estimate" });
+    // },
+    // gopage27() {
+    //   this.$router.push({ name: "otherbusyness" });
+    // },
+    // go0home() {
+    //   this.$router.push({ name: "primarypage" });
+    // },
+    // slttaghdr() {
+    //   var bartitle = document.getElementById("whybartool").children[0];
+    //   console.log(bartitle);
+    //   bartitle.classList.add("invldctns");
+    //   bartitle.classList.remove("v-toolbar__content");
+    //   bartitle.style.display = "flex";
+    //   bartitle.style.justifyContent = "space-between";
+    //   bartitle.style.alignItems = "center";
+    //   console.dir(bartitle);
+    //   console.dir(bartitle.style);
+    // },
+    // goHome() {
+    //   console.log("Glicked go home....");
+    //   this.$router.push("/home/home");
+    //   this.$store.commit({
+    //     type: "setCurrentRoute",
+    //     route: "/home",
+    //   });
+    // }, // goHome
+    // login() {
+    //   this.$store.commit({ type: "setSubPage", sub_page: "로그인" });
+    //   this.$router.push("/sign/login");
+    //   this.$store.commit({
+    //     type: "setCurrentRoute",
+    //     route: "login",
+    //   });
+    // }, // login
   },
 };
 </script>
