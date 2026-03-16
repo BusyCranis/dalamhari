@@ -211,15 +211,9 @@ const router = new VueRouter({
         {
           name: "ledger",
           path: "/introduce/detail/ledger",
-          // props: true,
+
           component: () => import("../views/ledger.vue"),
         },
-
-        // {
-        //   path: "/signup",
-        //   name: "signup",
-        //   component: Signup,
-        // },
 
         {
           path: "/introduce/detail/linkinfo",
@@ -232,12 +226,6 @@ const router = new VueRouter({
           name: "lawagree",
           component: Lawpage,
         },
-
-        // {
-        //   path: "/login",
-        //   name: "login",
-        //   component: Login,
-        // },
       ],
     },
 
