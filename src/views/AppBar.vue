@@ -1,14 +1,5 @@
 <template>
-  <v-app-bar
-    id="whybartool"
-    class="set101color"
-    color="white"
-    transparent
-    height="94"
-    fixed
-    @click="detectAction"
-  >
-  </v-app-bar>
+  <v-app-bar id="whybartool" transparent height="94" fixed> </v-app-bar>
 </template>
 
 <script>
