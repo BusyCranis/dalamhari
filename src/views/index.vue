@@ -2,7 +2,7 @@
   <v-app class="ma-0 pa-0">
     <AppBar />
 
-    <v-container class="ma-0 pa-0 fill-height" fluid >
+    <v-container class="ma-0 pa-0 fill-height" fluid>
       <routermainview class="ma-0 pa-0 fill-height"> </routermainview>
     </v-container>
 
@@ -14,9 +14,7 @@
 <script>
 import Mainbottom from "./mainbottom.vue";
 import Routermainview from "./routermainview.vue";
-import AppBar from "./AppBar.vue"
-
-
+import AppBar from "./AppBar.vue";
 
 export default {
   name: "Home",
@@ -24,12 +22,12 @@ export default {
   components: {
     Routermainview,
     Mainbottom,
-    AppBar
+    AppBar,
   },
 };
 </script>
 
-<style   scoped >
+<style scoped>
 /* .set01color {
   background: yellow;
 } */
@@ -38,16 +36,7 @@ export default {
   background: white;
 } */
 
-
-
 .wrapapp :not(.edxn0) {
- 
   text-align: center;
-  
 }
-
-
-
-
-
 </style>
