@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+// import Home from "../views/Home.vue";
 import Signup from "../views/signup.vue";
 import LinkedInfo from "../views/linkedInfo.vue";
 import Login from "../views/loginformpage.vue";
@@ -10,43 +10,7 @@ import primarypage from "../views/primarypage.vue";
 
 Vue.use(VueRouter);
 
-const routes = [
-  // {
-  //   path: "/about",
-  //   name: "About",
-  //   component: () =>
-  //     import(/* webpackChunkName: "about" */ "../views/About.vue"),
-  // },
-  // {
-  //   path: "/*",
-  //   redirect: { name: "primarypage" },
-  // },
-  // {
-  //   path: "/signup",
-  //   name: "signup",
-  //   component: Signup,
-  // },
-  // {
-  //   path: "/linkinfo",
-  //   name: "linkedinfo",
-  //   component: LinkedInfo,
-  // },
-  // {
-  //   path: "/law",
-  //   name: "lawagree",
-  //   component: Lawpage,
-  // },
-  // {
-  //   path: "/login",
-  //   name: "login",
-  //   component: Login,
-  // },
-  // {
-  //   path: "/",
-  //   name: "primarypage",
-  //   component: primarypage,
-  // },
-];
+// const routes = [];
 
 const router = new VueRouter({
   mode: "history",
@@ -237,65 +201,56 @@ const router = new VueRouter({
           name: "selectednews",
           component: () => import("../views/selectednews.vue"),
         }, //
-
-        // {
-        //     path: '/',
-        //     name: 'primarypage',
-        //     component: () =>
-        //         import ('../views/primarypage.vue')
-        // }, //
       ],
     },
 
     {
-      path: "/detail",
+      path: "/introduce/detail",
       component: () => import("../views/detail.vue"),
       children: [
         {
           name: "ledger",
-          path: "/detail/ledger",
+          path: "/introduce/detail/ledger",
           // props: true,
           component: () => import("../views/ledger.vue"),
         },
 
-        {
-          path: "/signup",
-          name: "signup",
-          component: Signup,
-        },
+        // {
+        //   path: "/signup",
+        //   name: "signup",
+        //   component: Signup,
+        // },
 
         {
-          path: "/linkinfo",
+          path: "/introduce/detail/linkinfo",
           name: "linkedinfo",
           component: LinkedInfo,
         },
 
         {
-          path: "/law",
+          path: "/introduce/detail/law",
           name: "lawagree",
           component: Lawpage,
         },
 
-        {
-          path: "/login",
-          name: "login",
-          component: Login,
-        },
+        // {
+        //   path: "/login",
+        //   name: "login",
+        //   component: Login,
+        // },
       ],
     },
 
     {
       path: "/about",
       name: "About",
-      component: () =>
-        import(/* webpackChunkName: "about" */ "../views/About.vue"),
+      component: () => import("../views/About.vue"),
     },
 
     {
       path: "/cleft",
       name: "cleft",
-      component: () =>
-        import(/* webpackChunkName: "about" */ "../views/CLeft.vue"),
+      component: () => import("../views/CLeft.vue"),
     },
 
     {
