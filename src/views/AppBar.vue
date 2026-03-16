@@ -1,5 +1,7 @@
 <template>
-  <v-app-bar id="whybartool" transparent height="94" fixed> </v-app-bar>
+  <v-app-bar id="whybartool" transparent height="94" fixed>
+    <button>로고</button>
+  </v-app-bar>
 </template>
 
 <script>
