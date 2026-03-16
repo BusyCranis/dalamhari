@@ -1,15 +1,11 @@
 <template>
-  <v-bottom-navigation 
+  <v-bottom-navigation
     id="whybartool"
     class="set101color"
     color="white"
     transparent
     min-height="94"
-   
-
-
     @click="detectAction"
-
   >
     <!-- <v-btn value="recent"> 냉장고 </v-btn>
     <v-btn value="favorites" @click="makeAlert"> 메모 </v-btn>
@@ -26,28 +22,15 @@ export default {
   },
   methods: {
     detectAction(event) {
-      console.log(event.target)
+      console.log(event.target);
       event.stopPropagation();
-      
 
-      let posXrate = event.offsetX / event.target.clientWidth
+      let posXrate = event.offsetX / event.target.clientWidth;
 
-      let posYrate = event.offsetY / event.target.clientHeight
+      let posYrate = event.offsetY / event.target.clientHeight;
 
-
-
-
-      console.log("너비비율= " + posXrate + ",  높이비율= " + posYrate)
-
-
-
-
-
+      console.log("너비비율= " + posXrate + ",  높이비율= " + posYrate);
     },
-
-
-
-
 
     move3() {
       this.$router.push({ name: "potenpage" });
@@ -62,7 +45,7 @@ export default {
   },
 };
 </script>
-<style    lang="scss" scoped>
+<style lang="scss" scoped>
 .set101color {
   background-image: url("/footerDefault.png");
 
@@ -72,7 +55,7 @@ export default {
 
   /* background-size: 100% 50%; */
 
-  background-size: 100% 100%; 
+  background-size: 100% 100%;
 
   background-position: center;
 
@@ -87,10 +70,7 @@ export default {
 .textcolor {
   color: rgb(255, 103, 53);
 
-
   font-weight: 800;
-
-
 }
 
 .moreflex {
@@ -152,12 +132,4 @@ export default {
 .upride {
   z-index: 9999;
 }
-
-
-
-
-
-
-
-
 </style>
